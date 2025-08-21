@@ -1,36 +1,59 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { Calendar, MapPin, Briefcase, ChevronDown, ChevronUp, Mail, Phone } from "lucide-react"
+import { useState } from "react";
+import Image from "next/image";
+import {
+  Calendar,
+  MapPin,
+  Briefcase,
+  ChevronDown,
+  ChevronUp,
+  Mail,
+  Phone,
+} from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, Badge } from "@/components/ui/card"
-import type { JobListing } from "@/data/job-listings"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import type { JobListing } from "@/data/job-listings";
+import { Badge } from "./ui/badge";
 
 interface JobCardProps {
-  job: JobListing
+  job: JobListing;
 }
 
 export function JobCard({ job }: JobCardProps) {
-  const [isExpanded, setIsExpanded] = useState(false)
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
-    setIsExpanded(!isExpanded)
-  }
+    setIsExpanded(!isExpanded);
+  };
 
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-md">
       <div className="flex flex-col md:flex-row">
         <div className="relative h-48 md:h-auto md:w-1/3 lg:w-1/4">
-          <Image src={job.image || "/placeholder.svg"} alt={job.title} fill className="object-cover" />
+          <Image
+            src={job.image || "/placeholder.svg"}
+            alt={job.title}
+            fill
+            className="object-cover"
+          />
         </div>
         <div className="flex-1">
           <CardHeader>
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
               <div>
                 <CardTitle className="text-xl">{job.title}</CardTitle>
-                <CardDescription className="text-base">{job.company}</CardDescription>
+                <CardDescription className="text-base">
+                  {job.company}
+                </CardDescription>
               </div>
               <Badge className="self-start bg-royal-blue-100 text-royal-blue-800 hover:bg-royal-blue-200">
                 {job.category}
@@ -49,10 +72,14 @@ export function JobCard({ job }: JobCardProps) {
               </div>
               <div className="flex items-center gap-1">
                 <Calendar className="h-4 w-4 text-muted-foreground" />
-                <span>Deadline: {new Date(job.deadline).toLocaleDateString()}</span>
+                <span>
+                  Deadline: {new Date(job.deadline).toLocaleDateString()}
+                </span>
               </div>
             </div>
-            <p className={`text-sm ${isExpanded ? "" : "line-clamp-2"}`}>{job.description}</p>
+            <p className={`text-sm ${isExpanded ? "" : "line-clamp-2"}`}>
+              {job.description}
+            </p>
 
             {isExpanded && (
               <div className="mt-4 space-y-4">
@@ -80,7 +107,9 @@ export function JobCard({ job }: JobCardProps) {
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-sm mb-1">Contact Information:</h4>
+                  <h4 className="font-bold text-sm mb-1">
+                    Contact Information:
+                  </h4>
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-1">
                       <Mail className="h-4 w-4 text-muted-foreground" />
@@ -112,6 +141,5 @@ export function JobCard({ job }: JobCardProps) {
         </div>
       </div>
     </Card>
-  )
+  );
 }
-
