@@ -136,7 +136,7 @@ export default function NewsSection() {
         <Button
           asChild
           variant="outline"
-          className="border-royal-blue-800 text-royal-blue-800 hover:bg-royal-blue-50 transition-all duration-300 hover:scale-105"
+          className="border-royal-blue-800 text-royal-blue-800 hover:bg-royal-blue-700 transition-all duration-300 hover:scale-105"
         >
           <Link href="/news" className="inline-flex items-center gap-1">
             View All News <ArrowRight className="h-4 w-4" />

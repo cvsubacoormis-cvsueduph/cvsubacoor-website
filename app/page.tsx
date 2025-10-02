@@ -30,7 +30,7 @@ export default function Home() {
         <AnimatedStats />
 
         {/* News and Updates */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-royal-blue-50/80 backdrop-blur-sm">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-royal-blue-800 backdrop-blur-sm">
           <div className="container px-4 md:px-6">
             <AnimatedSectionTitle
               title="News & Updates"

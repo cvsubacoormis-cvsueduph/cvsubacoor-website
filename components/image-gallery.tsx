@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import Image from "next/image"
-import { gsap } from "@/lib/gsap"
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+import { gsap } from "@/lib/gsap";
 
 export default function ImageGallery() {
-  const galleryRef = useRef<HTMLDivElement>(null)
-  const titleRef = useRef<HTMLDivElement>(null)
+  const galleryRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLDivElement>(null);
 
   // Array of image placeholders
   const images = [
@@ -30,13 +30,13 @@ export default function ImageGallery() {
       src: "/placeholder.svg?height=400&width=600",
       alt: "Campus Life 5",
     },
-  ]
+  ];
 
   useEffect(() => {
-    const gallery = galleryRef.current
-    const title = titleRef.current
+    const gallery = galleryRef.current;
+    const title = titleRef.current;
 
-    if (!gallery || !title) return
+    if (!gallery || !title) return;
 
     // Animate the title
     gsap.fromTo(
@@ -55,8 +55,8 @@ export default function ImageGallery() {
           start: "top 80%",
           toggleActions: "play none none none",
         },
-      },
-    )
+      }
+    );
 
     // Create a staggered animation for the gallery items
     gsap.fromTo(
@@ -76,48 +76,53 @@ export default function ImageGallery() {
           start: "top 80%",
           toggleActions: "play none none none",
         },
-      },
-    )
+      }
+    );
 
     // Add hover animation
     gallery.childNodes.forEach((child) => {
-      const element = child as HTMLElement
+      const element = child as HTMLElement;
 
       element.addEventListener("mouseenter", () => {
         gsap.to(element.querySelector("img"), {
           scale: 1.1,
           duration: 0.3,
-        })
-      })
+        });
+      });
 
       element.addEventListener("mouseleave", () => {
         gsap.to(element.querySelector("img"), {
           scale: 1,
           duration: 0.3,
-        })
-      })
-    })
+        });
+      });
+    });
 
     return () => {
-      gsap.killTweensOf(gallery.children)
-      gsap.killTweensOf(title.children)
+      gsap.killTweensOf(gallery.children);
+      gsap.killTweensOf(title.children);
 
       // Remove event listeners
       gallery.childNodes.forEach((child) => {
-        const element = child as HTMLElement
-        element.removeEventListener("mouseenter", () => {})
-        element.removeEventListener("mouseleave", () => {})
-      })
-    }
-  }, [])
+        const element = child as HTMLElement;
+        element.removeEventListener("mouseenter", () => {});
+        element.removeEventListener("mouseleave", () => {});
+      });
+    };
+  }, []);
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-royal-blue-50/80 backdrop-blur-sm">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-royal-blue-800 backdrop-blur-sm">
       <div className="container px-4 md:px-6">
-        <div ref={titleRef} className="flex flex-col items-center justify-center space-y-4 text-center">
+        <div
+          ref={titleRef}
+          className="flex flex-col items-center justify-center space-y-4 text-center"
+        >
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Campus Life</h2>
-            <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl">
+            <h2 className="text-3xl text-white font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              Campus Life
+            </h2>
+            <p className="mx-auto max-w-[700px] text-white text-lg sm:text-500 md:text-xl">
               Experience the vibrant and diverse community at our university
             </p>
           </div>
@@ -127,7 +132,10 @@ export default function ImageGallery() {
           className="mx-auto grid max-w-6xl grid-cols-2 gap-3 py-12 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 md:gap-6"
         >
           {images.map((image, index) => (
-            <div key={index} className="overflow-hidden rounded-lg shadow-md transition-all hover:shadow-lg group">
+            <div
+              key={index}
+              className="overflow-hidden rounded-lg shadow-md transition-all hover:shadow-lg group"
+            >
               <div className="relative aspect-square w-full sm:aspect-[3/4]">
                 <Image
                   src={image.src || "/placeholder.svg"}
@@ -141,6 +149,5 @@ export default function ImageGallery() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

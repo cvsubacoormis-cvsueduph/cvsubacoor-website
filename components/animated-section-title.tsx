@@ -1,21 +1,25 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import { gsap } from "@/lib/gsap"
+import { useEffect, useRef } from "react";
+import { gsap } from "@/lib/gsap";
 
 interface AnimatedSectionTitleProps {
-  title: string
-  subtitle?: string
-  className?: string
+  title: string;
+  subtitle?: string;
+  className?: string;
 }
 
-export default function AnimatedSectionTitle({ title, subtitle, className = "" }: AnimatedSectionTitleProps) {
-  const titleRef = useRef<HTMLDivElement>(null)
+export default function AnimatedSectionTitle({
+  title,
+  subtitle,
+  className = "",
+}: AnimatedSectionTitleProps) {
+  const titleRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const titleElement = titleRef.current
+    const titleElement = titleRef.current;
 
-    if (!titleElement) return
+    if (!titleElement) return;
 
     gsap.fromTo(
       titleElement.children,
@@ -33,21 +37,29 @@ export default function AnimatedSectionTitle({ title, subtitle, className = "" }
           start: "top 80%",
           toggleActions: "play none none none",
         },
-      },
-    )
+      }
+    );
 
     return () => {
-      gsap.killTweensOf(titleElement.children)
-    }
-  }, [])
+      gsap.killTweensOf(titleElement.children);
+    };
+  }, []);
 
   return (
-    <div ref={titleRef} className={`flex flex-col items-center justify-center space-y-4 text-center ${className}`}>
+    <div
+      ref={titleRef}
+      className={`flex flex-col items-center justify-center space-y-4 text-center ${className}`}
+    >
       <div className="space-y-2">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{title}</h2>
-        {subtitle && <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl">{subtitle}</p>}
+        <h2 className="text-3xl text-white font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          {title}
+        </h2>
+        {subtitle && (
+          <p className="mx-auto max-w-[700px] text-white sm:text-lg md:text-xl">
+            {subtitle}
+          </p>
+        )}
       </div>
     </div>
-  )
+  );
 }
-
