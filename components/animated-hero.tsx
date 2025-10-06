@@ -88,7 +88,7 @@ export default function AnimatedHero() {
             <div className="relative w-full max-w-md aspect-square">
               <div className="absolute inset-0 bg-canary-yellow-500 rounded-lg rotate-3 transform-gpu"></div>
               <Image
-                src="/placeholder.svg?height=500&width=500"
+                src="/herobg.png"
                 alt="University Students"
                 width={500}
                 height={500}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, CheckCircle, Target } from "lucide-react";
+import { ArrowLeft, CheckCircle, EyeIcon, Target } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -42,31 +42,26 @@ export default function MissionVisionPage() {
             <CardTitle className="text-2xl">Our Mission</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-lg">
-              To provide accessible, high-quality education that prepares
-              students for leadership and service in a diverse and global
-              society through excellence in teaching, research, and community
-              engagement.
+            <p className="text-md">
+              Cavite State University shall provide excellent, equitable and
+              relevant educational opportunities in the arts, sciences and
+              technology through quality instruction and responsive research and
+              development activities. It shall produce professional, skilled and
+              morally upright individuals for global competitiveness.
             </p>
           </CardContent>
         </Card>
 
         <Card className="bg-slate-50">
           <CardHeader className="flex flex-row items-center gap-4">
-            <Image
-              src="/placeholder.svg?height=32&width=32"
-              alt="Vision Icon"
-              width={32}
-              height={32}
-              className="text-primary"
-            />
+            <EyeIcon className="h-8 w-8 text-primary" />
             <CardTitle className="text-2xl">Our Vision</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-lg">
-              To be a leading institution of higher education recognized for
-              academic excellence, innovative research, and commitment to the
-              advancement of society at the local, national, and global levels.
+            <p className="text-md">
+              The premier university in historic Cavite globally recognized for
+              excellence in character development, academics, research,
+              innovation and sustainable community engagement.
             </p>
           </CardContent>
         </Card>
