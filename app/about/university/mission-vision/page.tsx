@@ -1,6 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, CheckCircle, EyeIcon, Target } from "lucide-react";
+import {
+  ArrowLeft,
+  BookCopy,
+  CheckCircle,
+  EyeIcon,
+  Target,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -67,131 +73,131 @@ export default function MissionVisionPage() {
         </Card>
       </div>
 
-      <div className="mb-12">
+      <Card className="bg-slate-50">
+        <CardHeader className="flex flex-row items-center gap-4">
+          <BookCopy className="h-8 w-8 text-primary" />
+          <CardTitle className="text-2xl">Mithiin ng Pamantasan</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-md">
+            “Ang nangungunang pamantasan sa makasaysayang Kabite na kinikilala
+            sa kahusayan sa paghubog ng mga indibidwal na may pandaigdigang
+            kakayahan at kagandahang asal.”
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card className="bg-slate-50 mt-12">
+        <CardHeader className="flex flex-row items-center gap-4">
+          <BookCopy className="h-8 w-8 text-primary" />
+          <CardTitle className="text-2xl">Hangarin ng Pamantasan</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-md">
+            Ang Cavite State university ay makapagbigay ng mahusay, pantay at
+            makabuluhang edukasyon sa sining, agham at teknolohiya sa
+            pamamagitan ng may kalidad na pagtuturo at tumutugon sa
+            pangangailangang pananaliksik at mga gawaing pangkaunlaran.
+            Makalikha ito ng mga indibidwal ng dalubhasa, may kasaysayan at
+            kagandahan-asal sa pandaigdigang kakayahan.
+          </p>
+        </CardContent>
+      </Card>
+
+      <div className="mb-12 mt-12">
         <h2 className="text-2xl font-bold mb-6">Core Values</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          <Card>
-            <CardHeader>
-              <CardTitle>Excellence</CardTitle>
+          <Card className="h-16">
+            <CardHeader className="flex items-center">
+              <CardTitle>Truth</CardTitle>
             </CardHeader>
-            <CardContent>
-              <p>
-                Pursuing the highest standards in all our endeavors, from
-                academics to administration.
-              </p>
-            </CardContent>
           </Card>
 
-          <Card>
-            <CardHeader>
+          <Card className="h-16">
+            <CardHeader className="flex items-center">
               <CardTitle>Integrity</CardTitle>
             </CardHeader>
-            <CardContent>
-              <p>
-                Upholding ethical principles and fostering a culture of honesty
-                and transparency.
-              </p>
-            </CardContent>
           </Card>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Diversity</CardTitle>
+          <Card className="h-16">
+            <CardHeader className="flex items-center">
+              <CardTitle>Excellence</CardTitle>
             </CardHeader>
-            <CardContent>
-              <p>
-                Embracing and celebrating the richness of different
-                perspectives, backgrounds, and experiences.
-              </p>
-            </CardContent>
           </Card>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Innovation</CardTitle>
+          <Card className="h-16">
+            <CardHeader className="flex items-center">
+              <CardTitle>Service</CardTitle>
             </CardHeader>
-            <CardContent>
-              <p>
-                Encouraging creative thinking and pioneering approaches to
-                address complex challenges.
-              </p>
-            </CardContent>
           </Card>
         </div>
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold mb-6">Strategic Objectives</h2>
+        <h2 className="text-2xl font-bold mb-6">Objectives</h2>
+        <p className="mb-6">
+          In addition to, and in support of its mission and policies embodied in
+          the charter, the University shall:
+        </p>
         <div className="space-y-4">
           <div className="flex items-start gap-3">
-            <CheckCircle className="h-6 w-6 text-primary mt-1" />
+            <CheckCircle className="h-4 w-4 text-primary mt-1" />
             <div>
-              <h3 className="text-xl font-semibold">Enhance Student Success</h3>
               <p>
-                Provide comprehensive support services, innovative teaching
-                methods, and enriching experiences that promote student
-                learning, development, and achievement.
+                provide a general education program that will promote national
+                identity, cultural consciousness, moral integrity and spiritual
+                vigor;
               </p>
             </div>
           </div>
 
           <div className="flex items-start gap-3">
-            <CheckCircle className="h-6 w-6 text-primary mt-1" />
+            <CheckCircle className="h-4 w-4 text-primary mt-1" />
             <div>
-              <h3 className="text-xl font-semibold">
-                Advance Research and Creative Activity
-              </h3>
               <p>
-                Foster a vibrant research culture that generates new knowledge,
-                addresses societal challenges, and enhances the educational
-                experience of our students.
+                train the nation's manpower in the skills required by the
+                national development;
               </p>
             </div>
           </div>
 
           <div className="flex items-start gap-3">
-            <CheckCircle className="h-6 w-6 text-primary mt-1" />
+            <CheckCircle className="h-4 w-4 text-primary mt-1" />
             <div>
-              <h3 className="text-xl font-semibold">
-                Strengthen Community Engagement
-              </h3>
               <p>
-                Develop meaningful partnerships with local, national, and global
-                communities to address shared challenges and create
-                opportunities for mutual benefit.
+                develop professions that will provide leadership for the nation;
+                and
               </p>
             </div>
           </div>
 
           <div className="flex items-start gap-3">
-            <CheckCircle className="h-6 w-6 text-primary mt-1" />
+            <CheckCircle className="h-4 w-4 text-primary mt-1" />
             <div>
-              <h3 className="text-xl font-semibold">
-                Ensure Institutional Sustainability
-              </h3>
               <p>
-                Maintain financial stability, enhance operational efficiency,
-                and implement environmentally sustainable practices to ensure
-                the long-term viability of the institution.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-3">
-            <CheckCircle className="h-6 w-6 text-primary mt-1" />
-            <div>
-              <h3 className="text-xl font-semibold">
-                Promote Global Engagement
-              </h3>
-              <p>
-                Expand international partnerships, enhance global learning
-                opportunities, and foster cross-cultural understanding to
-                prepare students for success in an interconnected world.
+                advance knowledge through research work and apply new knowledge
+                for improving the quality of human life and responding
+                effectively to changing societal needs and conditions.
               </p>
             </div>
           </div>
         </div>
       </div>
+      <Card className="bg-slate-50 mt-12">
+        <CardHeader className="flex flex-row items-center gap-4">
+          <CheckCircle className="h-8 w-8 text-primary" />
+          <CardTitle className="text-2xl">Quality Policy</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-md">
+            We Commit to the highest standards of education, value our
+            stakeholders, Strive for continual improvement of our products and
+            services, and Uphold the University’s tenets of Truth, Excellence,
+            and Service to produce globally competitive and morally upright
+            individuals.
+          </p>
+        </CardContent>
+      </Card>
     </div>
   );
 }
