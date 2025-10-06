@@ -29,13 +29,9 @@ export default function MissionVisionPage() {
             Home
           </Link>
           <span className="mx-2">/</span>
-          <Link href="/" className="hover:underline">
-            About
-          </Link>
+          About
           <span className="mx-2">/</span>
-          <Link href="/" className="hover:underline">
-            The University
-          </Link>
+          The University
           <span className="mx-2">/</span>
           <span>Mission, Vision and Objectives</span>
         </div>

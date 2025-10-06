@@ -21,13 +21,9 @@ export default function UniversityHymnPage() {
             Home
           </Link>
           <span className="mx-2">/</span>
-          <Link href="/" className="hover:underline">
-            About
-          </Link>
+          About
           <span className="mx-2">/</span>
-          <Link href="/" className="hover:underline">
-            The University
-          </Link>
+          The University
           <span className="mx-2">/</span>
           <span>University Hymn</span>
         </div>
@@ -36,12 +32,19 @@ export default function UniversityHymnPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="md:col-span-2 space-y-6">
           <div className="relative h-80 w-full mb-6">
-            <Image
-              src="/placeholder.svg?height=400&width=800"
-              alt="University Choir"
-              fill
-              className="object-cover rounded-lg"
-            />
+            <div className="relative w-full h-80">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                width="770"
+                height="330"
+                src="https://www.youtube.com/embed/A2fOWAo9jME"
+                title="Cavite State University Hymn"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
 
           <div className="prose max-w-none">
@@ -68,65 +71,61 @@ export default function UniversityHymnPage() {
               <CardContent className="p-6">
                 <div className="italic text-center space-y-4">
                   <p>
-                    Alma Mater, standing proud,
+                    Hail Alma Mater Dear
                     <br />
-                    Beacon bright for all to see.
+                    CvSU all the way through
                     <br />
-                    Guiding light of truth and knowledge,
+                    Seat of hope that we dream of
                     <br />
-                    Leading us to victory.
+                    Under the sky so blue
                   </p>
 
                   <p>
-                    Through the years your halls have echoed
+                    Verdant fields God’s gift to you
                     <br />
-                    With the steps of scholars true.
+                    Open our lives a new
                     <br />
-                    Hearts and minds forever loyal,
+                    Oh, our hearts, our hands, our minds, too
                     <br />
-                    We pledge our faith anew.
+                    In your bossom thrive and grow.
                   </p>
 
                   <p>
                     <strong>Chorus:</strong>
                     <br />
-                    Hail to thee, our Alma Mater,
+                    Seeds of hope are now in bloom
                     <br />
-                    Colors raised of [University Colors].
+                    Vigilant sons to you have sworn
                     <br />
-                    Wisdom, strength, and honor guide us,
+                    To CvSU our faith goes on
                     <br />
-                    As we strive for excellence.
+                    Cradle of hope and bright vision.
                   </p>
 
                   <p>
-                    From thy halls we journey forward,
+                    These sturdy arms that care
                     <br />
-                    Bearing gifts that you bestow.
+                    Are the nation builders
                     <br />
-                    Knowledge, friendship, inspiration,
+                    Blessed with strength and power
                     <br />
-                    Wherever we may go.
+                    To our Almighty we offer.
                   </p>
 
                   <p>
-                    Through the years we'll remember,
+                    We Pray for CvSU
                     <br />
-                    All the lessons we have learned.
+                    God’s Blessing be with you
                     <br />
-                    And our hearts will always cherish,
+                    You’re the master, we’re the builders
                     <br />
-                    The love that we have earned.
-                  </p>
-
-                  <p>
-                    <em>(Repeat Chorus)</em>
+                    CvSU leads forever.
                   </p>
                 </div>
               </CardContent>
             </Card>
 
-            <h2>Musical Composition</h2>
+            {/* <h2>Musical Composition</h2>
             <p>
               The hymn is composed in the key of B-flat major with a dignified,
               stately tempo. The melody combines elements of traditional hymnal
@@ -143,12 +142,12 @@ export default function UniversityHymnPage() {
               performance as a sign of respect. The University Choir leads the
               singing at official events, often accompanied by the University
               Orchestra or Brass Ensemble for special occasions.
-            </p>
+            </p> */}
           </div>
         </div>
 
         <div className="space-y-6">
-          <div className="bg-slate-50 p-6 rounded-lg">
+          {/* <div className="bg-slate-50 p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-4">Listen to the Hymn</h3>
             <div className="flex items-center justify-center p-4 bg-white rounded-md border mb-4">
               <Music className="h-12 w-12 text-primary" />
@@ -159,7 +158,7 @@ export default function UniversityHymnPage() {
                 Download Sheet Music (PDF)
               </Button>
             </div>
-          </div>
+          </div> */}
 
           <div className="bg-slate-50 p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-4">Hymn Performances</h3>
@@ -168,7 +167,7 @@ export default function UniversityHymnPage() {
               <li>Convocation</li>
               <li>Alumni Reunions</li>
               <li>Presidential Inaugurations</li>
-              <li>Founder's Day Celebrations</li>
+              {/* <li>Founder's Day Celebrations</li> */}
             </ul>
           </div>
 
