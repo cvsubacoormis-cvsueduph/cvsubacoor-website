@@ -35,9 +35,9 @@ export default function UniversitySealPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="md:col-span-2 space-y-6">
           <div className="flex justify-center mb-8">
-            <div className="relative h-64 w-64">
+            <div className="relative h-96 w-96">
               <Image
-                src="/placeholder.svg?height=256&width=256"
+                src="/seal.png"
                 alt="University Seal"
                 fill
                 className="object-contain"
