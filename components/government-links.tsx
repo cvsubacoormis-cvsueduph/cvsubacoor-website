@@ -13,7 +13,7 @@ export default function GovernmentLinks() {
       items: [
         {
           name: "Brand of Governance and Leadership",
-          url: "https://www.ed.gov/",
+          url: "#",
         },
       ],
     },
@@ -74,13 +74,19 @@ export default function GovernmentLinks() {
               </CardHeader>
               {/* Image at top */}
               <div className="relative w-full">
-                <Image
-                  src={section.image}
-                  alt={section.category}
-                  width={300}
-                  height={200}
-                  className="object-none"
-                />
+                <Link
+                  href={section.items[0].url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={section.image}
+                    alt={section.category}
+                    width={300}
+                    height={200}
+                    className="object-none"
+                  />
+                </Link>
               </div>
               <CardContent className="pt-0">
                 <ul className="space-y-2 text-sm">
@@ -88,12 +94,12 @@ export default function GovernmentLinks() {
                     <li key={linkIndex}>
                       <Link
                         href={link.url}
-                        className="flex items-center text-blue-700 hover:underline"
+                        className="flex items-center text-blue-700 hover:underline text-sm"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         {link.name}
-                        <ExternalLink className="ml-1 h-3 w-3" />
+                        <ExternalLink className="ml-1 h-5 w-5" />
                       </Link>
                     </li>
                   ))}
