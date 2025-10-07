@@ -401,11 +401,11 @@ export default function CampusOfficialsPage() {
               />
             </div>
           </div>
-          <div className="text-center">
+          {/* <div className="text-center">
             <Button variant="outline">
               Download Organizational Chart (PDF)
             </Button>
-          </div>
+          </div> */}
         </section>
       </div>
     </div>

@@ -8,8 +8,8 @@ import PageTransition from "@/components/page-transition";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "University Website",
-  description: "A modern university website",
+  title: "Cavite State University Bacoor City Campus",
+  description: "Cavite State University Bacoor City Campus Official Website",
 };
 
 export default function RootLayout({
