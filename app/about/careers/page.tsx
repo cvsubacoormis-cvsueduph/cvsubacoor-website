@@ -38,7 +38,9 @@ export default function CareersPage() {
             Back to Home
           </Link>
         </Button>
-        <h1 className="text-3xl font-bold mb-2">Careers at University Name</h1>
+        <h1 className="text-3xl font-bold mb-2">
+          Careers at Cavite State University Bacoor City Campus
+        </h1>
         <div className="flex items-center text-sm text-muted-foreground mb-8">
           <Link href="/" className="hover:underline">
             Home

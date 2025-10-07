@@ -153,7 +153,7 @@ export default function CampusMapPage() {
                 <CardTitle>Map Controls</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2">
+                <ul className="space-y-10">
                   <li className="flex items-center gap-2">
                     <span className="font-medium">Zoom:</span>
                     <span>Use Ctrl + scroll wheel to zoom the map</span>
