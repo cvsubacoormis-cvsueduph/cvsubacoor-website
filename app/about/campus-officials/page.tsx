@@ -35,83 +35,84 @@ export default function CampusOfficialsPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="flex flex-col items-center text-center">
-              <div className="relative h-48 w-48 rounded-full overflow-hidden mt-6">
+              <div className="relative w-60 h-60 rounded-full overflow-hidden mt-6">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
+                  src="/GAMUYAO, ZANNIE I..jpg"
                   alt="Campus Chancellor"
+                  className="object-cover object-zoom"
                   fill
-                  className="object-cover"
                 />
               </div>
               <CardHeader>
-                <CardTitle>Dr. Jane Smith</CardTitle>
+                <CardTitle>Zannie I. Gamuyao</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg font-medium text-primary">
-                  Campus Chancellor
+                  Head, Administration and Support Services Office
                 </p>
-                <p className="mt-2 text-muted-foreground">
+                {/* <p className="mt-2 text-muted-foreground">
                   Ph.D. in Educational Leadership
                 </p>
                 <p className="text-muted-foreground">Harvard University</p>
                 <p className="mt-4">
                   Leading the campus since 2018 with a focus on academic
                   excellence and community engagement.
-                </p>
+                </p> */}
               </CardContent>
             </Card>
 
             <Card className="flex flex-col items-center text-center">
-              <div className="relative h-48 w-48 rounded-full overflow-hidden mt-6">
+              <div className="relative w-60 h-60 rounded-full overflow-hidden mt-6">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="Vice Chancellor for Academic Affairs"
+                  src="/MACALALAD, MENVYLUZ S..jpg"
+                  alt="Campus Chancellor"
+                  className="object-cover object-zoom"
                   fill
-                  className="object-cover"
                 />
               </div>
               <CardHeader>
-                <CardTitle>Dr. Michael Johnson</CardTitle>
+                <CardTitle>Menvyluz S. Macalalad</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg font-medium text-primary">
-                  Vice Chancellor for Academic Affairs
+                  Campus Administrator
                 </p>
-                <p className="mt-2 text-muted-foreground">
+                {/* <p className="mt-2 text-muted-foreground">
                   Ph.D. in Higher Education
-                </p>
-                <p className="text-muted-foreground">Stanford University</p>
-                <p className="mt-4">
+                </p> */}
+                {/* <p className="text-muted-foreground">Stanford University</p> */}
+                {/* <p className="mt-4">
                   Oversees all academic programs and ensures educational quality
                   across departments.
-                </p>
+                </p> */}
               </CardContent>
             </Card>
 
             <Card className="flex flex-col items-center text-center">
-              <div className="relative h-48 w-48 rounded-full overflow-hidden mt-6">
+              <div className="relative w-60 h-60 rounded-full overflow-hidden mt-6 bg-black">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="Vice Chancellor for Administration"
+                  src="/CAJIGAL RONAN M..jpg"
+                  alt="Campus Chancellor"
+                  className="object-cover object-zoom"
                   fill
-                  className="object-cover"
                 />
               </div>
               <CardHeader>
-                <CardTitle>Dr. Sarah Williams</CardTitle>
+                <CardTitle>Ronan M. Cajigal</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg font-medium text-primary">
-                  Vice Chancellor for Administration
+                  Campus Secretary, Head, Campus Research Services Office,
+                  Coordinator, Professional Education
                 </p>
-                <p className="mt-2 text-muted-foreground">
+                {/* <p className="mt-2 text-muted-foreground">
                   Ph.D. in Public Administration
-                </p>
-                <p className="text-muted-foreground">University of Michigan</p>
+                </p> */}
+                {/* <p className="text-muted-foreground">University of Michigan</p>
                 <p className="mt-4">
                   Manages campus operations, finances, and administrative
                   services.
-                </p>
+                </p> */}
               </CardContent>
             </Card>
           </div>
@@ -119,68 +120,190 @@ export default function CampusOfficialsPage() {
 
         {/* College Deans */}
         <section>
-          <h2 className="text-2xl font-bold mb-6 text-center">College Deans</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center">
+            Faculty and Staff Members
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                name: "Dr. Robert Chen",
-                title: "Dean, College of Arts and Sciences",
-                image: "/placeholder.svg?height=150&width=150",
-                education: "Ph.D. in Physics, MIT",
+                name: "Jimmy M. Caltino",
+                title:
+                  "Head, Curriculum and Instruction Office Coordinator, Department of Criminology",
+                image: "/campus-officials/JIMMY M.C.jpg",
+                // education: "Ph.D. in Physics, MIT",
               },
               {
-                name: "Dr. Lisa Rodriguez",
-                title: "Dean, College of Business",
-                image: "/placeholder.svg?height=150&width=150",
-                education: "Ph.D. in Business Administration, Wharton",
+                name: "Kathy C. Jamero",
+                title: "Chairperson, Department of Arts and Sciences",
+                image: "/campus-officials/GUMBOC, KATHY J..jpg",
+                // education: "Ph.D. in Business Administration, Wharton",
               },
               {
-                name: "Dr. James Wilson",
-                title: "Dean, College of Engineering",
-                image: "/placeholder.svg?height=150&width=150",
-                education: "Ph.D. in Civil Engineering, Georgia Tech",
+                name: "Jovelyn D. Ocampo",
+                title: "Chairperson, Department of Computer Studies",
+                image: "/campus-officials/OCAMPO, JOVELYN D..jpg",
+                // education: "Ph.D. in Civil Engineering, Georgia Tech",
               },
               {
-                name: "Dr. Emily Thompson",
-                title: "Dean, College of Education",
-                image: "/placeholder.svg?height=150&width=150",
-                education: "Ed.D., Columbia University",
+                name: "Janice A. Nealega",
+                title:
+                  "Chairperson, Department of Management Studies, Head, Campus Extension Services Office",
+                image: "/campus-officials/Nealage, Janice.jpg",
+                // education: "Ed.D., Columbia University",
               },
               {
-                name: "Dr. David Kim",
-                title: "Dean, College of Health Sciences",
-                image: "/placeholder.svg?height=150&width=150",
-                education: "M.D., Johns Hopkins University",
+                name: "Jolina Razell M. Mindoro",
+                title:
+                  "Chairperson, Department of Teacher Education, Coordinator, Field Study Program",
+                image: "/campus-officials/MINDORO, JOLINA RAZELL M. .jpg ",
+                // education: "M.D., Johns Hopkins University",
               },
               {
-                name: "Dr. Maria Garcia",
-                title: "Dean, College of Agriculture",
-                image: "/placeholder.svg?height=150&width=150",
-                education: "Ph.D. in Agricultural Sciences, Cornell",
+                name: "Anarose M. Rupido",
+                title: "Coordinator, General Education",
+                image: "/campus-officials/RUPIDO, Ana Rose M..jpg",
+                // education: "Ph.D. in Agricultural Sciences, Cornell",
               },
               {
-                name: "Dr. Thomas Brown",
-                title: "Dean, College of Law",
-                image: "/placeholder.svg?height=150&width=150",
-                education: "J.D., Yale Law School",
+                name: "Janette E. Alagar",
+                title: "Coordinator, Psychology Program",
+                image: "/campus-officials/thumbnail (1).jpg",
+                // education: "J.D., Yale Law School",
               },
               {
-                name: "Dr. Sophia Lee",
-                title: "Dean, Graduate School",
+                name: "Regine U. Caltino",
+                title: "Coordinator, Physical Education",
+                image: "/campus-officials/CALTINO, REGINE U.jpg",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Ely Rose L. Panganiban-Briones",
+                title:
+                  "Head, Gender and Development Office, Coordinator, Computer Science Program",
+                image: "/campus-officials/PANGANIBAN-BRIONES, ELY ROSE L..png",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Donnalyn B. Montallana",
+                title:
+                  "Coordinator, Information Technology Program, Coordinator, Campus ICT",
+                image: "/campus-officials/MONTALLANA, DONNALYN B..png",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Maria Lourdez D. Lamanilao",
+                title:
+                  "Coordinator, Business Administration Program, Coordinator, Campus Linkages Office",
+                image: "/campus-officials/Lamanilao, Maria Lourdez D..jpg",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Ryan S. Acojedo",
+                title: "Coordinator, Hospitality Management Program",
+                image: "/campus-officials/ACOJEDO, RYAN S.JPG",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Nezil Obiado",
+                title:
+                  "Coordinator, Secondary Education Program Major in Mathematics",
+                image: "/campus-officials/OBIADO, NEZIL M..png",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Jay Anne F. Salles-Villareal",
+                title:
+                  "Coordinator, Secondary Education Program Major in English",
+                image: "/campus-officials/SALLES, JAY ANNE F..png",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Jimwell G. Dacanay",
+                title: "Campus Registrar, Office of the Campus Registrar",
+                image: "/campus-officials/DACANAY, JIMWELL G.jpg",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Lorema N. Acapulco",
+                title: "Campus Librarian, Campus Library Services Office",
+                image: "/campus-officials/ACAPULCO, LOREMA.jpg",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Steffanie M. Bato",
+                title:
+                  "Head, Office of Student Affairs and Services, Coordinator, Quality Assurance Office",
+                image: "/campus-officials/BATO STEFFANIE M..jpg",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Haydih Anne T. Velasco",
+                title: "Focal Person, Campus Anti-Red Tape Authority (ARTA)",
+                image: "/campus-officials/VELASCO, HAYDIH ANNE.jpg",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Rimat Maris I. Taclibon",
+                title:
+                  "Coordinator, Human Resource and Development Office, Public Information Officer",
+                image: "/campus-officials/TACLIBON, RIMAT MARIS.jpg",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "James E. Dalis",
+                title:
+                  "Security Officer, Civil Security Services Office, Coordinator, Knowledge Management Office",
+                image: "/campus-officials/DALIS, JAMES.jpg",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Arman C. Maribojo",
+                title: "Coordinator, Pollution Control Office",
+                image: "/campus-officials/MARIBOJO, ARMAN C..jpg",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Alvina E. Ramallosa",
+                title: "Coordinator, Alumni Affairs",
+                image: "/campus-officials/RAMALLOSA, ALVINA E..jpg",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Ryan Angelo G. Mojica",
+                title: "Budget Officer, In-charge, Procurement Office",
                 image: "/placeholder.svg?height=150&width=150",
-                education: "Ph.D. in Sociology, UC Berkeley",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Gilbert E. Magano",
+                title:
+                  "Safety Officer, Campus DRRM Office, Coordinator, Physical Plant Services Office",
+                image: "/campus-officials/MAGANO, GILBERT.jpg",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Diana Mae M. Belarmino",
+                title: "Head, Business and Resource Generation Office",
+                image: "/campus-officials/BELARMINO PAJAH.jpg",
+                // education: "Ph.D. in Sociology, UC Berkeley",
+              },
+              {
+                name: "Aivan Rhei P. Cacho",
+                title: "Campus Nurse, Health Services Office",
+                image: "/placeholder.svg?height=150&width=150",
+                // education: "Ph.D. in Sociology, UC Berkeley",
               },
             ].map((dean, index) => (
               <Card
                 key={index}
                 className="flex flex-col items-center text-center"
               >
-                <div className="relative h-24 w-24 rounded-full overflow-hidden mt-6">
+                <div className="relative w-52 h-52 rounded-full overflow-hidden mt-6">
                   <Image
                     src={dean.image || "/placeholder.svg"}
                     alt={dean.name}
+                    className="object-cover object-zoom"
                     fill
-                    className="object-cover"
                   />
                 </div>
                 <CardHeader className="pb-2">
@@ -189,7 +312,7 @@ export default function CampusOfficialsPage() {
                 <CardContent>
                   <p className="font-medium text-primary">{dean.title}</p>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    {dean.education}
+                    {/* {dean.education} */}
                   </p>
                 </CardContent>
               </Card>
@@ -198,7 +321,7 @@ export default function CampusOfficialsPage() {
         </section>
 
         {/* Directors */}
-        <section>
+        {/* <section>
           <h2 className="text-2xl font-bold mb-6 text-center">
             Directors and Department Heads
           </h2>
@@ -261,7 +384,7 @@ export default function CampusOfficialsPage() {
               </Card>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* Organizational Chart */}
         <section className="bg-slate-50 p-6 rounded-lg">
