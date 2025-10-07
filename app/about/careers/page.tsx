@@ -54,24 +54,19 @@ export default function CareersPage() {
         <div>
           <h2 className="text-2xl font-bold mb-4">Join Our Team</h2>
           <p className="mb-4">
-            At University Name, we are committed to excellence in education,
-            research, and service. We seek talented individuals who share our
-            passion for making a difference in the lives of our students and
-            communities.
+            At Cavite State University Bacoor City Campus, we are committed to
+            excellence in education, research, and service. We seek talented
+            individuals who share our passion for making a difference in the
+            lives of our students and communities.
           </p>
-          <p className="mb-4">
-            As one of the region's largest employers, we offer competitive
-            salaries, comprehensive benefits, and a supportive work environment
-            that values diversity, innovation, and professional growth.
-          </p>
-          <div className="flex flex-wrap gap-4 mt-6">
+          {/* <div className="flex flex-wrap gap-4 mt-6">
             <Button>View Current Openings</Button>
             <Button variant="outline">Benefits Information</Button>
-          </div>
+          </div> */}
         </div>
         <div className="relative h-[300px] rounded-lg overflow-hidden">
           <Image
-            src="/placeholder.svg?height=300&width=500"
+            src="/at-glance-bg.png"
             alt="University Staff"
             fill
             className="object-cover"
@@ -115,9 +110,9 @@ export default function CareersPage() {
       </div>
 
       <Tabs defaultValue="openings" className="mb-12">
-        <TabsList className="grid w-full grid-cols-3">
+        <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="openings">Current Openings</TabsTrigger>
-          <TabsTrigger value="benefits">Benefits</TabsTrigger>
+          {/* <TabsTrigger value="benefits">Benefits</TabsTrigger> */}
           <TabsTrigger value="process">Application Process</TabsTrigger>
         </TabsList>
 

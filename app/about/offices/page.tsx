@@ -377,7 +377,7 @@ export default function OfficesPage() {
         </TabsContent>
       </Tabs>
 
-      <div className="bg-slate-50 p-6 rounded-lg">
+      {/* <div className="bg-slate-50 p-6 rounded-lg">
         <h2 className="text-2xl font-bold mb-4 text-center">
           Directory Resources
         </h2>
@@ -430,7 +430,7 @@ export default function OfficesPage() {
             </CardContent>
           </Card>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -36,15 +36,15 @@ export default function CampusMapPage() {
         </div>
       </div>
 
-      <div className="mb-8">
+      {/* <div className="mb-8">
         <p className="text-lg text-center max-w-3xl mx-auto">
           Navigate our campus with interactive maps, building information, and
           directions to key locations.
         </p>
-      </div>
+      </div> */}
 
       {/* Search and Filter */}
-      <div className="bg-slate-50 p-6 rounded-lg mb-8">
+      {/* <div className="bg-slate-50 p-6 rounded-lg mb-8">
         <h2 className="text-xl font-bold mb-4">Find Campus Locations</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="md:col-span-2">
@@ -76,38 +76,44 @@ export default function CampusMapPage() {
             <Button className="w-full">Search</Button>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Tabs defaultValue="interactive" className="mb-12">
-        <TabsList className="grid w-full grid-cols-3">
+        {/* <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="interactive">Interactive Map</TabsTrigger>
           <TabsTrigger value="buildings">Building Directory</TabsTrigger>
           <TabsTrigger value="parking">Parking & Transportation</TabsTrigger>
-        </TabsList>
+        </TabsList> */}
 
         {/* Interactive Map Tab */}
         <TabsContent value="interactive" className="pt-6">
           <div className="bg-white border rounded-lg overflow-hidden mb-6">
             <div className="relative h-[600px] w-full">
-              <Image
+              {/* <Image
                 src="/placeholder.svg?height=600&width=1200"
                 alt="Interactive Campus Map"
                 fill
                 className="object-cover"
-              />
+              /> */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-white/80 p-4 rounded-lg text-center">
-                  <p className="font-medium">Interactive Map Placeholder</p>
-                  <p className="text-sm text-muted-foreground">
-                    In a real implementation, this would be an interactive map
-                    with clickable buildings and locations
-                  </p>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1475.598924144317!2d120.9818166303995!3d14.412585371963287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d22f4810979f:0xaf0dae4457b7d498!2sCavite State University - Bacoor Campus!5e0!3m2!1sen!2sph!4v1759819467062!5m2!1sen!2sph"
+                    width="1370"
+                    height="600"
+                    style={{
+                      border: "none",
+                    }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card>
               <CardHeader>
                 <CardTitle>Map Legend</CardTitle>
@@ -150,25 +156,25 @@ export default function CampusMapPage() {
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
                     <span className="font-medium">Zoom:</span>
-                    <span>Use + and - buttons or scroll wheel</span>
+                    <span>Use Ctrl + scroll wheel to zoom the map</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="font-medium">Pan:</span>
-                    <span>Click and drag to move around</span>
+                    <span className="font-medium">View:</span>
+                    <span>
+                      Click view larger map button on the top left side
+                    </span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="font-medium">Select:</span>
-                    <span>Click on buildings for details</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="font-medium">Layers:</span>
-                    <span>Toggle different map features</span>
+                    <span className="font-medium">Navigate:</span>
+                    <span>
+                      Click on bottom right for navigation or drag your mouse
+                    </span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card>
+            {/* <Card>
               <CardHeader>
                 <CardTitle>Download Maps</CardTitle>
               </CardHeader>
@@ -195,7 +201,7 @@ export default function CampusMapPage() {
                   Accessibility Map
                 </Button>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </TabsContent>
 
@@ -348,7 +354,7 @@ export default function CampusMapPage() {
               </CardContent>
             </Card>
 
-            <Card>
+            {/* <Card>
               <CardHeader>
                 <CardTitle>Campus Shuttle</CardTitle>
               </CardHeader>
@@ -377,7 +383,7 @@ export default function CampusMapPage() {
                   Shuttle Schedule
                 </Button>
               </CardContent>
-            </Card>
+            </Card> */}
 
             <Card>
               <CardHeader>
@@ -414,7 +420,7 @@ export default function CampusMapPage() {
         </TabsContent>
       </Tabs>
 
-      <div className="bg-slate-50 p-6 rounded-lg">
+      {/* <div className="bg-slate-50 p-6 rounded-lg">
         <h2 className="text-2xl font-bold mb-4 text-center">
           Campus Navigation Resources
         </h2>
@@ -462,7 +468,7 @@ export default function CampusMapPage() {
             </CardContent>
           </Card>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
