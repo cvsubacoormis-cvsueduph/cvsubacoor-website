@@ -65,7 +65,7 @@ export default function Navbar() {
             <div className="flex items-center mb-6">
               <GraduationCap className="h-12 w-12 text-royal-blue-800 mr-2" />
               <span className="font-bold text-sm text-royal-blue-800">
-                Cavite State University Bacoor City Campus
+                Cavite State University - Bacoor City Campus
               </span>
             </div>
             <nav className="flex flex-col gap-4">
@@ -318,7 +318,7 @@ export default function Navbar() {
         <Link href="/" className="mr-6 flex items-center space-x-2 text-white">
           <Image src="/logo.png" alt="Logo" width={34} height={34} />
           <span className="hidden font-bold sm:inline-block">
-            Cavite State University Bacoor City Campus
+            Cavite State University - Bacoor City Campus
           </span>
         </Link>
 
