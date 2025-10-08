@@ -59,7 +59,11 @@ export default function FeedbackForm() {
               </CardDescription>
             </CardHeader>
             <CardFooter className="flex justify-center">
-              <Link href="/feedback-form">
+              <Link
+                href="https://forms.gle/oBSYTDUpWnTKU4rK9"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button className="bg-blue-700 hover:bg-blue-600 text-white font-medium px-6 py-2">
                   <Send className="mr-2 h-4 w-4" />
                   Go to Feedback Form

@@ -22,7 +22,7 @@ export default function Footer() {
         {/* Middle: Quick Links */}
         <div className="mt-10">
           <h3 className="text-lg font-semibold mb-2 text-black">Quick Links</h3>
-          <div className="w-28 h-[2px] bg-gray-600 mb-4"></div>
+          <div className="w-28 h-[2px] bg-accent mb-4"></div>
           <ul className="space-y-2">
             <li>
               <Link
@@ -54,7 +54,7 @@ export default function Footer() {
         {/* Right: Contact Info */}
         <div className="mt-10">
           <h3 className="text-lg font-semibold mb-2 text-black">Contact Us</h3>
-          <div className="w-28 h-[2px] bg-gray-600 mb-4"></div>
+          <div className="w-28 h-[2px] bg-accent mb-4"></div>
           <p className="text-sm">
             EM’s Barrio, Barangay Tejeros Convention, Rosario, Cavite
           </p>

@@ -22,25 +22,31 @@ export default function GovernmentLinks() {
       image: "/government-assets/citizen charter.png",
       items: [{ name: "State Department of Education", url: "#" }],
     },
-    {
-      category: "LANDBANK Link.BizPortal",
-      image: "/government-assets/landbank logo.png",
-      items: [
-        { name: "National Institutes of Health", url: "https://www.nih.gov/" },
-      ],
-    },
+    // {
+    //   category: "LANDBANK Link.BizPortal",
+    //   image: "/government-assets/landbank logo.png",
+    //   items: [
+    //     { name: "National Institutes of Health", url: "https://www.nih.gov/" },
+    //   ],
+    // },
     {
       category: "Freedom of Information",
       image: "/government-assets/foi.png",
       items: [
-        { name: "National Institutes of Health", url: "https://www.nih.gov/" },
+        {
+          name: "National Institutes of Health",
+          url: "https://www.foi.gov.ph/agencies/cvsu/",
+        },
       ],
     },
     {
       category: "Transparency Seal",
       image: "/government-assets/transparency-seal.png",
       items: [
-        { name: "National Institutes of Health", url: "https://www.nih.gov/" },
+        {
+          name: "National Institutes of Health",
+          url: "https://cvsu.edu.ph/transparency-seal/",
+        },
       ],
     },
   ];
@@ -61,7 +67,7 @@ export default function GovernmentLinks() {
         </div>
 
         {/* Grid layout */}
-        <div className="mx-auto grid max-w-full grid-cols-1 gap-4 py-20 md:grid-cols-5">
+        <div className="mx-auto grid max-w-full grid-cols-1 gap-4 py-20 md:grid-cols-4">
           {links.map((section, index) => (
             <Card
               key={index}
@@ -98,8 +104,8 @@ export default function GovernmentLinks() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {link.name}
-                        <ExternalLink className="ml-1 h-5 w-5" />
+                        {/* {link.name} */}
+                        {/* <ExternalLink className="ml-1 h-5 w-5" /> */}
                       </Link>
                     </li>
                   ))}

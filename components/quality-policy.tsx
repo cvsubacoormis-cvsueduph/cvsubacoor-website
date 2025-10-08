@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Award, CheckCircle, Target } from "lucide-react";
+import { Award, CheckCircle, EyeIcon, Target } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { gsap } from "@/lib/gsap";
@@ -65,7 +65,7 @@ export default function QualityPolicy() {
   return (
     <div
       ref={cardsRef}
-      className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-3"
+      className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2"
     >
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -73,14 +73,14 @@ export default function QualityPolicy() {
           <Target className="h-6 w-6 text-primary" />
         </CardHeader>
         <CardContent>
-          <p className="text-muted-foreground">
+          <p className="">
             Cavite State University shall provide excellent, equitable and
             relevant educational opportunities in the arts, sciences and
             technology through quality instruction and responsive research and
             development activities. It shall produce professional, skilled and
             morally upright individuals for global competitiveness.
           </p>
-          <ul className="mt-4 space-y-2">
+          {/* <ul className="mt-4 space-y-2">
             <li className="flex items-start gap-2">
               <CheckCircle className="mt-0.5 h-5 w-5 text-royal-blue-800" />
               <span>Excellence in teaching and learning</span>
@@ -93,20 +93,21 @@ export default function QualityPolicy() {
               <CheckCircle className="mt-0.5 h-5 w-5 text-royal-blue-800" />
               <span>Meaningful community engagement</span>
             </li>
-          </ul>
+          </ul> */}
         </CardContent>
       </Card>
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-xl font-bold">Quality Assurance</CardTitle>
-          <Award className="h-6 w-6 text-primary" />
+          <CardTitle className="text-xl font-bold">Vision</CardTitle>
+          <EyeIcon className="h-6 w-6 text-primary" />
         </CardHeader>
         <CardContent>
-          <p className="text-muted-foreground">
-            We are committed to continuous improvement through rigorous
-            assessment and accreditation processes.
+          <p>
+            The Premier University in historic Cavite globally recognized for
+            excellence in character development, academics, research, innovation
+            and sustainable community engagement.
           </p>
-          <ul className="mt-4 space-y-2">
+          {/* <ul className="mt-4 space-y-2">
             <li className="flex items-start gap-2">
               <CheckCircle className="mt-0.5 h-5 w-5 text-royal-blue-800" />
               <span>Regular program reviews and updates</span>
@@ -119,16 +120,16 @@ export default function QualityPolicy() {
               <CheckCircle className="mt-0.5 h-5 w-5 text-royal-blue-800" />
               <span>Student learning outcomes assessment</span>
             </li>
-          </ul>
+          </ul> */}
         </CardContent>
       </Card>
-      <Card>
+      {/* <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-xl font-bold">Standards</CardTitle>
           <CheckCircle className="h-6 w-6 text-primary" />
         </CardHeader>
         <CardContent>
-          <p className="text-muted-foreground">
+          <p>
             We adhere to the highest standards of academic integrity, ethical
             conduct, and professional excellence.
           </p>
@@ -147,7 +148,7 @@ export default function QualityPolicy() {
             </li>
           </ul>
         </CardContent>
-      </Card>
+      </Card> */}
     </div>
   );
 }

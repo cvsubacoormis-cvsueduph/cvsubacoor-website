@@ -106,18 +106,18 @@ export default function AnimatedStats() {
               <div className="text-3xl sm:text-4xl font-bold stat-number">
                 120
               </div>
-              <p className="text-muted-foreground text-sm sm:text-base">
+              {/* <p className="text-muted-foreground text-sm sm:text-base">
                 Undergraduate and graduate programs across 8 colleges
-              </p>
+              </p> */}
             </CardContent>
-            <CardFooter>
+            {/* <CardFooter>
               <Link
                 href="#"
                 className="inline-flex items-center text-sm font-medium text-primary"
               >
                 Explore Programs <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
-            </CardFooter>
+            </CardFooter> */}
           </Card>
           <Card className="overflow-hidden transform-gpu transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <div className="relative h-48 w-full">
@@ -138,18 +138,18 @@ export default function AnimatedStats() {
               <div className="text-3xl sm:text-4xl font-bold stat-number">
                 25000
               </div>
-              <p className="text-muted-foreground text-sm sm:text-base">
+              {/* <p className="text-muted-foreground text-sm sm:text-base">
                 Students from 50+ countries around the world
-              </p>
+              </p> */}
             </CardContent>
-            <CardFooter>
+            {/* <CardFooter>
               <Link
                 href="#"
                 className="inline-flex items-center text-sm font-medium text-primary"
               >
                 Student Life <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
-            </CardFooter>
+            </CardFooter> */}
           </Card>
           <Card className="overflow-hidden transform-gpu transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <div className="relative h-48 w-full">
@@ -170,18 +170,18 @@ export default function AnimatedStats() {
               <div className="text-3xl sm:text-4xl font-bold stat-number">
                 1500
               </div>
-              <p className="text-muted-foreground text-sm sm:text-base">
+              {/* <p className="text-muted-foreground text-sm sm:text-base">
                 Distinguished faculty members and dedicated staff
-              </p>
+              </p> */}
             </CardContent>
-            <CardFooter>
+            {/* <CardFooter>
               <Link
                 href="#"
                 className="inline-flex items-center text-sm font-medium text-primary"
               >
                 Meet Our Team <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
-            </CardFooter>
+            </CardFooter> */}
           </Card>
           {/* <Card className="overflow-hidden transform-gpu transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <div className="relative h-48 w-full">

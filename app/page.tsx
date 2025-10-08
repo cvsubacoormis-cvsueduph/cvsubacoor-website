@@ -46,7 +46,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <AnimatedSectionTitle
               title="Quality Policy"
-              subtitle="Our commitment to excellence in education, research, and service"
+              subtitle="We Commit to the highest standards of education, value our stakeholders, Strive for continual improvement of our products and services, and Uphold the University’s tenets of Truth, Excellence, and Service to produce globally competitive and morally upright individuals."
             />
             <QualityPolicy />
           </div>
