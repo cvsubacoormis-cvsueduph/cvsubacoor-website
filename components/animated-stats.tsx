@@ -85,7 +85,7 @@ export default function AnimatedStats() {
       <div className="container px-4 md:px-6">
         <div
           ref={cardsRef}
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          className="grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3"
         >
           <Card className="overflow-hidden transform-gpu transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <div className="relative h-48 w-full">
@@ -183,7 +183,7 @@ export default function AnimatedStats() {
               </Link>
             </CardFooter>
           </Card>
-          <Card className="overflow-hidden transform-gpu transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+          {/* <Card className="overflow-hidden transform-gpu transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <div className="relative h-48 w-full">
               <Image
                 src="/placeholder.svg?height=200&width=400"
@@ -214,7 +214,7 @@ export default function AnimatedStats() {
                 How to Apply <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </CardFooter>
-          </Card>
+          </Card> */}
         </div>
       </div>
     </section>

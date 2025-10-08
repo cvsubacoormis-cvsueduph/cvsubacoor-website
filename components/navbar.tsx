@@ -48,7 +48,7 @@ export default function Navbar() {
   }, [isMobile]);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-royal-blue-900/70 to-royal-blue-800/40 text-white">
+    <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-royal-blue-900/70 to-royal-blue-800/40 backdrop-blur-sm text-white">
       <div className="container flex h-16 items-center justify-between px-4 sm:px-6">
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
@@ -342,43 +342,43 @@ export default function Navbar() {
                 />
               </Button>
               {activeDropdown === "about" && (
-                <div className="absolute left-0 top-full z-50 mt-1 w-64 rounded-md border bg-canary-yellow-500 shadow-md">
+                <div className="absolute left-0 top-full z-50 mt-1 w-64 rounded-md bg-accent shadow-md">
                   <div className="p-2">
                     {/* The University - Nested Dropdown */}
                     <div
-                      className="relative rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground"
+                      className="relative rounded-sm px-2 py-1.5 text-sm hover:bg-royal-blue-600 hover:text-accent-foreground"
                       onMouseEnter={() => handleNestedMouseEnter("university")}
                       onMouseLeave={handleNestedMouseLeave}
                     >
-                      <div className="flex items-center justify-between text-royal-blue-800 hover:text-white font-medium">
+                      <div className="flex items-center justify-between text-white hover:text-canary-yellow-500  font-medium">
                         <span>The University</span>
                         <ChevronRight className="h-4 w-4" />
                       </div>
 
                       {activeNestedDropdown === "university" && (
-                        <div className="absolute left-full top-0 z-50 ml-1 w-64 rounded-md border bg-canary-yellow-500 shadow-md">
+                        <div className="absolute left-full top-0 z-50 ml-1 w-64 rounded-md bg-accent shadow-md">
                           <div className="p-2">
                             <Link
                               href="/about/university/history"
-                              className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                              className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                             >
                               History
                             </Link>
                             <Link
                               href="/about/university/mission-vision"
-                              className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                              className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                             >
                               Mission, Vision and Objectives
                             </Link>
                             <Link
                               href="/about/university/seal"
-                              className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                              className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                             >
                               University Seal
                             </Link>
                             <Link
                               href="/about/university/hymn"
-                              className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                              className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                             >
                               University Hymn
                             </Link>
@@ -389,43 +389,43 @@ export default function Navbar() {
 
                     <Link
                       href="/about/campus-history"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Campus History
                     </Link>
                     <Link
                       href="/about/campus-officials"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Campus Officials
                     </Link>
                     <Link
                       href="/about/offices"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Offices
                     </Link>
                     <Link
                       href="/about/faculty-staff"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Faculty and Staffs
                     </Link>
                     <Link
                       href="/about/campus-map"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Campus Map
                     </Link>
                     <Link
                       href="/about/careers"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Careers
                     </Link>
                     <Link
                       href="/about/citizens-charter"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Citizens Charter
                     </Link>
@@ -453,23 +453,23 @@ export default function Navbar() {
                 />
               </Button>
               {activeDropdown === "admission" && (
-                <div className="absolute left-0 top-full z-50 mt-1 w-48 rounded-md border bg-canary-yellow-500 shadow-md">
+                <div className="absolute left-0 top-full z-50 mt-1 w-48 rounded-md bg-accent shadow-md">
                   <div className="p-2">
                     <Link
                       href="/admission/requirements-procedures"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Requirements and Procedures
                     </Link>
                     <Link
                       href="/admission/academic-programs"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Academic Programs
                     </Link>
                     <Link
                       href="#"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Admission Portal
                     </Link>
@@ -497,23 +497,23 @@ export default function Navbar() {
                 />
               </Button>
               {activeDropdown === "academics" && (
-                <div className="absolute left-0 top-full z-50 mt-1 w-48 rounded-md border bg-canary-yellow-500 shadow-md">
+                <div className="absolute left-0 top-full z-50 mt-1 w-48 rounded-md bg-accent shadow-md">
                   <div className="p-2">
                     <Link
                       href="/academics/departments"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Departments
                     </Link>
                     <Link
                       href="/academics/library-services"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Library Services
                     </Link>
                     <Link
                       href="/academics/academic-calendar"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Academic Calendar
                     </Link>
@@ -541,17 +541,17 @@ export default function Navbar() {
                 />
               </Button>
               {activeDropdown === "research" && (
-                <div className="absolute left-0 top-full z-50 mt-1 w-48 rounded-md border bg-canary-yellow-500 shadow-md">
+                <div className="absolute left-0 top-full z-50 mt-1 w-48 rounded-md bg-accent shadow-md">
                   <div className="p-2">
                     <Link
                       href="/research/research-development"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Research and Development
                     </Link>
                     <Link
                       href="/research/extension-services"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Extension Services
                     </Link>
@@ -579,29 +579,29 @@ export default function Navbar() {
                 />
               </Button>
               {activeDropdown === "students" && (
-                <div className="absolute left-0 top-full z-50 mt-1 w-48 rounded-md border bg-canary-yellow-500 shadow-md">
+                <div className="absolute left-0 top-full z-50 mt-1 w-48 rounded-md  bg-accent shadow-md">
                   <div className="p-2">
                     <Link
                       href="/students/student-organizations"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Student Organizations
                     </Link>
                     <Link
                       href="/students/job-placement"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Job Placement
                     </Link>
                     <Link
                       href="#"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Student Portal
                     </Link>
                     <Link
                       href="/students/open-distance-learning"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Open Distance Learning
                     </Link>
@@ -629,29 +629,29 @@ export default function Navbar() {
                 />
               </Button>
               {activeDropdown === "services" && (
-                <div className="absolute left-0 top-full z-50 mt-1 w-48 rounded-md border bg-canary-yellow-500 shadow-md">
+                <div className="absolute left-0 top-full z-50 mt-1 w-48 rounded-md bg-accent shadow-md">
                   <div className="p-2">
                     <Link
                       href="#"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Student Portal
                     </Link>
                     <Link
                       href="#"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Integrated Library System
                     </Link>
                     <Link
                       href="#"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Open Distance eLearning
                     </Link>
                     <Link
                       href="/services/downloadable-forms"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-royal-blue-800 font-medium hover:bg-royal-blue-600 hover:text-white"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Downloadable Forms
                     </Link>

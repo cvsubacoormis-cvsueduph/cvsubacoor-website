@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import PageTransition from "@/components/page-transition";
+import AnimatedBackground from "@/components/animated-background";
 
 const inter = Inter({ subsets: ["latin"] });
 

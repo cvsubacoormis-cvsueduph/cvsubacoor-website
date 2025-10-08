@@ -50,8 +50,8 @@ export default function AnimatedBackground() {
     >
       <Particles
         particleColors={["#ffffff", "#ffffff"]}
-        particleCount={200}
-        particleSpread={20}
+        particleCount={500}
+        particleSpread={10}
         speed={0.1}
         particleBaseSize={100}
         moveParticlesOnHover={true}
