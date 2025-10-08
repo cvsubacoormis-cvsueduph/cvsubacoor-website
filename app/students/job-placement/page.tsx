@@ -195,7 +195,6 @@ export default function JobPlacementPage() {
           </div>
         </div>
       </AnimatedPage>
-      <Footer />
       <BackToTop />
     </>
   );

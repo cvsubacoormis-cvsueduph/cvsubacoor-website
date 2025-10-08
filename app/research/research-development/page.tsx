@@ -635,7 +635,6 @@ export default function ResearchDevelopmentPage() {
           </div>
         </div>
       </AnimatedPage>
-      <Footer />
       <BackToTop />
     </>
   );

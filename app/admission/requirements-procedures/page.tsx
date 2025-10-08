@@ -661,7 +661,6 @@ export default function RequirementsProceduresPage() {
           </Tabs>
         </div>
       </AnimatedPage>
-      <Footer />
       <BackToTop />
     </>
   );

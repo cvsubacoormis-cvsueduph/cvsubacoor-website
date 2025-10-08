@@ -1124,7 +1124,6 @@ export default function StudentOrganizationsPage() {
           </div>
         </div>
       </AnimatedPage>
-      <Footer />
       <BackToTop />
     </>
   );

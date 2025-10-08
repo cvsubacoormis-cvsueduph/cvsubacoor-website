@@ -395,7 +395,6 @@ export default function HowToApplyPage() {
           </div>
         </div>
       </AnimatedPage>
-      <Footer />
       <BackToTop />
     </>
   );

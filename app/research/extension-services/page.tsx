@@ -625,7 +625,6 @@ export default function ExtensionServicesPage() {
           </div>
         </div>
       </AnimatedPage>
-      <Footer />
       <BackToTop />
     </>
   );

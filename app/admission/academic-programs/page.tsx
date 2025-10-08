@@ -65,7 +65,7 @@ export default function AcademicProgramsPage() {
               </p>
               <div className="flex flex-wrap gap-4 mt-6">
                 <Button>Apply Now</Button>
-                <Button variant="outline">Download Program Catalog</Button>
+                {/* <Button variant="outline">Download Program Catalog</Button> */}
               </div>
             </div>
             <div className="relative h-[300px] rounded-lg overflow-hidden">
@@ -718,7 +718,6 @@ export default function AcademicProgramsPage() {
           </div>
         </div>
       </AnimatedPage>
-      <Footer />
       <BackToTop />
     </>
   );
