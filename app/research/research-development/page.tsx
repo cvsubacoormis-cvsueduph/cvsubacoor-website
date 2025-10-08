@@ -22,7 +22,6 @@ import AnimatedSectionTitle from "@/components/animated-section-title";
 export default function ResearchDevelopmentPage() {
   return (
     <>
-      <Navbar />
       <AnimatedPage>
         <div className="container mx-auto px-4 py-12">
           <div className="mb-6 animate-element">

@@ -28,7 +28,6 @@ import BackToTop from "@/components/back-to-top";
 export default function StudentOrganizationsPage() {
   return (
     <>
-      <Navbar />
       <AnimatedPage>
         <div className="container mx-auto px-4 py-12">
           <div className="mb-6 animate-element">
