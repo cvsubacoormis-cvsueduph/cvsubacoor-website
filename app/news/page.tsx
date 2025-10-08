@@ -1,16 +1,23 @@
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowLeft, ArrowRight, Calendar, Search } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowLeft, ArrowRight, Calendar, Search } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import AnimatedPage from "@/components/animated-page"
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
-import BackToTop from "@/components/back-to-top"
-import StickyHeader from "@/components/sticky-header"
-import AnimatedSectionTitle from "@/components/animated-section-title"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import AnimatedPage from "@/components/animated-page";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import BackToTop from "@/components/back-to-top";
+import StickyHeader from "@/components/sticky-header";
+import AnimatedSectionTitle from "@/components/animated-section-title";
 
 // Mock news data - in a real app, this would come from a database
 const newsData = [
@@ -95,14 +102,11 @@ const newsData = [
     excerpt:
       "Dr. Elizabeth Chen from the Department of Biology has been awarded the National Medal of Science for her groundbreaking research in cellular regeneration.",
   },
-]
+];
 
 export default function AllNewsPage() {
   return (
     <>
-      <StickyHeader>
-        <Navbar />
-      </StickyHeader>
       <AnimatedPage>
         <div className="container mx-auto px-4 py-12">
           <div className="mb-6 animate-element">
@@ -112,7 +116,9 @@ export default function AllNewsPage() {
                 Back to Home
               </Link>
             </Button>
-            <h1 className="text-3xl font-bold mb-2">University News & Updates</h1>
+            <h1 className="text-3xl font-bold mb-2">
+              University News & Updates
+            </h1>
             <div className="flex items-center text-sm text-muted-foreground mb-8">
               <Link href="/" className="hover:underline">
                 Home
@@ -145,14 +151,18 @@ export default function AllNewsPage() {
                       />
                     </div>
                     <CardHeader>
-                      <CardTitle className="line-clamp-2">{item.title}</CardTitle>
+                      <CardTitle className="line-clamp-2">
+                        {item.title}
+                      </CardTitle>
                       <CardDescription className="flex items-center gap-1">
                         <Calendar className="h-4 w-4" />
                         {item.date}
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="flex-1">
-                      <p className="line-clamp-3 text-sm sm:text-base">{item.excerpt}</p>
+                      <p className="line-clamp-3 text-sm sm:text-base">
+                        {item.excerpt}
+                      </p>
                     </CardContent>
                     <CardFooter>
                       <Link
@@ -186,7 +196,11 @@ export default function AllNewsPage() {
                 <h3 className="text-xl font-bold mb-4">Search News</h3>
                 <div className="relative">
                   <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-                  <Input type="search" placeholder="Search news..." className="pl-8" />
+                  <Input
+                    type="search"
+                    placeholder="Search news..."
+                    className="pl-8"
+                  />
                 </div>
                 <Button className="w-full mt-4">Search</Button>
               </div>
@@ -194,22 +208,40 @@ export default function AllNewsPage() {
               <div className="bg-slate-50 p-6 rounded-lg animate-element">
                 <h3 className="text-xl font-bold mb-4">Categories</h3>
                 <div className="flex flex-col space-y-2">
-                  <Link href="/news?category=all" className="text-royal-blue-800 hover:text-royal-blue-600 font-medium">
+                  <Link
+                    href="/news?category=all"
+                    className="text-royal-blue-800 hover:text-royal-blue-600 font-medium"
+                  >
                     All News
                   </Link>
-                  <Link href="/news?category=research" className="text-royal-blue-800 hover:text-royal-blue-600">
+                  <Link
+                    href="/news?category=research"
+                    className="text-royal-blue-800 hover:text-royal-blue-600"
+                  >
                     Research (2)
                   </Link>
-                  <Link href="/news?category=campus" className="text-royal-blue-800 hover:text-royal-blue-600">
+                  <Link
+                    href="/news?category=campus"
+                    className="text-royal-blue-800 hover:text-royal-blue-600"
+                  >
                     Campus News (3)
                   </Link>
-                  <Link href="/news?category=achievements" className="text-royal-blue-800 hover:text-royal-blue-600">
+                  <Link
+                    href="/news?category=achievements"
+                    className="text-royal-blue-800 hover:text-royal-blue-600"
+                  >
                     Achievements (3)
                   </Link>
-                  <Link href="/news?category=events" className="text-royal-blue-800 hover:text-royal-blue-600">
+                  <Link
+                    href="/news?category=events"
+                    className="text-royal-blue-800 hover:text-royal-blue-600"
+                  >
                     Events (1)
                   </Link>
-                  <Link href="/news?category=academics" className="text-royal-blue-800 hover:text-royal-blue-600">
+                  <Link
+                    href="/news?category=academics"
+                    className="text-royal-blue-800 hover:text-royal-blue-600"
+                  >
                     Academics (1)
                   </Link>
                 </div>
@@ -218,19 +250,34 @@ export default function AllNewsPage() {
               <div className="bg-slate-50 p-6 rounded-lg animate-element">
                 <h3 className="text-xl font-bold mb-4">Archives</h3>
                 <div className="flex flex-col space-y-2">
-                  <Link href="/news?month=march-2025" className="text-royal-blue-800 hover:text-royal-blue-600">
+                  <Link
+                    href="/news?month=march-2025"
+                    className="text-royal-blue-800 hover:text-royal-blue-600"
+                  >
                     March 2025 (2)
                   </Link>
-                  <Link href="/news?month=february-2025" className="text-royal-blue-800 hover:text-royal-blue-600">
+                  <Link
+                    href="/news?month=february-2025"
+                    className="text-royal-blue-800 hover:text-royal-blue-600"
+                  >
                     February 2025 (5)
                   </Link>
-                  <Link href="/news?month=january-2025" className="text-royal-blue-800 hover:text-royal-blue-600">
+                  <Link
+                    href="/news?month=january-2025"
+                    className="text-royal-blue-800 hover:text-royal-blue-600"
+                  >
                     January 2025 (2)
                   </Link>
-                  <Link href="/news?month=december-2024" className="text-royal-blue-800 hover:text-royal-blue-600">
+                  <Link
+                    href="/news?month=december-2024"
+                    className="text-royal-blue-800 hover:text-royal-blue-600"
+                  >
                     December 2024 (4)
                   </Link>
-                  <Link href="/news?month=november-2024" className="text-royal-blue-800 hover:text-royal-blue-600">
+                  <Link
+                    href="/news?month=november-2024"
+                    className="text-royal-blue-800 hover:text-royal-blue-600"
+                  >
                     November 2024 (3)
                   </Link>
                 </div>
@@ -238,8 +285,14 @@ export default function AllNewsPage() {
 
               <div className="bg-slate-50 p-6 rounded-lg animate-element">
                 <h3 className="text-xl font-bold mb-4">Subscribe to Updates</h3>
-                <p className="mb-4 text-sm">Receive the latest news and updates directly in your inbox.</p>
-                <Input type="email" placeholder="Your email address" className="mb-4" />
+                <p className="mb-4 text-sm">
+                  Receive the latest news and updates directly in your inbox.
+                </p>
+                <Input
+                  type="email"
+                  placeholder="Your email address"
+                  className="mb-4"
+                />
                 <Button className="w-full">Subscribe</Button>
               </div>
             </div>
@@ -249,6 +302,5 @@ export default function AllNewsPage() {
       <Footer />
       <BackToTop />
     </>
-  )
+  );
 }
-

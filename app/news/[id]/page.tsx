@@ -1,13 +1,13 @@
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowLeft, Calendar, User, Tag } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowLeft, Calendar, User, Tag } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import AnimatedPage from "@/components/animated-page"
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
-import BackToTop from "@/components/back-to-top"
-import StickyHeader from "@/components/sticky-header"
+import { Button } from "@/components/ui/button";
+import AnimatedPage from "@/components/animated-page";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import BackToTop from "@/components/back-to-top";
+import StickyHeader from "@/components/sticky-header";
 
 // Mock news data - in a real app, this would come from a database
 const newsData = [
@@ -110,17 +110,15 @@ const newsData = [
       <p>While celebrating this milestone, university leadership emphasized that the institution's primary focus remains on providing exceptional educational experiences and conducting research that addresses pressing global challenges.</p>
     `,
   },
-]
+];
 
 export default function NewsDetailPage({ params }: { params: { id: string } }) {
   // Find the news item with the matching ID
-  const newsItem = newsData.find((item) => item.id === params.id) || newsData[0]
+  const newsItem =
+    newsData.find((item) => item.id === params.id) || newsData[0];
 
   return (
     <>
-      <StickyHeader>
-        <Navbar />
-      </StickyHeader>
       <AnimatedPage>
         <div className="container mx-auto px-4 py-12">
           <div className="mb-6 animate-element">
@@ -172,10 +170,15 @@ export default function NewsDetailPage({ params }: { params: { id: string } }) {
                     .filter((item) => item.id !== params.id)
                     .map((item) => (
                       <li key={item.id}>
-                        <Link href={`/news/${item.id}`} className="text-primary hover:underline">
+                        <Link
+                          href={`/news/${item.id}`}
+                          className="text-primary hover:underline"
+                        >
                           {item.title}
                         </Link>
-                        <p className="text-sm text-muted-foreground">{item.date}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {item.date}
+                        </p>
                       </li>
                     ))}
                 </ul>
@@ -235,9 +238,7 @@ export default function NewsDetailPage({ params }: { params: { id: string } }) {
           </div>
         </div>
       </AnimatedPage>
-      <Footer />
       <BackToTop />
     </>
-  )
+  );
 }
-

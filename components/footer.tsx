@@ -10,13 +10,19 @@ export default function Footer() {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
         {/* Left: Logo */}
         <div className="flex flex-col items-center md:items-start mt-10">
-          <Image
-            src="/government-assets/gov.png" // replace with your logo path
-            alt="Government Logo"
-            width={140}
-            height={140}
-            className="mb-3"
-          />
+          <Link
+            href="https://www.gov.ph/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/government-assets/gov.png" // replace with your logo path
+              alt="Government Logo"
+              width={140}
+              height={140}
+              className="mb-3"
+            />
+          </Link>
         </div>
 
         {/* Middle: Quick Links */}
@@ -26,15 +32,17 @@ export default function Footer() {
           <ul className="space-y-2">
             <li>
               <Link
-                href="#"
+                href="https://studentportal.cvsu-bacoor.com/"
                 className="hover:text-accent transition-colors duration-200 text-sm"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Student Portal
               </Link>
             </li>
             <li>
               <Link
-                href="#"
+                href="/services/downloadable-forms"
                 className="hover:text-accent transition-colors duration-200 text-sm"
               >
                 Downloadable Forms
@@ -42,7 +50,9 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                href="#"
+                href="https://cvsu.edu.ph/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-accent transition-colors duration-200 text-sm"
               >
                 CvSU Main Campus
@@ -56,19 +66,20 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-2 text-black">Contact Us</h3>
           <div className="w-28 h-[2px] bg-accent mb-4"></div>
           <p className="text-sm">
-            EM’s Barrio, Barangay Tejeros Convention, Rosario, Cavite
+            Lily Street. Phase II Soldiers Hills IV Bacoor City, Cavite 4102
+            Philippines
           </p>
-          <p className="mt-2 text-sm">Phone: (046) 437-9505 to 9508</p>
+          <p className="mt-2 text-sm">Telephone: (046) 476-5029</p>
           <p className="text-sm mt-2">
             Email:{" "}
             <Link
-              href="mailto:cvsurosario@cvsu.edu.ph"
+              href="mailto:cvsubacoor@cvsu.edu.ph"
               className="hover:text-accent transition-colors duration-200"
             >
-              cvsurosario@cvsu.edu.ph
+              cvsubacoor@cvsu.edu.ph
             </Link>
           </p>
-          <p className="text-sm mt-2">
+          {/* <p className="text-sm mt-2">
             Web:{" "}
             <Link
               href="https://www.cvsu-rosario.edu.ph"
@@ -77,7 +88,7 @@ export default function Footer() {
             >
               www.cvsu-rosario.edu.ph
             </Link>
-          </p>
+          </p> */}
           {/* <div className="flex gap-3 mt-3">
             <Image
               src="/dpo.png" // replace with your actual image path
@@ -104,8 +115,10 @@ export default function Footer() {
           </p>
           <div className="flex gap-4 mt-2 md:mt-0">
             <Link
-              href="#"
+              href="https://www.facebook.com/CvSUBacoorCityCampus"
               className="hover:text-accent transition-colors duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Facebook />
             </Link>

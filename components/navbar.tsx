@@ -595,8 +595,10 @@ export default function Navbar() {
                       Job Placement
                     </Link>
                     <Link
-                      href="#"
+                      href="https://studentportal.cvsu-bacoor.com/"
                       className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Student Portal
                     </Link>
@@ -633,8 +635,10 @@ export default function Navbar() {
                 <div className="absolute left-0 top-full z-50 mt-1 w-48 rounded-md bg-accent shadow-md">
                   <div className="p-2">
                     <Link
-                      href="#"
+                      href="https://studentportal.cvsu-bacoor.com/"
                       className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Student Portal
                     </Link>

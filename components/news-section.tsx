@@ -1,17 +1,24 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowRight, Calendar } from "lucide-react"
+import { useEffect, useRef } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight, Calendar } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { gsap } from "@/lib/gsap"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { gsap } from "@/lib/gsap";
 
 export default function NewsSection() {
-  const newsRef = useRef<HTMLDivElement>(null)
-  const buttonRef = useRef<HTMLDivElement>(null)
+  const newsRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
 
   const newsItems = [
     {
@@ -21,7 +28,7 @@ export default function NewsSection() {
       excerpt:
         "The National Science Foundation has awarded our university a $10 million grant to advance research in renewable energy technologies.",
       link: "/news/1",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/news-placeholder.png",
     },
     {
       id: "2",
@@ -30,7 +37,7 @@ export default function NewsSection() {
       excerpt:
         "The state-of-the-art student center will open its doors next month, featuring study spaces, dining options, and recreational facilities.",
       link: "/news/2",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/news-placeholder.png",
     },
     {
       id: "3",
@@ -39,15 +46,15 @@ export default function NewsSection() {
       excerpt:
         "Our university has been ranked among the top 50 institutions globally in the latest World University Rankings.",
       link: "/news/3",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/news-placeholder.png",
     },
-  ]
+  ];
 
   useEffect(() => {
-    const newsCards = newsRef.current
-    const button = buttonRef.current
+    const newsCards = newsRef.current;
+    const button = buttonRef.current;
 
-    if (!newsCards || !button) return
+    if (!newsCards || !button) return;
 
     // Animate news cards
     gsap.fromTo(
@@ -66,8 +73,8 @@ export default function NewsSection() {
           start: "top 80%",
           toggleActions: "play none none none",
         },
-      },
-    )
+      }
+    );
 
     // Animate button
     gsap.fromTo(
@@ -86,18 +93,21 @@ export default function NewsSection() {
           start: "top 90%",
           toggleActions: "play none none none",
         },
-      },
-    )
+      }
+    );
 
     return () => {
-      gsap.killTweensOf(newsCards.children)
-      gsap.killTweensOf(button)
-    }
-  }, [])
+      gsap.killTweensOf(newsCards.children);
+      gsap.killTweensOf(button);
+    };
+  }, []);
 
   return (
     <>
-      <div ref={newsRef} className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 sm:grid-cols-2 lg:grid-cols-3">
+      <div
+        ref={newsRef}
+        className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 sm:grid-cols-2 lg:grid-cols-3"
+      >
         {newsItems.map((item) => (
           <Card
             key={item.id}
@@ -119,7 +129,9 @@ export default function NewsSection() {
               </CardDescription>
             </CardHeader>
             <CardContent className="flex-1">
-              <p className="line-clamp-3 text-sm sm:text-base">{item.excerpt}</p>
+              <p className="line-clamp-3 text-sm sm:text-base">
+                {item.excerpt}
+              </p>
             </CardContent>
             <CardFooter>
               <Link
@@ -144,6 +156,5 @@ export default function NewsSection() {
         </Button>
       </div>
     </>
-  )
+  );
 }
-
