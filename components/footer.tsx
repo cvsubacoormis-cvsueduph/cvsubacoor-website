@@ -13,8 +13,8 @@ export default function Footer() {
           <Image
             src="/government-assets/gov.png" // replace with your logo path
             alt="Government Logo"
-            width={150}
-            height={150}
+            width={140}
+            height={140}
             className="mb-3"
           />
         </div>

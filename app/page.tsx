@@ -57,8 +57,8 @@ export default function Home() {
 
         {/* Feedback Form */}
         <FeedbackForm />
+        <Footer />
       </main>
-      <Footer />
 
       {/* Back to Top Button */}
       <BackToTop />

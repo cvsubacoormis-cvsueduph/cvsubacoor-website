@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 
 // Add the import for our new hook at the top of the file
 import { useMobileMenu } from "@/hooks/use-mobile-menu";
+import Image from "next/image";
 
 // Find the Navbar component function declaration:
 // And update it to:
@@ -315,7 +316,7 @@ export default function Navbar() {
           </SheetContent>
         </Sheet>
         <Link href="/" className="mr-6 flex items-center space-x-2 text-white">
-          <GraduationCap className="h-6 w-6" />
+          <Image src="/logo.png" alt="Logo" width={34} height={34} />
           <span className="hidden font-bold sm:inline-block">
             Cavite State University Bacoor City Campus
           </span>

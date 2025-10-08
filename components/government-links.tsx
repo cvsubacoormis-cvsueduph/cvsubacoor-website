@@ -62,7 +62,7 @@ export default function GovernmentLinks() {
             Government Resources
           </h2>
           <p className="mx-auto max-w-[600px] text-white/90 md:text-lg">
-            Official government links and resources for education and research
+            Official government links and resources
           </p>
         </div>
 
@@ -78,23 +78,23 @@ export default function GovernmentLinks() {
                   {section.category}
                 </CardTitle>
               </CardHeader>
-              {/* Image at top */}
-              <div className="relative w-full">
-                <Link
-                  href={section.items[0].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={section.image}
-                    alt={section.category}
-                    width={300}
-                    height={200}
-                    className="object-none"
-                  />
-                </Link>
-              </div>
               <CardContent className="pt-0">
+                {/* Image at top */}
+                <div className="relative w-full">
+                  <Link
+                    href={section.items[0].url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={section.image}
+                      alt={section.category}
+                      width={300}
+                      height={200}
+                      className="object-none object-center w-full h-auto"
+                    />
+                  </Link>
+                </div>
                 <ul className="space-y-2 text-sm">
                   {section.items.map((link, linkIndex) => (
                     <li key={linkIndex}>
