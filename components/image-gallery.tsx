@@ -112,7 +112,7 @@ export default function ImageGallery() {
   }, []);
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-royal-blue-800 backdrop-blur-sm">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-royal-blue-900/70 to-royal-blue-800/40">
       <div className="container px-4 md:px-6">
         <div
           ref={titleRef}

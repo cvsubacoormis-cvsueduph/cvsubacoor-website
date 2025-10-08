@@ -143,10 +143,10 @@ export default function OfficesPage() {
                       <MapPin className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
                       <span>{office.location}</span>
                     </div>
-                    <div className="flex items-start gap-2">
+                    {/* <div className="flex items-start gap-2">
                       <Phone className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
                       <span>{office.contact.phone}</span>
-                    </div>
+                    </div> */}
                     <div className="flex items-start gap-2">
                       <Mail className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
                       <span>{office.contact.email}</span>
@@ -249,10 +249,10 @@ export default function OfficesPage() {
                       <MapPin className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
                       <span>{office.location}</span>
                     </div>
-                    <div className="flex items-start gap-2">
+                    {/* <div className="flex items-start gap-2">
                       <Phone className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
                       <span>{office.contact.phone}</span>
-                    </div>
+                    </div> */}
                     <div className="flex items-start gap-2">
                       <Mail className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
                       <span>{office.contact.email}</span>
@@ -355,10 +355,10 @@ export default function OfficesPage() {
                       <MapPin className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
                       <span>{office.location}</span>
                     </div>
-                    <div className="flex items-start gap-2">
+                    {/* <div className="flex items-start gap-2">
                       <Phone className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
                       <span>{office.contact.phone}</span>
-                    </div>
+                    </div> */}
                     <div className="flex items-start gap-2">
                       <Mail className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
                       <span>{office.contact.email}</span>

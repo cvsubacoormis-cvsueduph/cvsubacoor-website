@@ -53,8 +53,7 @@ export default function AnimatedHero() {
       className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden"
     >
       {/* Background overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-royal-blue-900/70 to-royal-blue-800/40 backdrop-blur-sm"></div>
-
+      <div className="absolute inset-0 bg-gradient-to-r from-royal-blue-900/70 to-royal-blue-800/40"></div>
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div

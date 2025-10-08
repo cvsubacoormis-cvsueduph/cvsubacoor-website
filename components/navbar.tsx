@@ -48,7 +48,7 @@ export default function Navbar() {
   }, [isMobile]);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-royal-blue-800 text-white">
+    <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-royal-blue-900/70 to-royal-blue-800/40 text-white">
       <div className="container flex h-16 items-center justify-between px-4 sm:px-6">
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
