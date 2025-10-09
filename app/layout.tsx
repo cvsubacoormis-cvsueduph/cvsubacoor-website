@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import PageTransition from "@/components/page-transition";
-import AnimatedBackground from "@/components/animated-background";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <PageTransition>{children}</PageTransition>
+        <Analytics />
       </body>
     </html>
   );
