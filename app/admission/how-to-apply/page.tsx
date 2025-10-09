@@ -4,20 +4,14 @@ import { ArrowLeft, Calendar, Clock, Download, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import AnimatedPage from "@/components/animated-page";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 import BackToTop from "@/components/back-to-top";
-import StickyHeader from "@/components/sticky-header";
 import AnimatedSectionTitle from "@/components/animated-section-title";
 
 export default function HowToApplyPage() {
   return (
     <>
-      <StickyHeader>
-        <Navbar />
-      </StickyHeader>
       <AnimatedPage>
-        <div className="container mx-auto px-4 py-12">
+        <div className="container mx-auto px-4 py-12">2
           <div className="mb-6 animate-element">
             <Button asChild className="mb-6">
               <Link

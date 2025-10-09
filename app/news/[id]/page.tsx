@@ -4,10 +4,7 @@ import { ArrowLeft, Calendar, User, Tag } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import AnimatedPage from "@/components/animated-page";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 import BackToTop from "@/components/back-to-top";
-import StickyHeader from "@/components/sticky-header";
 
 // Mock news data - in a real app, this would come from a database
 const newsData = [

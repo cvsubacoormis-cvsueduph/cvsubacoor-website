@@ -13,8 +13,6 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import AnimatedPage from "@/components/animated-page";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 import BackToTop from "@/components/back-to-top";
 import StickyHeader from "@/components/sticky-header";
 import AnimatedSectionTitle from "@/components/animated-section-title";
@@ -299,7 +297,6 @@ export default function AllNewsPage() {
           </div>
         </div>
       </AnimatedPage>
-      <Footer />
       <BackToTop />
     </>
   );

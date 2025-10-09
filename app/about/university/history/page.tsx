@@ -4,8 +4,6 @@ import { ArrowLeft } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import AnimatedPage from "@/components/animated-page";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 import BackToTop from "@/components/back-to-top";
 
 export default function HistoryPage() {
@@ -207,7 +205,6 @@ export default function HistoryPage() {
           </div>
         </div>
       </AnimatedPage>
-      <Footer />
       <BackToTop />
     </>
   );

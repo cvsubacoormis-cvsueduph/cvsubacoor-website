@@ -19,8 +19,6 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AnimatedPage from "@/components/animated-page";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 import BackToTop from "@/components/back-to-top";
 
 export default function AcademicProgramsPage() {

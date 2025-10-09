@@ -317,7 +317,7 @@ export default function Navbar() {
         </Sheet>
         <Link href="/" className="mr-6 flex items-center space-x-2 text-white">
           <Image src="/logo.png" alt="Logo" width={34} height={34} />
-          <span className="hidden font-bold sm:inline-block">
+          <span className="hidden font-bold sm:inline-block mt-1">
             Cavite State University - Bacoor City Campus
           </span>
         </Link>
