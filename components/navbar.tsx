@@ -605,10 +605,12 @@ export default function Navbar() {
                       Student Portal
                     </Link>
                     <Link
-                      href="/students/open-distance-learning"
+                      href="https://elearning.cvsu.edu.ph/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
-                      Open Distance Learning
+                      Open Distance eLearning
                     </Link>
                   </div>
                 </div>
@@ -651,7 +653,9 @@ export default function Navbar() {
                       Integrated Library System
                     </Link>
                     <Link
-                      href="#"
+                      href="https://elearning.cvsu.edu.ph/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Open Distance eLearning

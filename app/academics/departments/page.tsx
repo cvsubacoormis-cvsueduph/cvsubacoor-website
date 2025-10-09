@@ -199,7 +199,7 @@ export default function DepartmentsPage() {
               </Card>
             </div>
           ) : (
-            <Card className="h-full flex items-center justify-center p-12 text-center">
+            <Card className="h-full flex items-center justify-center p-6 text-center">
               <div>
                 <h2 className="text-2xl font-bold text-[#0A2463] mb-2">
                   Select a Department
@@ -209,10 +209,10 @@ export default function DepartmentsPage() {
                   about programs, faculty, and contact details.
                 </p>
                 <Image
-                  src="/placeholder.svg?height=200&width=400"
+                  src="/at-glance-bg.png"
                   alt="University campus"
-                  width={400}
-                  height={200}
+                  width={800}
+                  height={800}
                   className="mx-auto rounded-md"
                 />
               </div>

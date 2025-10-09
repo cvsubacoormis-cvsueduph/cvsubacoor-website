@@ -47,9 +47,16 @@ export default function ExtensionServicesPage() {
                 Connecting Knowledge with Communities
               </h2>
               <p className="mb-4">
-                Our Extension Services program bridges the gap between academic
-                knowledge and community needs, applying university expertise to
-                address real-world challenges and improve quality of life.
+                Beyond academic excellence, CvSU Bacoor is deeply committed to
+                community engagement and extension services. In{" "}
+                <span className="font-semibold">2017</span>, the campus launched{" "}
+                <span className="font-semibold">BACOOREx</span>, a
+                community-based extension program capable of utilizing research
+                output, assisting the community in managing their limited
+                resources and providing access to services. This program
+                underscores the university’s role not only as an educational
+                institution but also as a catalyst for positive community impact
+                and sustainable development.
               </p>
               <p className="mb-4">
                 Through collaborative partnerships, educational programs, and
@@ -57,17 +64,17 @@ export default function ExtensionServicesPage() {
                 beyond campus boundaries to create positive social impact and
                 sustainable development.
               </p>
-              <div className="flex flex-wrap gap-4 mt-6">
+              {/* <div className="flex flex-wrap gap-4 mt-6">
                 <Button>Request Services</Button>
                 <Button variant="outline">Become a Partner</Button>
-              </div>
+              </div> */}
             </div>
             <div className="relative h-[300px] rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=300&width=500"
+                src="/bacoorex.png"
                 alt="Community Outreach Program"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </div>
           </div>
@@ -232,7 +239,24 @@ export default function ExtensionServicesPage() {
               </div>
             </div>
           </div>
-
+          <div className="flex items-center">
+            <iframe
+              src="https://drive.google.com/file/d/1ntXBd4N5HWWw_Vo0Gk2PJMDjkepe6zSU/preview"
+              width="1900"
+              height="480"
+              allow="autoplay"
+              className="rounded-md"
+            ></iframe>
+          </div>
+          <div className="flex items-center mt-6">
+            <iframe
+              src="https://drive.google.com/file/d/10at0SJiTpGqEeISAAArhfhXgnTk3Raud/preview"
+              width="1900"
+              height="480"
+              allow="autoplay"
+              className="rounded-md"
+            ></iframe>
+          </div>
           {/* Extension Thrust Areas */}
           <div className="mb-12 animate-element">
             <AnimatedSectionTitle
@@ -241,8 +265,8 @@ export default function ExtensionServicesPage() {
               className="mb-8"
             />
 
-            <Tabs defaultValue="education" className="mb-12">
-              <TabsList className="grid w-full grid-cols-4">
+            {/* <Tabs defaultValue="education" className="mb-12"> */}
+            {/* <TabsList className="grid w-full grid-cols-4">
                 <TabsTrigger value="education">
                   Education & Training
                 </TabsTrigger>
@@ -251,10 +275,10 @@ export default function ExtensionServicesPage() {
                 <TabsTrigger value="environment">
                   Environmental Stewardship
                 </TabsTrigger>
-              </TabsList>
+              </TabsList> */}
 
-              {/* Education & Training Tab */}
-              <TabsContent value="education" className="pt-6">
+            {/* Education & Training Tab */}
+            {/* <TabsContent value="education" className="pt-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div className="md:col-span-2">
                     <h3 className="text-xl font-bold mb-4">
@@ -329,10 +353,10 @@ export default function ExtensionServicesPage() {
                     </Card>
                   </div>
                 </div>
-              </TabsContent>
+              </TabsContent> */}
 
-              {/* Health & Wellness Tab */}
-              <TabsContent value="health" className="pt-6">
+            {/* Health & Wellness Tab */}
+            {/* <TabsContent value="health" className="pt-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div className="md:col-span-2">
                     <h3 className="text-xl font-bold mb-4">
@@ -405,10 +429,10 @@ export default function ExtensionServicesPage() {
                     </Card>
                   </div>
                 </div>
-              </TabsContent>
+              </TabsContent> */}
 
-              {/* Economic Development Tab */}
-              <TabsContent value="economic" className="pt-6">
+            {/* Economic Development Tab */}
+            {/* <TabsContent value="economic" className="pt-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div className="md:col-span-2">
                     <h3 className="text-xl font-bold mb-4">
@@ -482,10 +506,10 @@ export default function ExtensionServicesPage() {
                     </Card>
                   </div>
                 </div>
-              </TabsContent>
+              </TabsContent> */}
 
-              {/* Environmental Stewardship Tab */}
-              <TabsContent value="environment" className="pt-6">
+            {/* Environmental Stewardship Tab */}
+            {/* <TabsContent value="environment" className="pt-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div className="md:col-span-2">
                     <h3 className="text-xl font-bold mb-4">
@@ -558,12 +582,12 @@ export default function ExtensionServicesPage() {
                     </Card>
                   </div>
                 </div>
-              </TabsContent>
-            </Tabs>
+              </TabsContent> */}
+            {/* </Tabs> */}
           </div>
 
           {/* Extension Resources */}
-          <div className="bg-slate-50 p-6 rounded-lg animate-element">
+          {/* <div className="bg-slate-50 p-6 rounded-lg animate-element">
             <h2 className="text-2xl font-bold mb-4 text-center">
               Extension Resources
             </h2>
@@ -620,7 +644,7 @@ export default function ExtensionServicesPage() {
                 </CardContent>
               </Card>
             </div>
-          </div>
+          </div> */}
         </div>
       </AnimatedPage>
       <BackToTop />
