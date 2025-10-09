@@ -30,7 +30,7 @@ export default function StudentOrganizationsPage() {
         <div className="container mx-auto px-4 py-12">
           <div className="mb-6 animate-element">
             <Button variant="outline" asChild className="mb-6">
-              <Link href="/" className="flex items-center gap-2">
+              <Link href="/" className="flex items-center gap-2"> 
                 <ArrowLeft className="h-4 w-4" />
                 Back to Home
               </Link>
@@ -62,10 +62,6 @@ export default function StudentOrganizationsPage() {
                 recreational, service, and special interest areas, there's
                 something for everyone at our university.
               </p>
-              <div className="flex flex-wrap gap-4 mt-6">
-                <Button>Join an Organization</Button>
-                <Button variant="outline">Start a New Organization</Button>
-              </div>
             </div>
             <div className="relative h-[300px] rounded-lg overflow-hidden">
               <Image

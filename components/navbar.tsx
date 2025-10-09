@@ -49,6 +49,7 @@ export default function Navbar() {
   }, [isMobile]);
 
   return (
+    //Mobile View
     <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-royal-blue-900/70 to-royal-blue-800/40 backdrop-blur-sm text-white">
       <div className="container flex h-16 items-center justify-between px-4 sm:px-6">
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -647,7 +648,9 @@ export default function Navbar() {
                       Student Portal
                     </Link>
                     <Link
-                      href="#"
+                      href="https://library.cvsu.edu.ph/landing/?view=campus&code=BACOORCITY"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Integrated Library System
