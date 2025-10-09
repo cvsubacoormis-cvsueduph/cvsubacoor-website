@@ -469,7 +469,9 @@ export default function Navbar() {
                       Academic Programs
                     </Link>
                     <Link
-                      href="#"
+                      href="https://admission.cvsu.edu.ph/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Admission Portal

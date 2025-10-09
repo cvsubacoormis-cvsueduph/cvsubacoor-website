@@ -3,15 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  ArrowLeft,
-  Users,
-  GraduationCap,
-  Phone,
-  Mail,
-  MapPin,
-  ChevronRight,
-} from "lucide-react";
+import { ArrowLeft, GraduationCap, ChevronRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -96,23 +88,23 @@ export default function DepartmentsPage() {
                 </CardHeader>
                 <CardContent className="p-6">
                   <div className="mb-6">
-                    <Image
+                    {/* <Image
                       src={selectedDepartment.image || "/placeholder.svg"}
                       alt={selectedDepartment.name}
                       width={500}
                       height={300}
                       className="w-full h-64 object-cover rounded-md mb-4"
-                    />
+                    /> */}
                     <p className="text-gray-700">
                       {selectedDepartment.description}
                     </p>
                   </div>
 
                   <Tabs defaultValue="programs">
-                    <TabsList className="grid grid-cols-3 mb-4">
+                    <TabsList className="grid grid-cols-2 mb-4">
                       <TabsTrigger value="programs">Programs</TabsTrigger>
                       <TabsTrigger value="faculty">Faculty</TabsTrigger>
-                      <TabsTrigger value="contact">Contact</TabsTrigger>
+                      {/* <TabsTrigger value="contact">Contact</TabsTrigger> */}
                     </TabsList>
                     <TabsContent value="programs" className="space-y-4">
                       <h3 className="text-lg font-medium text-[#0A2463]">
@@ -131,7 +123,7 @@ export default function DepartmentsPage() {
                       <h3 className="text-lg font-medium text-[#0A2463]">
                         Faculty Information
                       </h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="flex items-center p-4 bg-gray-50 rounded-md">
                           <Users className="h-8 w-8 text-[#0A2463] mr-3" />
                           <div>
@@ -154,13 +146,25 @@ export default function DepartmentsPage() {
                             </p>
                           </div>
                         </div>
-                      </div>
+                      </div> */}
                       <div className="mt-4">
-                        <h4 className="font-medium">Department Chair</h4>
+                        <h4 className="font-medium">Department Chairperson</h4>
                         <p>{selectedDepartment.chairperson}</p>
+                        <br />
+                        <h4 className="font-medium">Coordinator</h4>
+                        {selectedDepartment?.coordinator?.map(
+                          (coordinator, index) => (
+                            <p key={index}>
+                              {coordinator}
+                              {index <
+                                (selectedDepartment.coordinator?.length || 0) -
+                                  1 && <br />}
+                            </p>
+                          )
+                        )}
                       </div>
                     </TabsContent>
-                    <TabsContent value="contact" className="space-y-4">
+                    {/* <TabsContent value="contact" className="space-y-4">
                       <h3 className="text-lg font-medium text-[#0A2463]">
                         Contact Information
                       </h3>
@@ -189,7 +193,7 @@ export default function DepartmentsPage() {
                           </div>
                         </div>
                       </div>
-                    </TabsContent>
+                    </TabsContent> */}
                   </Tabs>
                 </CardContent>
               </Card>
