@@ -16,6 +16,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AnimatedPage from "@/components/animated-page";
 import BackToTop from "@/components/back-to-top";
 import AnimatedSectionTitle from "@/components/animated-section-title";
+import DrivePreview from "@/components/drive-preview";
 
 export default function ExtensionServicesPage() {
   return (
@@ -239,24 +240,7 @@ export default function ExtensionServicesPage() {
               </div>
             </div>
           </div>
-          <div className="flex items-center">
-            <iframe
-              src="https://drive.google.com/file/d/1ntXBd4N5HWWw_Vo0Gk2PJMDjkepe6zSU/preview"
-              width="1900"
-              height="480"
-              allow="autoplay"
-              className="rounded-md"
-            ></iframe>
-          </div>
-          <div className="flex items-center mt-6">
-            <iframe
-              src="https://drive.google.com/file/d/10at0SJiTpGqEeISAAArhfhXgnTk3Raud/preview"
-              width="1900"
-              height="480"
-              allow="autoplay"
-              className="rounded-md"
-            ></iframe>
-          </div>
+          <DrivePreview />
           {/* Extension Thrust Areas */}
           <div className="mb-12 animate-element">
             <AnimatedSectionTitle
