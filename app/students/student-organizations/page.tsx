@@ -124,10 +124,10 @@ export default function StudentOrganizationsPage() {
                     <Card key={index} className="overflow-hidden">
                       <div className="relative h-48 w-full">
                         <Image
-                          src="/placeholder.svg?height=200&width=300"
+                          src={org.image}
                           alt="Society Image"
                           fill
-                          className="object-cover"
+                          className="object-contain"
                         />
                       </div>
                       <CardHeader>
