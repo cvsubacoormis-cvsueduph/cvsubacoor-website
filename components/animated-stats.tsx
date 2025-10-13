@@ -3,13 +3,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  ArrowRight,
-  BookOpen,
-  ClipboardList,
-  GraduationCap,
-  Users,
-} from "lucide-react";
+import { BookOpen, GraduationCap, Users } from "lucide-react";
 
 import {
   Card,
@@ -18,7 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { gsap } from "@/lib/gsap";
+import { gsap } from "gsap";
 
 export default function AnimatedStats() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -104,7 +98,7 @@ export default function AnimatedStats() {
             </CardHeader>
             <CardContent>
               <div className="text-3xl sm:text-4xl font-bold stat-number">
-                120
+                9
               </div>
               {/* <p className="text-muted-foreground text-sm sm:text-base">
                 Undergraduate and graduate programs across 8 colleges
@@ -136,7 +130,7 @@ export default function AnimatedStats() {
             </CardHeader>
             <CardContent>
               <div className="text-3xl sm:text-4xl font-bold stat-number">
-                25000
+                7000+
               </div>
               {/* <p className="text-muted-foreground text-sm sm:text-base">
                 Students from 50+ countries around the world
@@ -168,7 +162,7 @@ export default function AnimatedStats() {
             </CardHeader>
             <CardContent>
               <div className="text-3xl sm:text-4xl font-bold stat-number">
-                1500
+                200+
               </div>
               {/* <p className="text-muted-foreground text-sm sm:text-base">
                 Distinguished faculty members and dedicated staff

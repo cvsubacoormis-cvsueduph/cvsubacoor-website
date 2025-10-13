@@ -66,7 +66,7 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-2 text-black">Contact Us</h3>
           <div className="w-28 h-[2px] bg-accent mb-4"></div>
           <p className="text-sm">
-            Lily Street. Phase II Soldiers Hills IV Bacoor City, Cavite 4102
+            Lily Street, Phase II Soldiers Hills IV, City of Bacoor, Cavite 4102
             Philippines
           </p>
           <p className="mt-2 text-sm">Telephone: (046) 476-5029</p>
@@ -123,11 +123,18 @@ export default function Footer() {
               <Facebook />
             </Link>
             <Link
-              href="#"
+              href="https://www.youtube.com/@cavitestateuniversity-bacoor"
               className="hover:text-accent transition-colors duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Youtube />
             </Link>
+            <p className="italic font-semibold">
+              CvSU Ascend {">"}
+              {">"}
+              {">"}
+            </p>
           </div>
         </div>
       </div>
