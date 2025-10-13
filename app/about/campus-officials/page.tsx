@@ -91,7 +91,7 @@ export default function CampusOfficialsPage() {
             <Card className="flex flex-col items-center text-center">
               <div className="relative w-60 h-60 rounded-full overflow-hidden mt-6 bg-black">
                 <Image
-                  src="/CAJIGAL RONAN M..jpg"
+                  src="/campus-officials/cajigal.jpg"
                   alt="Campus Chancellor"
                   className="object-cover object-zoom"
                   fill
@@ -129,39 +129,39 @@ export default function CampusOfficialsPage() {
                 name: "Jimmy M. Caltino",
                 title:
                   "Head, Curriculum and Instruction Office Coordinator, Department of Criminology",
-                image: "/campus-officials/JIMMY M.C.jpg",
+                image: "/campus-officials/jcaltino.jpg",
                 // education: "Ph.D. in Physics, MIT",
               },
               {
                 name: "Kathy C. Jamero",
                 title: "Chairperson, Department of Arts and Sciences",
-                image: "/campus-officials/GUMBOC, KATHY J..jpg",
+                image: "/campus-officials/gumboc.jpg",
                 // education: "Ph.D. in Business Administration, Wharton",
               },
               {
                 name: "Jovelyn D. Ocampo",
                 title: "Chairperson, Department of Computer Studies",
-                image: "/campus-officials/OCAMPO, JOVELYN D..jpg",
+                image: "/campus-officials/ocampo.jpg",
                 // education: "Ph.D. in Civil Engineering, Georgia Tech",
               },
               {
                 name: "Janice A. Nealega",
                 title:
                   "Chairperson, Department of Management Studies, Head, Campus Extension Services Office",
-                image: "/campus-officials/Nealage, Janice.jpg",
+                image: "/campus-officials/nealega.jpg",
                 // education: "Ed.D., Columbia University",
               },
               {
                 name: "Jolina Razell M. Mindoro",
                 title:
                   "Chairperson, Department of Teacher Education, Coordinator, Field Study Program",
-                image: "/campus-officials/MINDORO, JOLINA RAZELL M.jpg ",
+                image: "/campus-officials/mindoro.jpg ",
                 // education: "M.D., Johns Hopkins University",
               },
               {
                 name: "Anarose M. Rupido",
                 title: "Coordinator, General Education",
-                image: "/campus-officials/RUPIDO, Ana Rose M..jpg",
+                image: "/campus-officials/rupido.jpg",
                 // education: "Ph.D. in Agricultural Sciences, Cornell",
               },
               {
@@ -173,99 +173,99 @@ export default function CampusOfficialsPage() {
               {
                 name: "Regine U. Caltino",
                 title: "Coordinator, Physical Education",
-                image: "/campus-officials/CALTINO, REGINE U.jpg",
+                image: "/campus-officials/caltino.jpg",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
                 name: "Ely Rose L. Panganiban-Briones",
                 title:
                   "Head, Gender and Development Office, Coordinator, Computer Science Program",
-                image: "/campus-officials/PANGANIBAN-BRIONES, ELY ROSE L..png",
+                image: "/campus-officials/panganiban.png",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
                 name: "Donnalyn B. Montallana",
                 title:
                   "Coordinator, Information Technology Program, Coordinator, Campus ICT",
-                image: "/campus-officials/MONTALLANA, DONNALYN B..png",
+                image: "/campus-officials/montallanad.png",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
                 name: "Maria Lourdez D. Lamanilao",
                 title:
                   "Coordinator, Business Administration Program, Coordinator, Campus Linkages Office",
-                image: "/campus-officials/Lamanilao, Maria Lourdez D..jpg",
+                image: "/campus-officials/lamanilao.jpg",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
                 name: "Ryan S. Acojedo",
                 title: "Coordinator, Hospitality Management Program",
-                image: "/campus-officials/ACOJEDO, RYAN S.JPG",
+                image: "/campus-officials/acojedo.jpg",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
                 name: "Nezil Obiado",
                 title:
                   "Coordinator, Secondary Education Program Major in Mathematics",
-                image: "/campus-officials/OBIADO, NEZIL M..png",
+                image: "/campus-officials/obiado.png",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
                 name: "Jay Anne F. Salles-Villareal",
                 title:
                   "Coordinator, Secondary Education Program Major in English",
-                image: "/campus-officials/SALLES, JAY ANNE F..png",
+                image: "/campus-officials/salles.png",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
                 name: "Jimwell G. Dacanay",
                 title: "Campus Registrar, Office of the Campus Registrar",
-                image: "/campus-officials/DACANAY, JIMWELL G.jpg",
+                image: "/campus-officials/dacanay.jpg",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
                 name: "Lorema N. Acapulco",
                 title: "Campus Librarian, Campus Library Services Office",
-                image: "/campus-officials/ACAPULCO, LOREMA.jpg",
+                image: "/campus-officials/acapulco.jpg",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
                 name: "Steffanie M. Bato",
                 title:
                   "Head, Office of Student Affairs and Services, Coordinator, Quality Assurance Office",
-                image: "/campus-officials/BATO STEFFANIE M..jpg",
+                image: "/campus-officials/bato.jpg",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
                 name: "Haydih Anne T. Velasco",
                 title: "Focal Person, Campus Anti-Red Tape Authority (ARTA)",
-                image: "/campus-officials/VELASCO, HAYDIH ANNE.jpg",
+                image: "/campus-officials/velasco.jpg",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
                 name: "Rimat Maris I. Taclibon",
                 title:
                   "Coordinator, Human Resource and Development Office, Public Information Officer",
-                image: "/campus-officials/TACLIBON, RIMAT MARIS.jpg",
+                image: "/campus-officials/taclibon.jpg",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
                 name: "James E. Dalis",
                 title:
                   "Security Officer, Civil Security Services Office, Coordinator, Knowledge Management Office",
-                image: "/campus-officials/DALIS, JAMES.jpg",
+                image: "/campus-officials/dalis.jpg",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
                 name: "Arman C. Maribojo",
                 title: "Coordinator, Pollution Control Office",
-                image: "/campus-officials/MARIBOJO, ARMAN C..jpg",
+                image: "/campus-officials/maribojo.jpg",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
                 name: "Alvina E. Ramallosa",
                 title: "Coordinator, Alumni Affairs",
-                image: "/campus-officials/RAMALLOSA, ALVINA E..jpg",
+                image: "/campus-officials/ramallosa.jpg",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
@@ -278,13 +278,13 @@ export default function CampusOfficialsPage() {
                 name: "Gilbert E. Magano",
                 title:
                   "Safety Officer, Campus DRRM Office, Coordinator, Physical Plant Services Office",
-                image: "/campus-officials/MAGANO, GILBERT.jpg",
+                image: "/campus-officials/magano.jpg",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
                 name: "Diana Mae M. Belarmino",
                 title: "Head, Business and Resource Generation Office",
-                image: "/campus-officials/BELARMINO PAJAH.jpg",
+                image: "/campus-officials/belarmino.jpg",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
