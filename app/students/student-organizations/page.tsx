@@ -25,11 +25,20 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AnimatedPage from "@/components/animated-page";
 import BackToTop from "@/components/back-to-top";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { organizations } from "@/data/organizations";
+import OrganizationCardsSkeleton from "@/components/skeleton/OrganizationCardsSkeleton";
+import DialogImageSkeleton from "@/components/skeleton/OrganizationImageCSGSkeleton";
 
 export default function StudentOrganizationsPage() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
       <AnimatedPage>
@@ -69,28 +78,32 @@ export default function StudentOrganizationsPage() {
                 something for everyone at our university.
               </p> */}
             </div>
-            <Dialog>
-              <DialogTrigger asChild>
-                <div className="relative h-[400px] rounded-lg overflow-hidden cursor-pointer">
-                  <Image
-                    src="/csg-bg.jpg"
-                    alt="Student Organization Fair"
-                    fill
-                    className="object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
-              </DialogTrigger>
-              <DialogContent className="max-w-[1200px] p-0 border-none shadow-none">
-                <div className="relative w-full h-[80vh]">
-                  <Image
-                    src="/csg-bg.jpg"
-                    alt="Student Organization Fair"
-                    fill
-                    className="object-contain rounded-lg"
-                  />
-                </div>
-              </DialogContent>
-            </Dialog>
+            {isLoading ? (
+              <DialogImageSkeleton />
+            ) : (
+              <Dialog>
+                <DialogTrigger asChild>
+                  <div className="relative h-[400px] rounded-lg overflow-hidden cursor-pointer">
+                    <Image
+                      src="/csg-bg.jpg"
+                      alt="Student Organization Fair"
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="max-w-[1200px] p-0 border-none shadow-none">
+                  <div className="relative w-full h-[80vh]">
+                    <Image
+                      src="/csg-bg.jpg"
+                      alt="Student Organization Fair"
+                      fill
+                      className="object-contain rounded-lg"
+                    />
+                  </div>
+                </DialogContent>
+              </Dialog>
+            )}
           </div>
           <Tabs defaultValue="academic" className="mb-12 animate-element">
             {/* <TabsList className="grid w-full grid-cols-5">
@@ -103,41 +116,45 @@ export default function StudentOrganizationsPage() {
 
             {/* Academic Organizations Tab */}
             <TabsContent value="academic" className="pt-6">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {organizations.map((org, index) => (
-                  <Card key={index} className="overflow-hidden">
-                    <div className="relative h-48 w-full">
-                      <Image
-                        src="/placeholder.svg?height=200&width=300"
-                        alt="Engineering Student Society"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <CardHeader>
-                      <CardTitle>{org.name}</CardTitle>
-                      <CardDescription>{org.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm">{org.details}</p>
-                      <div className="flex items-center gap-2 mt-4">
-                        <Users className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-sm text-muted-foreground">
-                          {org.members}
-                        </span>
+              {isLoading ? (
+                <OrganizationCardsSkeleton />
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {organizations.map((org, index) => (
+                    <Card key={index} className="overflow-hidden">
+                      <div className="relative h-48 w-full">
+                        <Image
+                          src="/placeholder.svg?height=200&width=300"
+                          alt="Society Image"
+                          fill
+                          className="object-cover"
+                        />
                       </div>
-                    </CardContent>
-                    <CardFooter className="flex justify-between">
-                      <Link href={org.link} target="_blank">
-                        <Button size="sm" className="flex items-center gap-1">
-                          <Mail className="h-3 w-3" />
-                          Contact
-                        </Button>
-                      </Link>
-                    </CardFooter>
-                  </Card>
-                ))}
-              </div>
+                      <CardHeader>
+                        <CardTitle>{org.name}</CardTitle>
+                        {/* <CardDescription>{org.description}</CardDescription> */}
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm">{org.details}</p>
+                        <div className="flex items-center gap-2 mt-4">
+                          <Users className="h-4 w-4 text-muted-foreground" />
+                          <span className="text-sm text-muted-foreground">
+                            {org.members}
+                          </span>
+                        </div>
+                      </CardContent>
+                      <CardFooter className="flex justify-between">
+                        <Link href={org.link} target="_blank">
+                          <Button size="sm" className="flex items-center gap-1">
+                            <Mail className="h-3 w-3" />
+                            Contact
+                          </Button>
+                        </Link>
+                      </CardFooter>
+                    </Card>
+                  ))}
+                </div>
+              )}
             </TabsContent>
 
             {/* Cultural Organizations Tab */}
