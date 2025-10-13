@@ -60,14 +60,10 @@ export default function ResearchDevelopmentPage() {
                 meaningful contributions to science, technology, arts, and
                 humanities.
               </p>
-              <div className="flex flex-wrap gap-4 mt-6">
-                <Button>Research Opportunities</Button>
-                <Button variant="outline">Partner With Us</Button>
-              </div>
             </div>
             <div className="relative h-[300px] rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=300&width=500"
+                src="/research-bg.png"
                 alt="University Research Laboratory"
                 fill
                 className="object-cover"
@@ -249,16 +245,16 @@ export default function ResearchDevelopmentPage() {
               className="mb-8"
             />
 
-            <Tabs defaultValue="health" className="mb-12">
-              <TabsList className="grid w-full grid-cols-4">
+            {/* <Tabs defaultValue="health" className="mb-12"> */}
+            {/* <TabsList className="grid w-full grid-cols-4">
                 <TabsTrigger value="health">Health & Medicine</TabsTrigger>
                 <TabsTrigger value="sustainability">Sustainability</TabsTrigger>
                 <TabsTrigger value="technology">Technology & AI</TabsTrigger>
                 <TabsTrigger value="society">Society & Culture</TabsTrigger>
-              </TabsList>
+              </TabsList> */}
 
-              {/* Health & Medicine Tab */}
-              <TabsContent value="health" className="pt-6">
+            {/* Health & Medicine Tab */}
+            {/* <TabsContent value="health" className="pt-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div className="md:col-span-2">
                     <h3 className="text-xl font-bold mb-4">
@@ -333,10 +329,10 @@ export default function ResearchDevelopmentPage() {
                     </Card>
                   </div>
                 </div>
-              </TabsContent>
+              </TabsContent> */}
 
-              {/* Sustainability Tab */}
-              <TabsContent value="sustainability" className="pt-6">
+            {/* Sustainability Tab */}
+            {/* <TabsContent value="sustainability" className="pt-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div className="md:col-span-2">
                     <h3 className="text-xl font-bold mb-4">
@@ -413,10 +409,10 @@ export default function ResearchDevelopmentPage() {
                     </Card>
                   </div>
                 </div>
-              </TabsContent>
+              </TabsContent> */}
 
-              {/* Technology & AI Tab */}
-              <TabsContent value="technology" className="pt-6">
+            {/* Technology & AI Tab */}
+            {/* <TabsContent value="technology" className="pt-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div className="md:col-span-2">
                     <h3 className="text-xl font-bold mb-4">
@@ -490,10 +486,10 @@ export default function ResearchDevelopmentPage() {
                     </Card>
                   </div>
                 </div>
-              </TabsContent>
+              </TabsContent> */}
 
-              {/* Society & Culture Tab */}
-              <TabsContent value="society" className="pt-6">
+            {/* Society & Culture Tab */}
+            {/* <TabsContent value="society" className="pt-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div className="md:col-span-2">
                     <h3 className="text-xl font-bold mb-4">
@@ -568,12 +564,12 @@ export default function ResearchDevelopmentPage() {
                     </Card>
                   </div>
                 </div>
-              </TabsContent>
-            </Tabs>
+              </TabsContent> */}
+            {/* </Tabs> */}
           </div>
 
           {/* Research Resources */}
-          <div className="bg-slate-50 p-6 rounded-lg animate-element">
+          {/* <div className="bg-slate-50 p-6 rounded-lg animate-element">
             <h2 className="text-2xl font-bold mb-4 text-center">
               Research Resources
             </h2>
@@ -630,7 +626,7 @@ export default function ResearchDevelopmentPage() {
                 </CardContent>
               </Card>
             </div>
-          </div>
+          </div> */}
         </div>
       </AnimatedPage>
       <BackToTop />
