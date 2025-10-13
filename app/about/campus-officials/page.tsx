@@ -155,7 +155,7 @@ export default function CampusOfficialsPage() {
                 name: "Jolina Razell M. Mindoro",
                 title:
                   "Chairperson, Department of Teacher Education, Coordinator, Field Study Program",
-                image: "/campus-officials/MINDORO, JOLINA RAZELL M. .jpg ",
+                image: "/campus-officials/MINDORO, JOLINA RAZELL M.jpg ",
                 // education: "M.D., Johns Hopkins University",
               },
               {
