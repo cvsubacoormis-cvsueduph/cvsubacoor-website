@@ -4,6 +4,7 @@ import { ArrowLeft, Music } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Footer from "@/components/footer";
 
 export default function UniversityHymnPage() {
   return (

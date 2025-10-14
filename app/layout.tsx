@@ -5,6 +5,7 @@ import "./globals.css";
 
 import PageTransition from "@/components/page-transition";
 import { Analytics } from "@vercel/analytics/next";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <PageTransition>{children}</PageTransition>
         <Analytics />
+        <Footer />
       </body>
     </html>
   );

@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedPage from "@/components/animated-page";
 import BackToTop from "@/components/back-to-top";
+import Footer from "@/components/footer";
 
 export default function HistoryPage() {
   return (
