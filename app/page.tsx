@@ -12,6 +12,7 @@ import AnimatedSectionTitle from "@/components/animated-section-title";
 import ScrollAnimations from "@/components/scroll-animations";
 import AnimatedBackground from "@/components/animated-background";
 import StickyHeader from "@/components/sticky-header";
+import CoreValues from "@/components/core-values";
 
 export default function Home() {
   return (
@@ -46,9 +47,37 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <AnimatedSectionTitle
               title="Quality Policy"
-              subtitle="We Commit to the highest standards of education, value our stakeholders, Strive for continual improvement of our products and services, and Uphold the University’s tenets of Truth, Excellence, and Service to produce globally competitive and morally upright individuals."
+              subtitle={
+                <>
+                  We{" "}
+                  <span className="text-canary-yellow-500 font-semibold">
+                    C
+                  </span>
+                  ommit to the highest standards of education,
+                  <span className="text-canary-yellow-500 font-semibold">
+                    {" "}
+                    v
+                  </span>
+                  alue our stakeholders,
+                  <span className="text-canary-yellow-500 font-semibold">
+                    {" "}
+                    S
+                  </span>
+                  trive for continual improvement of our products and services,
+                  and{" "}
+                  <span className="text-canary-yellow-500 font-semibold">
+                    {" "}
+                    U
+                  </span>
+                  phold the University’s tenets of Truth, Excellence, and
+                  Service to produce globally competitive and morally upright
+                  individuals.
+                </>
+              }
             />
+
             <QualityPolicy />
+            <CoreValues />
           </div>
         </section>
 

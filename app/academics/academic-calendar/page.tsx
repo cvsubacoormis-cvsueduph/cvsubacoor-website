@@ -64,7 +64,7 @@ export default function AcademicCalendarPage() {
                       <Image
                         src={src}
                         width={1200}
-                        height={900}
+                        height={1200}
                         alt={`Academic Calendar ${index + 1}`}
                         className="object-contain w-full h-[300px] sm:h-[500px] md:h-[700px] lg:h-[900px] bg-white"
                       />

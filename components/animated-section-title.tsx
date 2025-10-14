@@ -5,7 +5,7 @@ import { gsap } from "@/lib/gsap";
 
 interface AnimatedSectionTitleProps {
   title: string;
-  subtitle?: string;
+  subtitle?: React.ReactNode; // changed from string → React.ReactNode
   className?: string;
 }
 
