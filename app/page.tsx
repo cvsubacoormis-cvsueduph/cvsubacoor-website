@@ -86,7 +86,6 @@ export default function Home() {
 
         {/* Feedback Form */}
         <FeedbackForm />
-        <Footer />
       </main>
 
       {/* Back to Top Button */}
