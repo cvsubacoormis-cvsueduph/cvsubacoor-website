@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import Footer from "@/components/footer";
 
 export default function AcademicCalendarPage() {
   const images = [
@@ -79,6 +80,7 @@ export default function AcademicCalendarPage() {
           </Carousel>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
