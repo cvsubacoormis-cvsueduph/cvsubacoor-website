@@ -112,7 +112,7 @@ export default function AcademicProgramsPage() {
                                 </DialogTrigger>
                                 <DialogContent className="sm:max-w-[650px] rounded-2xl p-0 overflow-hidden">
                                   <div className="bg-gradient-to-r bg-royal-blue-50  px-6 py-4">
-                                    <h2 className="text-lg font-semibold flex items-center gap-2">
+                                    <h2 className="text-sm font-semibold flex items-center gap-2">
                                       <BookOpen className="w-5 h-5 text-primary" />
                                       {program.name}
                                     </h2>
