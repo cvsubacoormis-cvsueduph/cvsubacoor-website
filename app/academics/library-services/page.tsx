@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, MailIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { CardDescription } from "@/components/card";
@@ -16,8 +16,27 @@ import {
   oerData,
   otherlinksData,
 } from "@/data/library-links";
+import { useEffect, useState } from "react";
+import LibraryServicesSkeleton from "@/components/skeleton/LibraryServicesSkeleton";
 
 export default function LibraryServicesPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  });
+
+  if (isLoading) {
+    return (
+      <>
+        <LibraryServicesSkeleton />
+      </>
+    );
+  }
+
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Header */}
@@ -412,6 +431,16 @@ export default function LibraryServicesPage() {
             target="_blank"
           >
             cvsubacoorlibrary@cvsu.edu.ph <br />
+          </Link>
+        </p>
+        <p className="  mb-2">
+          Facebook:{" "}
+          <Link
+            href="https://www.facebook.com/CvSUBacoorCityCampusLibrary"
+            className="text-blue-600 hover:underline"
+            target="_blank"
+          >
+            Cavite State University Bacoor City Campus Library <br />
           </Link>
         </p>
         <p className=" ">
