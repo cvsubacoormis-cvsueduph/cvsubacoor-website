@@ -554,3 +554,68 @@ export const newspaperlinksData = [
     url: "https://www.bworldonline.com/",
   },
 ];
+
+export const acquiredBooksData = [
+  {
+    name: "New Acquired EBooks July 2022",
+    url: "https://cvsubacoorcitycampuslibrary.wordpress.com/wp-content/uploads/2022/09/purchased-library-ebooks-tritech.pdf",
+  },
+  {
+    name: "New Acquired EBooks March 2022",
+    url: "https://cvsubacoorcitycampuslibrary.wordpress.com/wp-content/uploads/2022/09/purchased-library-ebooks-tritech-march-2022.pdf",
+  },
+  {
+    name: "The Philippine Journal of Third World Studies",
+    url: "https://journals.upd.edu.ph/index.php/kasarinlan/index",
+  },
+  {
+    name: "Newly Acquired Ebooks as of March 2022-6",
+    url: "https://cvsubacoorcitycampuslibrary.wordpress.com/wp-content/uploads/2022/04/newly-acquired-ebooks-as-of-march-2022-6.pdf",
+  },
+];
+
+export const otherlinksData = [
+  {
+    name: "List of Theses: Click this link to view:",
+    url: " https://bit.ly/Lib_Theses_List",
+  },
+  {
+    name: "Curated List of Open Access Databases",
+    url: "https://www.longdom.org/sociology-and-criminology/current-issue.html",
+  },
+  {
+    name: "Open Source eBook’s Links",
+    url: "https://journals.upd.edu.ph/index.php/kasarinlan/index",
+  },
+  {
+    name: "Open Access Ebooks",
+    url: "https://journals.upd.edu.ph/index.php/kasarinlan/index",
+  },
+];
+
+export const formsData = [
+  {
+    name: "Request for E-Resources Password",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSfVLKwvfpY4ScN4VBT5QVaJJjcD_PdktY7999P1HN7sZJG8Xw/viewform",
+  },
+  {
+    name: "Request for Thesis Abstract",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLScEq8WjUI1QhhcMTeIbKaoayKwcNd99thFxOYEeRUKXmmaGCg/viewform",
+  },
+  {
+    name: "Request for Borrowing of Books",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSfm9uHp1b58918lYL0G9vte0YWhMoBJlPjWgUKWnw7bVOQLjA/viewform",
+  },
+  {
+    name: "Request for On-Site Library Use",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSeThd6TRBrtlWPxpXKvvX2vYsBFppTgXv8xWTY_luGBHAw1gw/viewform",
+  },
+  {
+    name: "Library Clientele Satisfaction Survey",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSfaF06opgDXtBTGM8mkcl1eaxNStf5wt2zc9vo6xPsfrbgZeg/viewform?fbclid=IwAR1O7PteJNqkk4ljO0NzzcQgSOZzRrca4zSvvhLOZN8M0cNcfSdPHEL8Pd8",
+  },
+  {
+    name: "Online Manuscript/Thesis Submission",
+    url: "https://bit.ly/40ouFtz",
+  },
+];

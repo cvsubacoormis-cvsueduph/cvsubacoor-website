@@ -6,12 +6,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { CardDescription } from "@/components/card";
 import {
+  acquiredBooksData,
   filipinianalinks,
+  formsData,
   journalCategories,
   libraryLinks,
   libraryplatforms,
   newspaperlinksData,
   oerData,
+  otherlinksData,
 } from "@/data/library-links";
 
 export default function LibraryServicesPage() {
@@ -354,6 +357,48 @@ export default function LibraryServicesPage() {
             ))}
           </CardContent>
         </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>New Acquired EBooks July 2022</CardTitle>
+          </CardHeader>
+          <CardContent>
+            {acquiredBooksData.map((item, index) => (
+              <ul className="space-y-2">
+                <li key={index} className="mb-2">
+                  <Link
+                    href={item.url}
+                    target="_blank"
+                    className="text-blue-600 hover:underline flex items-center gap-1"
+                  >
+                    {item.name} <ExternalLink size={14} />
+                  </Link>
+                </li>
+              </ul>
+            ))}
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Other Links</CardTitle>
+          </CardHeader>
+          <CardContent>
+            {otherlinksData.map((item, index) => (
+              <ul className="space-y-2">
+                <li key={index} className="mb-2">
+                  <Link
+                    href={item.url}
+                    target="_blank"
+                    className="text-blue-600 hover:underline flex items-center gap-1"
+                  >
+                    {item.name} <ExternalLink size={14} />
+                  </Link>
+                </li>
+              </ul>
+            ))}
+          </CardContent>
+        </Card>
       </section>
 
       {/* Contact */}
@@ -362,21 +407,25 @@ export default function LibraryServicesPage() {
         <p className="  mb-2">
           Email:{" "}
           <Link
-            href="mailto:library@university.edu"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=cvsubacoorlibrary@cvsu.edu.ph"
             className="text-blue-600 hover:underline"
+            target="_blank"
           >
-            library@university.edu
+            cvsubacoorlibrary@cvsu.edu.ph <br />
           </Link>
         </p>
         <p className=" ">
-          Feedback or book requests:{" "}
-          <Link
-            href="https://forms.gle/samplelibraryform"
-            target="_blank"
-            className="text-blue-600 hover:underline flex items-center gap-1"
-          >
-            Submit via Google Form <ExternalLink size={14} />
-          </Link>
+          Library Forms:{" "}
+          {formsData.map((form, index) => (
+            <Link
+              href={form.url || "#"}
+              target="_blank"
+              className="text-blue-600 hover:underline flex items-center gap-1 mb-2"
+              key={index}
+            >
+              {form.name} <ExternalLink size={14} />
+            </Link>
+          ))}
         </p>
       </section>
     </div>
