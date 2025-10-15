@@ -5,6 +5,14 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { CardDescription } from "@/components/card";
+import {
+  filipinianalinks,
+  journalCategories,
+  libraryLinks,
+  libraryplatforms,
+  newspaperlinksData,
+  oerData,
+} from "@/data/library-links";
 
 export default function LibraryServicesPage() {
   return (
@@ -201,116 +209,17 @@ export default function LibraryServicesPage() {
       <section className="mb-10">
         <h2 className="text-2xl font-semibold mb-3">Library Platforms</h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          <li>
-            <Link
-              href="http://library.cvsu.edu.ph/landing/?view=campus&code=BACOORCITY"
-              target="_blank"
-              className="text-blue-600 hover:underline flex items-center gap-1"
-            >
-              CvSU Integrated Library <ExternalLink size={14} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://www.sciencedirect.com/"
-              target="_blank"
-              className="text-blue-600 hover:underline flex items-center gap-1"
-            >
-              Science Direct <ExternalLink size={14} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://www.scopus.com/home.uri"
-              target="_blank"
-              className="text-blue-600 hover:underline flex items-center gap-1"
-            >
-              Scopus <ExternalLink size={14} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://www.tdmebooks.com/("
-              target="_blank"
-              className="text-blue-600 hover:underline flex items-center gap-1"
-            >
-              TriTech Digital Media <ExternalLink size={14} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://portal.igpublish.com/iglibrary/?fbclid=IwAR2faJd9AboItj5czz2VpBQLpc_bZ_WUB6exVEs7wTL73Vab9CwBBxdQq4U"
-              target="_blank"
-              className="text-blue-600 hover:underline flex items-center gap-1"
-            >
-              CvSU Library iG Ebooks Platform <ExternalLink size={14} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://cvsubccl.librarika.com/"
-              target="_blank"
-              className="text-blue-600 hover:underline flex items-center gap-1"
-            >
-              CvSU Bacoor Campus Library OPAC <ExternalLink size={14} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://www.youtube.com/watch?v=LG3kggGyPGo"
-              target="_blank"
-              className="text-blue-600 hover:underline flex items-center gap-1"
-            >
-              A Glance at CvSU Bacoor Campus Library <ExternalLink size={14} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://www.facebook.com/cvsulibrary/videos/3678326855564842"
-              target="_blank"
-              className="text-blue-600 hover:underline flex items-center gap-1"
-            >
-              CvSU Online Library Tutorial Video <ExternalLink size={14} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://www.youtube.com/watch?v=AMj0P1DKraQ&t=42s"
-              target="_blank"
-              className="text-blue-600 hover:underline flex items-center gap-1"
-            >
-              CvSU Bacoor Campus Library Website Tutorial{" "}
-              <ExternalLink size={14} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://www.youtube.com/watch?v=xaRdCR6R4jw"
-              target="_blank"
-              className="text-blue-600 hover:underline flex items-center gap-1"
-            >
-              AACCUP 2nd Survey Visit 2022 <ExternalLink size={14} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://www.youtube.com/watch?v=Lo0IfEk3FUc"
-              target="_blank"
-              className="text-blue-600 hover:underline flex items-center gap-1"
-            >
-              AACCUP 2nd Survey Visit 2021 <ExternalLink size={14} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://cvsubacoorcitycampuslibrary.wordpress.com/wp-content/uploads/2021/10/compilation-of-open-source-journalsa.pdf"
-              target="_blank"
-              className="text-blue-600 hover:underline flex items-center gap-1"
-            >
-              CvSU-BCCL Compilation of Open Source Journals{" "}
-              <ExternalLink size={14} />
-            </Link>
-          </li>
+          {libraryplatforms.map((item, index) => (
+            <li key={index}>
+              <Link
+                href={item.link}
+                target="_blank"
+                className="text-blue-600 hover:underline flex items-center gap-1"
+              >
+                {item.name} <ExternalLink size={14} />
+              </Link>
+            </li>
+          ))}
         </ul>
       </section>
 
@@ -318,7 +227,7 @@ export default function LibraryServicesPage() {
       <section className="mb-10 space-y-6">
         <Card>
           <CardHeader>
-            <CardTitle>Open Access Journals</CardTitle>
+            <CardTitle>Open Access Links</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="mb-2">"Exploring the depths of knowledge."</p>
@@ -332,158 +241,117 @@ export default function LibraryServicesPage() {
             <p className="font-semibold mb-4">
               Filipiniana Free and Open Access Sources
             </p>
-            <ul className="space-y-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              <li>
-                <Link
-                  href="https://www.bsp.gov.ph/SitePages/Default.aspx"
-                  target="_blank"
-                  className="text-blue-600 hover:underline flex items-center gap-1"
-                >
-                  KWF Diksiyonaryo ng Wikang Filipino
-                  <ExternalLink size={14} />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://www.bsp.gov.ph/SitePages/Default.aspx"
-                  target="_blank"
-                  className="text-blue-600 hover:underline flex items-center gap-1"
-                >
-                  Bangko Sentral ng Pilipinas
-                  <ExternalLink size={14} />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://cpbrd.congress.gov.ph/2012-06-30-13-06-51/hrep-secretariat-publications/compendium-of-laws-and-executive-issuances?fbclid=IwAR2q7CS7cSf3UX4x6OGzLoyk2a9jfalL6QamDZGA-DjP1Ve5cvI2WaefPrg"
-                  target="_blank"
-                  className="text-blue-600 hover:underline flex items-center gap-1"
-                >
-                  HRep Secretariat Publications COMPENDIUM OF LAWS AND EXECUTIVE
-                  ISSUANCES <ExternalLink size={14} />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://www.filipinaslibrary.org.ph/online-library/"
-                  target="_blank"
-                  className="text-blue-600 hover:underline flex items-center gap-1"
-                >
-                  Filipinas Heritage Library <ExternalLink size={14} />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://www.foi.gov.ph/"
-                  target="_blank"
-                  className="text-blue-600 hover:underline flex items-center gap-1"
-                >
-                  Freedom of Information <ExternalLink size={14} />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://library.pcw.gov.ph/"
-                  target="_blank"
-                  className="text-blue-600 hover:underline flex items-center gap-1"
-                >
-                  PCW Digital GAD Library <ExternalLink size={14} />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://phlconnect.ched.gov.ph/home?fbclid=IwAR16VUBt21GGxesrztr4MvAWgUUuCE3Ra1sYbXxuY1SALUykKRErMdnCQik"
-                  target="_blank"
-                  className="text-blue-600 hover:underline flex items-center gap-1"
-                >
-                  Phil CHED Connect <ExternalLink size={14} />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://ebookhub.ph/?fbclid=IwAR0M3RLr5r1Z_wsXUxnl99GjbAPGo0_rSiqdSDP-owDoCjntanoYCaPIPTk"
-                  target="_blank"
-                  className="text-blue-600 hover:underline flex items-center gap-1"
-                >
-                  Philippine E-Book Hub <ExternalLink size={14} />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://philjournalsci.dost.gov.ph/"
-                  target="_blank"
-                  className="text-blue-600 hover:underline flex items-center gap-1"
-                >
-                  Philippine Journal of Science <ExternalLink size={14} />
-                </Link>
-              </li>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {filipinianalinks.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    href={item.link}
+                    target="_blank"
+                    className="text-blue-600 hover:underline flex items-center gap-1"
+                  >
+                    {item.name} <ExternalLink size={14} />
+                  </Link>
+                </li>
+              ))}
             </ul>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle>Filipiniana Journals</CardTitle>
+            <CardTitle>Other Open Access Sources</CardTitle>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-2  ">
-              <li>
-                <Link
-                  href="https://ejournals.ph/section/filipiniana"
-                  target="_blank"
-                  className="text-blue-600 hover:underline flex items-center gap-1"
-                >
-                  Philippine E-Journals (Filipiniana Section)
-                  <ExternalLink size={14} />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://journals.upd.edu.ph/"
-                  target="_blank"
-                  className="text-blue-600 hover:underline flex items-center gap-1"
-                >
-                  UP Journals Online <ExternalLink size={14} />
-                </Link>
-              </li>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {libraryLinks.map((link) => (
+                <li key={link.url}>
+                  <Link
+                    href={link.url}
+                    target="_blank"
+                    className="text-blue-600 hover:underline flex items-center gap-1"
+                  >
+                    {link.name}
+                    <ExternalLink size={14} />
+                  </Link>
+                </li>
+              ))}
             </ul>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle>Newspapers and News Portals</CardTitle>
+            <CardTitle>Open Access Journals</CardTitle>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-2  ">
-              <li>
-                <Link
-                  href="https://www.inquirer.net/"
-                  target="_blank"
-                  className="text-blue-600 hover:underline flex items-center gap-1"
-                >
-                  Philippine Daily Inquirer <ExternalLink size={14} />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://www.philstar.com/"
-                  target="_blank"
-                  className="text-blue-600 hover:underline flex items-center gap-1"
-                >
-                  The Philippine Star <ExternalLink size={14} />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://www.manilatimes.net/"
-                  target="_blank"
-                  className="text-blue-600 hover:underline flex items-center gap-1"
-                >
-                  The Manila Times <ExternalLink size={14} />
-                </Link>
-              </li>
+            <div className="space-y-8">
+              {journalCategories.map((category, index) => (
+                <div key={index}>
+                  <h2 className="text-lg font-semibold mb-3">
+                    {category.category}
+                  </h2>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {category.journals.map((journal, i) => (
+                      <li key={i}>
+                        <Link
+                          href={journal.url || "#"}
+                          target="_blank"
+                          className="text-blue-600 hover:underline flex items-center gap-1"
+                        >
+                          {journal.name}
+                          <ExternalLink size={14} />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>
+              Open Educational Resources (OER) Filipiniana E-Journals
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {oerData.map((journal, index) => (
+                <li key={index}>
+                  <Link
+                    href={journal.url || "#"}
+                    target="_blank"
+                    className="text-blue-600 hover:underline flex items-center gap-1"
+                  >
+                    {journal.name}
+                    <ExternalLink size={14} />
+                  </Link>
+                </li>
+              ))}
             </ul>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Newspapers Links</CardTitle>
+          </CardHeader>
+          <CardContent>
+            {newspaperlinksData.map((item, index) => (
+              <ul className="space-y-2">
+                <li key={index} className="mb-2">
+                  <Link
+                    href={item.url}
+                    target="_blank"
+                    className="text-blue-600 hover:underline flex items-center gap-1"
+                  >
+                    {item.name} <ExternalLink size={14} />
+                  </Link>
+                </li>
+              </ul>
+            ))}
           </CardContent>
         </Card>
       </section>
