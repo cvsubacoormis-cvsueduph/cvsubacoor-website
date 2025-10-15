@@ -4,38 +4,9 @@ import Link from "next/link";
 import { ArrowLeft, FileText, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { categories } from "@/data/downloadableforms";
 
 export default function DownloadableFormsPage() {
-  const categories = [
-    {
-      title: "Enrollment Forms",
-      description: "Forms related to student registration and enrollment.",
-      forms: [
-        { name: "Admission Application Form", file: "/forms/admission-form.pdf", type: "PDF" },
-        { name: "Subject Adding/Dropping Form", file: "/forms/add-drop-form.docx", type: "DOCX" },
-        { name: "Cross-Enrollment Form", file: "/forms/cross-enrollment.pdf", type: "PDF" },
-      ],
-    },
-    {
-      title: "Academic Forms",
-      description: "Documents for academic requests and clearance.",
-      forms: [
-        { name: "Change of Grade Request", file: "/forms/change-grade.docx", type: "DOCX" },
-        { name: "Completion Form", file: "/forms/completion.pdf", type: "PDF" },
-        { name: "Clearance Form", file: "/forms/clearance.pdf", type: "PDF" },
-      ],
-    },
-    {
-      title: "Student Services",
-      description: "General student service-related forms.",
-      forms: [
-        { name: "Scholarship Application", file: "/forms/scholarship.pdf", type: "PDF" },
-        { name: "Good Moral Certificate Request", file: "/forms/good-moral.docx", type: "DOCX" },
-        { name: "ID Replacement Form", file: "/forms/id-replacement.pdf", type: "PDF" },
-      ],
-    },
-  ];
-
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Header */}
@@ -59,26 +30,29 @@ export default function DownloadableFormsPage() {
         </div>
 
         <p className="text-muted-foreground">
-          Access and download important forms and documents for your student needs.
+          Access and download important forms and documents for your student
+          needs.
         </p>
       </div>
 
       {/* Forms Grid */}
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-1">
         {categories.map((category) => (
-          <Card key={category.title} className="shadow-sm border border-gray-200">
+          <Card key={category.id} className="shadow-sm border border-gray-200">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-lg">
                 <FileText className="h-5 w-5 text-blue-600" />
                 {category.title}
               </CardTitle>
-              <p className="text-sm text-muted-foreground">{category.description}</p>
+              <p className="text-sm text-muted-foreground">
+                {category.description}
+              </p>
             </CardHeader>
             <CardContent>
               <ul className="space-y-3">
                 {category.forms.map((form) => (
                   <li
-                    key={form.name}
+                    key={form.id}
                     className="flex items-center justify-between border rounded-md px-3 py-2 hover:bg-muted transition"
                   >
                     <span className="text-sm font-medium">{form.name}</span>
