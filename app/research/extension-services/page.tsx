@@ -12,9 +12,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AnimatedPage from "@/components/animated-page";
-import BackToTop from "@/components/back-to-top";
 import AnimatedSectionTitle from "@/components/animated-section-title";
 import DrivePreview from "@/components/drive-preview";
 
@@ -631,7 +629,6 @@ export default function ExtensionServicesPage() {
           </div> */}
         </div>
       </AnimatedPage>
-      <BackToTop />
     </>
   );
 }

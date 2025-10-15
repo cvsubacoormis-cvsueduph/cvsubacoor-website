@@ -4,7 +4,6 @@ import { ArrowLeft, Calendar, User, Tag } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import AnimatedPage from "@/components/animated-page";
-import BackToTop from "@/components/back-to-top";
 
 // Mock news data - in a real app, this would come from a database
 const newsData = [
@@ -235,7 +234,6 @@ export default function NewsDetailPage({ params }: { params: { id: string } }) {
           </div>
         </div>
       </AnimatedPage>
-      <BackToTop />
     </>
   );
 }

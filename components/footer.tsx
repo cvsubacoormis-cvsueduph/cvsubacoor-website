@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Youtube } from "lucide-react";
+import BackToTop from "./back-to-top";
 
 export default function Footer() {
   return (
@@ -135,6 +136,7 @@ export default function Footer() {
               {">"}
               {">"}
             </p>
+            <BackToTop />
           </div>
         </div>
       </div>

@@ -6,7 +6,6 @@ import { ArrowLeft, Briefcase } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import AnimatedPage from "@/components/animated-page";
-import BackToTop from "@/components/back-to-top";
 import AnimatedSectionTitle from "@/components/animated-section-title";
 import { JobCard } from "@/components/job-card";
 import { JobFilter } from "@/components/job-filter";
@@ -192,7 +191,6 @@ export default function JobPlacementPage() {
           </div>
         </div>
       </AnimatedPage>
-      <BackToTop />
     </>
   );
 }

@@ -14,7 +14,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AnimatedPage from "@/components/animated-page";
-import BackToTop from "@/components/back-to-top";
 
 export default function RequirementsProceduresPage() {
   return (
@@ -659,7 +658,6 @@ export default function RequirementsProceduresPage() {
           </Tabs>
         </div>
       </AnimatedPage>
-      <BackToTop />
     </>
   );
 }

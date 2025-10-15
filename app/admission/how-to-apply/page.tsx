@@ -4,14 +4,14 @@ import { ArrowLeft, Calendar, Clock, Download, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import AnimatedPage from "@/components/animated-page";
-import BackToTop from "@/components/back-to-top";
 import AnimatedSectionTitle from "@/components/animated-section-title";
 
 export default function HowToApplyPage() {
   return (
     <>
       <AnimatedPage>
-        <div className="container mx-auto px-4 py-12">2
+        <div className="container mx-auto px-4 py-12">
+          2
           <div className="mb-6 animate-element">
             <Button asChild className="mb-6">
               <Link
@@ -33,7 +33,6 @@ export default function HowToApplyPage() {
               <span>How to Apply</span>
             </div>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="md:col-span-2 space-y-8">
               <AnimatedSectionTitle
@@ -389,7 +388,6 @@ export default function HowToApplyPage() {
           </div>
         </div>
       </AnimatedPage>
-      <BackToTop />
     </>
   );
 }

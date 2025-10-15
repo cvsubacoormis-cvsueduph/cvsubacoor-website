@@ -1,4 +1,3 @@
-import BackToTop from "@/components/back-to-top";
 import FeedbackForm from "@/components/feedback-form";
 import GovernmentLinks from "@/components/government-links";
 import ImageGallery from "@/components/image-gallery";
@@ -87,9 +86,6 @@ export default function Home() {
         {/* Feedback Form */}
         <FeedbackForm />
       </main>
-
-      {/* Back to Top Button */}
-      <BackToTop />
 
       {/* Global scroll animations */}
       <ScrollAnimations />

@@ -24,7 +24,6 @@ import {
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AnimatedPage from "@/components/animated-page";
-import BackToTop from "@/components/back-to-top";
 import { useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { organizations } from "@/data/organizations";
@@ -413,7 +412,6 @@ export default function StudentOrganizationsPage() {
           </div>
         </div>
       </AnimatedPage>
-      <BackToTop />
     </>
   );
 }

@@ -22,8 +22,7 @@ import {
 } from "@/components/ui/dialog";
 
 import AnimatedPage from "@/components/animated-page";
-import BackToTop from "@/components/back-to-top";
-import { courses } from "@/data/courses"; // <-- adjust this import path
+import { courses } from "@/data/courses";
 
 export default function AcademicProgramsPage() {
   return (
@@ -163,7 +162,6 @@ export default function AcademicProgramsPage() {
           </Tabs>
         </div>
       </AnimatedPage>
-      <BackToTop />
     </>
   );
 }
