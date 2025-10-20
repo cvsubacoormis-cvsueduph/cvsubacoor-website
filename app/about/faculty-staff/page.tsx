@@ -313,9 +313,11 @@ export default function FacultyStaffPage() {
               </div>
 
               {/* Pagination */}
+              {/* Pagination */}
               {totalPages > 1 && (
                 <Pagination className="mt-8">
                   <PaginationContent>
+                    {/* Previous Button */}
                     <PaginationItem>
                       <PaginationPrevious
                         href="#"
@@ -327,7 +329,87 @@ export default function FacultyStaffPage() {
                       />
                     </PaginationItem>
 
-                    {/* same pagination logic */}
+                    {/* Page Numbers (5 at a time) */}
+                    {(() => {
+                      let startPage = Math.max(1, currentPage - 2);
+                      let endPage = Math.min(totalPages, startPage + 4);
+
+                      if (endPage - startPage < 4) {
+                        startPage = Math.max(1, endPage - 4);
+                      }
+
+                      const visiblePages = Array.from(
+                        { length: endPage - startPage + 1 },
+                        (_, i) => startPage + i
+                      );
+
+                      return (
+                        <>
+                          {startPage > 1 && (
+                            <>
+                              <PaginationItem>
+                                <PaginationLink
+                                  href="#"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    handlePageChange(1);
+                                  }}
+                                >
+                                  1
+                                </PaginationLink>
+                              </PaginationItem>
+                              {startPage > 2 && <PaginationEllipsis />}
+                            </>
+                          )}
+
+                          {visiblePages.map((page) => (
+                            <PaginationItem key={page}>
+                              <PaginationLink
+                                href="#"
+                                isActive={currentPage === page}
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  handlePageChange(page);
+                                }}
+                              >
+                                {page}
+                              </PaginationLink>
+                            </PaginationItem>
+                          ))}
+
+                          {endPage < totalPages && (
+                            <>
+                              {endPage < totalPages - 1 && (
+                                <PaginationEllipsis />
+                              )}
+                              <PaginationItem>
+                                <PaginationLink
+                                  href="#"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    handlePageChange(totalPages);
+                                  }}
+                                >
+                                  {totalPages}
+                                </PaginationLink>
+                              </PaginationItem>
+                            </>
+                          )}
+                        </>
+                      );
+                    })()}
+
+                    {/* Next Button */}
+                    <PaginationItem>
+                      <PaginationNext
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          if (currentPage < totalPages)
+                            handlePageChange(currentPage + 1);
+                        }}
+                      />
+                    </PaginationItem>
                   </PaginationContent>
                 </Pagination>
               )}
