@@ -145,7 +145,7 @@ export default function FacultyStaffPage() {
                     <div className="flex flex-col items-center p-4">
                       <div className="relative h-32 w-32 rounded-full overflow-hidden mb-4">
                         <Image
-                          src={faculty.image || "/placeholder.svg"}
+                          src={faculty?.image || "/placeholder-faculty.png"}
                           alt={faculty.name}
                           fill
                           className="object-cover"
@@ -283,7 +283,7 @@ export default function FacultyStaffPage() {
                     <div className="flex flex-col items-center p-4">
                       <div className="relative h-32 w-32 rounded-full overflow-hidden mb-4">
                         <Image
-                          src={staff.image || "/placeholder.svg"}
+                          src={staff.image || "/placeholder-faculty.png"}
                           alt={staff.name}
                           fill
                           className="object-cover"
