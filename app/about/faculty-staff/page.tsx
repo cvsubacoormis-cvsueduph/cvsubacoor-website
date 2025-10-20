@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, Mail, Search, AlertCircle } from "lucide-react";
@@ -25,16 +25,23 @@ import {
   PaginationLink,
   PaginationEllipsis,
 } from "@/components/ui/pagination";
-
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 import { facultyData, staffData } from "@/data/faculty-staff";
+import FacultyStaffLoadingSkeleton from "@/components/skeleton/FacultyStaffLoadingSkeleton";
 
 export default function FacultyStaffPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [filterType, setFilterType] = useState("faculty");
   const [currentPage, setCurrentPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(true);
   const itemsPerPage = 9;
+
+  // Simulate loading delay (remove or replace with real fetch later)
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsLoading(false), 1500);
+    return () => clearTimeout(timeout);
+  }, []);
 
   const data = filterType === "faculty" ? facultyData : staffData;
 
@@ -53,6 +60,11 @@ export default function FacultyStaffPage() {
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
   };
+
+  // ✅ Show skeleton while loading
+  if (isLoading) {
+    return <FacultyStaffLoadingSkeleton />;
+  }
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -194,6 +206,7 @@ export default function FacultyStaffPage() {
                       />
                     </PaginationItem>
 
+                    {/* Page Numbers */}
                     {(() => {
                       let startPage = Math.max(1, currentPage - 2);
                       let endPage = Math.min(totalPages, startPage + 4);
@@ -313,11 +326,9 @@ export default function FacultyStaffPage() {
               </div>
 
               {/* Pagination */}
-              {/* Pagination */}
               {totalPages > 1 && (
                 <Pagination className="mt-8">
                   <PaginationContent>
-                    {/* Previous Button */}
                     <PaginationItem>
                       <PaginationPrevious
                         href="#"
@@ -329,11 +340,10 @@ export default function FacultyStaffPage() {
                       />
                     </PaginationItem>
 
-                    {/* Page Numbers (5 at a time) */}
+                    {/* Page numbers */}
                     {(() => {
                       let startPage = Math.max(1, currentPage - 2);
                       let endPage = Math.min(totalPages, startPage + 4);
-
                       if (endPage - startPage < 4) {
                         startPage = Math.max(1, endPage - 4);
                       }
@@ -399,7 +409,6 @@ export default function FacultyStaffPage() {
                       );
                     })()}
 
-                    {/* Next Button */}
                     <PaginationItem>
                       <PaginationNext
                         href="#"
