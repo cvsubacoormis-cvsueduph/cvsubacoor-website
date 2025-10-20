@@ -283,7 +283,9 @@ export default function FacultyStaffPage() {
                     <div className="flex flex-col items-center p-4">
                       <div className="relative h-32 w-32 rounded-full overflow-hidden mb-4">
                         <Image
-                          src={staff.image || "/placeholder-faculty.png"}
+                          src={
+                            staff.image ? staff.image : "/placeholder-staff.png"
+                          }
                           alt={staff.name}
                           fill
                           className="object-cover"
