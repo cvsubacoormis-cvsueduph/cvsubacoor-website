@@ -37,7 +37,6 @@ export default function FacultyStaffPage() {
   const [isLoading, setIsLoading] = useState(true);
   const itemsPerPage = 9;
 
-  // Simulate loading delay (remove or replace with real fetch later)
   useEffect(() => {
     const timeout = setTimeout(() => setIsLoading(false), 1500);
     return () => clearTimeout(timeout);
@@ -169,12 +168,11 @@ export default function FacultyStaffPage() {
                 {paginatedData.map((faculty, index) => (
                   <Card key={index}>
                     <div className="flex flex-col items-center p-4">
-                      <div className="relative h-32 w-32 rounded-full overflow-hidden mb-4">
+                      <div className="relative h-48 w-48 rounded-full overflow-hidden mb-4">
                         <Image
                           src={faculty?.image || "/placeholder-faculty.png"}
                           alt={faculty.name}
                           fill
-                          sizes="(100vw)"
                           className="object-cover"
                         />
                       </div>
