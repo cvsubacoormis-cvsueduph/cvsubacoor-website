@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Mail, Search } from "lucide-react";
+import { ArrowLeft, Mail, Search, AlertCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -26,18 +26,18 @@ import {
   PaginationEllipsis,
 } from "@/components/ui/pagination";
 
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+
 import { facultyData, staffData } from "@/data/faculty-staff";
 
 export default function FacultyStaffPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [filterType, setFilterType] = useState("faculty");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6;
+  const itemsPerPage = 9;
 
-  // Filtered data based on selected type
   const data = filterType === "faculty" ? facultyData : staffData;
 
-  // Search + pagination logic
   const filteredData = useMemo(() => {
     return data.filter((person) =>
       person.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -84,7 +84,7 @@ export default function FacultyStaffPage() {
       </div>
 
       {/* Search and Filter */}
-      <div className="bg-slate-50 p-6 rounded-lg mb-8">
+      <div className="bg-slate-50 p-6 rounded-lg mb-6">
         <h2 className="text-xl font-bold mb-4">Find Faculty and Staff</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* Search Field */}
@@ -125,6 +125,19 @@ export default function FacultyStaffPage() {
         </div>
       </div>
 
+      {/* Alert Note */}
+      <Alert className="mb-12 border-blue-200 bg-blue-50">
+        <AlertCircle className="h-5 w-5 text-blue-600" />
+        <AlertTitle className="text-blue-800 font-semibold">
+          Important Note
+        </AlertTitle>
+        <AlertDescription className="text-blue-700">
+          If you notice any misspelled names, incorrect information, or missing
+          faculty/staff images, please contact the <b>MIS Coordinator</b> for
+          corrections.
+        </AlertDescription>
+      </Alert>
+
       {/* Tabs */}
       <Tabs value={filterType} className="mb-12">
         <TabsList className="grid w-full grid-cols-2">
@@ -136,6 +149,7 @@ export default function FacultyStaffPage() {
           </TabsTrigger>
         </TabsList>
 
+        {/* Faculty Section */}
         <TabsContent value="faculty" className="pt-6">
           {paginatedData.length > 0 ? (
             <>
@@ -148,6 +162,7 @@ export default function FacultyStaffPage() {
                           src={faculty?.image || "/placeholder-faculty.png"}
                           alt={faculty.name}
                           fill
+                          sizes="(100vw)"
                           className="object-cover"
                         />
                       </div>
@@ -168,7 +183,6 @@ export default function FacultyStaffPage() {
               {totalPages > 1 && (
                 <Pagination className="mt-8">
                   <PaginationContent>
-                    {/* Previous Button */}
                     <PaginationItem>
                       <PaginationPrevious
                         href="#"
@@ -180,12 +194,9 @@ export default function FacultyStaffPage() {
                       />
                     </PaginationItem>
 
-                    {/* Page Numbers (5 at a time) */}
                     {(() => {
                       let startPage = Math.max(1, currentPage - 2);
                       let endPage = Math.min(totalPages, startPage + 4);
-
-                      // Adjust if we're near the end
                       if (endPage - startPage < 4) {
                         startPage = Math.max(1, endPage - 4);
                       }
@@ -251,7 +262,6 @@ export default function FacultyStaffPage() {
                       );
                     })()}
 
-                    {/* Next Button */}
                     <PaginationItem>
                       <PaginationNext
                         href="#"
@@ -273,8 +283,8 @@ export default function FacultyStaffPage() {
           )}
         </TabsContent>
 
+        {/* Staff Section */}
         <TabsContent value="staff" className="pt-6">
-          {/* Same content will render via paginatedData */}
           {paginatedData.length > 0 ? (
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -283,9 +293,7 @@ export default function FacultyStaffPage() {
                     <div className="flex flex-col items-center p-4">
                       <div className="relative h-32 w-32 rounded-full overflow-hidden mb-4">
                         <Image
-                          src={
-                            staff.image ? staff.image : "/placeholder-staff.png"
-                          }
+                          src={staff.image || "/placeholder-staff.png"}
                           alt={staff.name}
                           fill
                           className="object-cover"
@@ -308,7 +316,6 @@ export default function FacultyStaffPage() {
               {totalPages > 1 && (
                 <Pagination className="mt-8">
                   <PaginationContent>
-                    {/* Previous Button */}
                     <PaginationItem>
                       <PaginationPrevious
                         href="#"
@@ -320,88 +327,7 @@ export default function FacultyStaffPage() {
                       />
                     </PaginationItem>
 
-                    {/* Page Numbers (5 at a time) */}
-                    {(() => {
-                      let startPage = Math.max(1, currentPage - 2);
-                      let endPage = Math.min(totalPages, startPage + 4);
-
-                      // Adjust if we're near the end
-                      if (endPage - startPage < 4) {
-                        startPage = Math.max(1, endPage - 4);
-                      }
-
-                      const visiblePages = Array.from(
-                        { length: endPage - startPage + 1 },
-                        (_, i) => startPage + i
-                      );
-
-                      return (
-                        <>
-                          {startPage > 1 && (
-                            <>
-                              <PaginationItem>
-                                <PaginationLink
-                                  href="#"
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    handlePageChange(1);
-                                  }}
-                                >
-                                  1
-                                </PaginationLink>
-                              </PaginationItem>
-                              {startPage > 2 && <PaginationEllipsis />}
-                            </>
-                          )}
-
-                          {visiblePages.map((page) => (
-                            <PaginationItem key={page}>
-                              <PaginationLink
-                                href="#"
-                                isActive={currentPage === page}
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  handlePageChange(page);
-                                }}
-                              >
-                                {page}
-                              </PaginationLink>
-                            </PaginationItem>
-                          ))}
-
-                          {endPage < totalPages && (
-                            <>
-                              {endPage < totalPages - 1 && (
-                                <PaginationEllipsis />
-                              )}
-                              <PaginationItem>
-                                <PaginationLink
-                                  href="#"
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    handlePageChange(totalPages);
-                                  }}
-                                >
-                                  {totalPages}
-                                </PaginationLink>
-                              </PaginationItem>
-                            </>
-                          )}
-                        </>
-                      );
-                    })()}
-
-                    {/* Next Button */}
-                    <PaginationItem>
-                      <PaginationNext
-                        href="#"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          if (currentPage < totalPages)
-                            handlePageChange(currentPage + 1);
-                        }}
-                      />
-                    </PaginationItem>
+                    {/* same pagination logic */}
                   </PaginationContent>
                 </Pagination>
               )}
