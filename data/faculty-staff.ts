@@ -1087,7 +1087,7 @@ export const staffData = [
     id: 10,
     name: "BADOCDOC, SHARLOTTE V.",
     title: "",
-    image: "/placeholder-faculty.png",
+    image: "/staff/sharlot.jpg",
   },
   {
     id: 11,
@@ -1183,7 +1183,7 @@ export const staffData = [
     id: 26,
     name: "GOROSPE, JAYSON L.",
     title: "Supplies Officer",
-    image: "/placeholder-faculty.png",
+    image: "/staff/gorospe.jpg",
   },
   {
     id: 27,

@@ -271,7 +271,7 @@ export default function CampusOfficialsPage() {
               {
                 name: "Ryan Angelo G. Mojica",
                 title: "Budget Officer, In-charge, Procurement Office",
-                image: "/placeholder.svg?height=150&width=150",
+                image: "/campus-officials/ninong-ry.jpg",
                 // education: "Ph.D. in Sociology, UC Berkeley",
               },
               {
