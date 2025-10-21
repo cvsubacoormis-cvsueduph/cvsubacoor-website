@@ -84,7 +84,7 @@ export default function StudentOrganizationsPage() {
                 <DialogTrigger asChild>
                   <div className="relative h-[400px] rounded-lg overflow-hidden cursor-pointer">
                     <Image
-                      src="/csg-bg.jpg"
+                      src="/csg.png"
                       alt="Student Organization Fair"
                       fill
                       className="object-cover transition-transform duration-300 hover:scale-105"
@@ -94,7 +94,7 @@ export default function StudentOrganizationsPage() {
                 <DialogContent className="max-w-[1200px] p-0 border-none shadow-none">
                   <div className="relative w-full h-[80vh]">
                     <Image
-                      src="/csg-bg.jpg"
+                      src="/csg.png"
                       alt="Student Organization Fair"
                       fill
                       className="object-contain rounded-lg"
