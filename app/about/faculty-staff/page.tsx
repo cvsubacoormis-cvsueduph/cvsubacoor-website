@@ -174,6 +174,7 @@ export default function FacultyStaffPage() {
                           alt={faculty.name}
                           fill
                           className="object-cover"
+                          sizes="(100vw)"
                         />
                       </div>
                       <CardHeader className="text-center p-0 mb-2">
