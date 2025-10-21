@@ -168,7 +168,7 @@ export default function FacultyStaffPage() {
                 {paginatedData.map((faculty, index) => (
                   <Card key={index}>
                     <div className="flex flex-col items-center p-4">
-                      <div className="relative h-48 w-48 rounded-full overflow-hidden mb-4">
+                      <div className="relative h-52 w-52 rounded-full overflow-hidden mb-4">
                         <Image
                           src={faculty?.image || "/placeholder-faculty.png"}
                           alt={faculty.name}
@@ -303,7 +303,7 @@ export default function FacultyStaffPage() {
                 {paginatedData.map((staff, index) => (
                   <Card key={index}>
                     <div className="flex flex-col items-center p-4">
-                      <div className="relative h-32 w-32 rounded-full overflow-hidden mb-4">
+                      <div className="relative h-52 w-52 rounded-full overflow-hidden mb-4">
                         <Image
                           src={staff.image || "/placeholder-staff.png"}
                           alt={staff.name}
