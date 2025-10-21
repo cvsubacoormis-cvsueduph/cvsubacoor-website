@@ -1182,7 +1182,7 @@ export const staffData = [
   {
     id: 26,
     name: "GOROSPE, JAYSON L.",
-    title: "Supplies Officer",
+    title: "Campus Canvasser",
     image: "/staff/gorospe.jpg",
   },
   {
