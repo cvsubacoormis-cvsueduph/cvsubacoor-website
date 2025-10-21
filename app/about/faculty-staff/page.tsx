@@ -29,6 +29,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 import { facultyData, staffData } from "@/data/faculty-staff";
 import FacultyStaffLoadingSkeleton from "@/components/skeleton/FacultyStaffLoadingSkeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function FacultyStaffPage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -36,6 +37,7 @@ export default function FacultyStaffPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
   const itemsPerPage = 9;
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => setIsLoading(false), 1500);
@@ -169,12 +171,20 @@ export default function FacultyStaffPage() {
                   <Card key={index}>
                     <div className="flex flex-col items-center p-4">
                       <div className="relative h-52 w-52 rounded-full overflow-hidden mb-4">
+                        {!isImageLoaded && (
+                          <Skeleton className="absolute inset-0 h-full w-full rounded-full" />
+                        )}
+
                         <Image
                           src={faculty?.image || "/placeholder-faculty.png"}
                           alt={faculty.name}
                           fill
-                          className="object-cover"
+                          className={`object-cover transition-opacity duration-500 ${
+                            isImageLoaded ? "opacity-100" : "opacity-0"
+                          }`}
                           sizes="(100vw)"
+                          onLoad={() => setIsImageLoaded(true)}
+                          onError={() => setIsImageLoaded(true)} // also hide skeleton if failed
                         />
                       </div>
                       <CardHeader className="text-center p-0 mb-2">
@@ -304,11 +314,20 @@ export default function FacultyStaffPage() {
                   <Card key={index}>
                     <div className="flex flex-col items-center p-4">
                       <div className="relative h-52 w-52 rounded-full overflow-hidden mb-4">
+                        {!isImageLoaded && (
+                          <Skeleton className="absolute inset-0 h-full w-full rounded-full" />
+                        )}
+
                         <Image
-                          src={staff.image || "/placeholder-staff.png"}
+                          src={staff?.image || "/placeholder-faculty.png"}
                           alt={staff.name}
                           fill
-                          className="object-cover"
+                          className={`object-cover transition-opacity duration-500 ${
+                            isImageLoaded ? "opacity-100" : "opacity-0"
+                          }`}
+                          sizes="(100vw)"
+                          onLoad={() => setIsImageLoaded(true)}
+                          onError={() => setIsImageLoaded(true)} // also hide skeleton if failed
                         />
                       </div>
                       <CardHeader className="text-center p-0 mb-2">
