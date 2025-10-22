@@ -29,17 +29,11 @@ export default function HowToApplyPage() {
               <span className="mx-2">/</span>
               Admission
               <span className="mx-2">/</span>
-              <span>How to Apply</span>
+              <span>Admission Process</span>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="md:col-span-2 space-y-8">
-              <AnimatedSectionTitle
-                title="Application Process"
-                subtitle="Follow these steps to apply to our university programs"
-                className="mb-8"
-              />
-
               <div className="bg-slate-50 p-6 rounded-lg animate-element">
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
@@ -205,7 +199,6 @@ export default function HowToApplyPage() {
                   </div>
                 </div>
               </div>
-
               <div className="animate-element">
                 <h3 className="text-2xl font-bold mb-4">
                   Application Timeline

@@ -8,12 +8,21 @@ import {
   FileText,
   GraduationCap,
   HelpCircle,
+  MessageCircleWarning,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AnimatedPage from "@/components/animated-page";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 export default function RequirementsProceduresPage() {
   return (
@@ -27,9 +36,7 @@ export default function RequirementsProceduresPage() {
                 Back to Home
               </Link>
             </Button>
-            <h1 className="text-3xl font-bold mb-2">
-              Admission Requirements and Procedures
-            </h1>
+            <h1 className="text-3xl font-bold mb-2">Admission Requirements</h1>
             <div className="flex items-center text-sm text-muted-foreground mb-8">
               <Link href="/" className="hover:underline">
                 Home
@@ -37,7 +44,7 @@ export default function RequirementsProceduresPage() {
               <span className="mx-2">/</span>
               Admission
               <span className="mx-2">/</span>
-              <span>Requirements and Procedures</span>
+              <span>Requirements</span>
             </div>
           </div>
 
@@ -80,6 +87,51 @@ export default function RequirementsProceduresPage() {
             {/* <TabsList className="grid w-full grid-cols-">
               <TabsTrigger value="undergraduate">Undergraduate</TabsTrigger>
             </TabsList> */}
+
+            <Card className="mb-12 animate-element">
+              <CardHeader>
+                <CardTitle className="flex items-center text-lg font-bold">
+                  <span className="mr-2 text-primary">
+                    <HelpCircle />
+                  </span>
+                  Important Information
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="mb-4">
+                  Beginning October 15, 2025, the Online Admission System will
+                  be open for aspiring applicants to process their application
+                  for College Admission for the First Semester, S.Y. 2026-2027.
+                </p>
+
+                <h3 className="font-bold mb-2">Reminders</h3>
+                <span className="font-bold">
+                  The following are strictly prohibited and will mean
+                  non-evaluation of your application
+                </span>
+                <ol className="list-decimal pl-5 mt-1 space-y-1">
+                  <li>
+                    Not declaring the correct category of applicant and
+                    TRACK/STRAND
+                  </li>
+                  <li>
+                    Any deception, falsification, or dishonesty in the declared
+                    information details
+                  </li>
+                  <li>
+                    Not following the intructions posted in the announcenments
+                  </li>
+                  <li>
+                    Uploading of incorrect, incompatible, mismatched, or
+                    falsified documentary requirements
+                  </li>
+                  <li>
+                    Creation or use of a different email account to deliberately
+                    generate multiple applications
+                  </li>
+                </ol>
+              </CardContent>
+            </Card>
 
             {/* Undergraduate Tab */}
             <TabsContent value="undergraduate" className="pt-6">
@@ -199,7 +251,7 @@ export default function RequirementsProceduresPage() {
                   <Card>
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
-                        <Clock className="h-5 w-5 text-primary" />
+                        <MessageCircleWarning className="h-5 w-5 text-primary" />
                         Reminders: Transferee &
                         Associate/Certificate/Vocational/Diploma Degree Holders
                       </CardTitle>
@@ -216,104 +268,6 @@ export default function RequirementsProceduresPage() {
                       </div>
                     </CardContent>
                   </Card>
-
-                  <div>
-                    <h3 className="text-xl font-bold mb-4">
-                      Application Procedure
-                    </h3>
-                    <div className="bg-slate-50 p-6 rounded-lg">
-                      <div className="space-y-4">
-                        <div className="flex items-start gap-4">
-                          <div className="flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold shrink-0">
-                            1
-                          </div>
-                          <div>
-                            <h4 className="font-bold">Create an Account</h4>
-                            <p className="mt-1">
-                              Create an account on our online application
-                              portal.
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start gap-4">
-                          <div className="flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold shrink-0">
-                            2
-                          </div>
-                          <div>
-                            <h4 className="font-bold">
-                              Complete the Application
-                            </h4>
-                            <p className="mt-1">
-                              Fill out the online application form with your
-                              personal information, academic history, and
-                              extracurricular activities.
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start gap-4">
-                          <div className="flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold shrink-0">
-                            3
-                          </div>
-                          <div>
-                            <h4 className="font-bold">Pay Application Fee</h4>
-                            <p className="mt-1">
-                              Pay the non-refundable application fee of $50 (fee
-                              waivers available for eligible students).
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start gap-4">
-                          <div className="flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold shrink-0">
-                            4
-                          </div>
-                          <div>
-                            <h4 className="font-bold">
-                              Submit Required Documents
-                            </h4>
-                            <p className="mt-1">
-                              Upload or arrange for submission of all required
-                              documents, including transcripts, test scores,
-                              essays, and recommendations.
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start gap-4">
-                          <div className="flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold shrink-0">
-                            5
-                          </div>
-                          <div>
-                            <h4 className="font-bold">
-                              Check Application Status
-                            </h4>
-                            <p className="mt-1">
-                              Monitor your application status through the online
-                              portal. You will be notified when your application
-                              is complete and under review.
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start gap-4">
-                          <div className="flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold shrink-0">
-                            6
-                          </div>
-                          <div>
-                            <h4 className="font-bold">
-                              Receive Admission Decision
-                            </h4>
-                            <p className="mt-1">
-                              Admission decisions are typically released within
-                              4-6 weeks after your application is complete.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
 
                 <div className="space-y-6">
@@ -376,6 +330,63 @@ export default function RequirementsProceduresPage() {
                   </Card>
                 </div>
               </div>
+
+              <Card className="mt-6">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <HelpCircle className="h-5 w-5 text-primary" />
+                    Application Category
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <Table className="mb-4">
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Category</TableHead>
+                        <TableHead>Definition</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      <TableRow>
+                        <TableCell>First-year applicant/New Student</TableCell>
+                        <TableCell>
+                          A.{" "}
+                          <span className="font-semibold">
+                            Current Grade 12 student
+                          </span>{" "}
+                          is expecting to finish shs at the end of the school
+                          year (2025-2026). <br />
+                          B. <span className="font-semibold">
+                            SHS Graduate
+                          </span>{" "}
+                          who have never been enrolled in any
+                          college/university. <br />
+                          C.{" "}
+                          <span className="font-semibold">
+                            ALS Completer
+                          </span>{" "}
+                          <br />
+                          D.{" "}
+                          <span className="font-semibold">
+                            Associate, Certificate, Vocational, or Diploma
+                            Degree Holder
+                          </span>{" "}
+                          - one who has finished a certificate, vocational,
+                          diploma course or associate degree in any
+                          college/university.
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>Transferee</TableCell>
+                        <TableCell>
+                          Applicants who started their college level at another
+                          universitys/school or another CvSU campus.
+                        </TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </CardContent>
+              </Card>
             </TabsContent>
 
             {/* International Tab */}
