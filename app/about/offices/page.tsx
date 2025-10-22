@@ -83,6 +83,7 @@ export default function OfficesPage() {
                     <div className="flex items-start gap-2">
                       <Mail className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
                       <span>{office.contact.email}</span>
+                      <span>{office.contact.email2}</span>
                     </div>
                     <div>
                       <p className="font-medium">Office Hours:</p>
@@ -117,7 +118,10 @@ export default function OfficesPage() {
                     </div>
                     <div className="flex items-start gap-2">
                       <Mail className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
-                      <span>{office.contact.email}</span>
+                      <span>
+                        {office.contact.email} <br /> {office.contact.email2}
+                      </span>{" "}
+                      {""}
                     </div>
                     <div>
                       <p className="font-medium">Office Hours:</p>
