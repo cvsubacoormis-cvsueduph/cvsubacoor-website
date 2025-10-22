@@ -84,14 +84,8 @@ export default function JobPlacementPage() {
                 Our Job Placement Office is dedicated to connecting students and
                 alumni with meaningful career opportunities. We work with
                 employers across various industries to provide access to
-                internships, part-time positions, and full-time employment that
-                align with your skills, interests, and career goals.
-              </p>
-              <p className="mb-4">
-                Browse the current job listings below or use the filters to find
-                opportunities that match your specific criteria. Our career
-                counselors are also available to provide personalized guidance
-                on resume building, interview preparation, and career planning.
+                part-time positions and full-time employment that align with
+                your skills, interests, and career goals.
               </p>
             </div>
           </div>
