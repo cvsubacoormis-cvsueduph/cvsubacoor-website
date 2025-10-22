@@ -69,7 +69,7 @@ export default function AcademicProgramsPage() {
             </div>
             <div className="relative h-[300px] rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=300&width=500"
+                src="/at-glance-bg.png"
                 alt="University Students in Classroom"
                 fill
                 className="object-cover"

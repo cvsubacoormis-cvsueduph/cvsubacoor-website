@@ -94,42 +94,7 @@ export default function JobPlacementPage() {
                 on resume building, interview preparation, and career planning.
               </p>
             </div>
-            <div className="bg-royal-blue-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4 flex items-center">
-                <Briefcase className="h-5 w-5 mr-2 text-royal-blue-800" />
-                Career Services
-              </h3>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-royal-blue-800"></div>
-                  <span>Resume & Cover Letter Review</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-royal-blue-800"></div>
-                  <span>Mock Interviews</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-royal-blue-800"></div>
-                  <span>Career Counseling</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-royal-blue-800"></div>
-                  <span>Job Search Strategies</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-royal-blue-800"></div>
-                  <span>Networking Events</span>
-                </li>
-              </ul>
-              <Button className="w-full mt-4">Schedule Appointment</Button>
-            </div>
           </div>
-
-          <AnimatedSectionTitle
-            title="Job Listings"
-            subtitle="Explore current job opportunities for students and alumni"
-            className="mb-8 animate-element"
-          />
 
           <JobFilter
             onFilterChange={setFilters}
@@ -150,44 +115,6 @@ export default function JobPlacementPage() {
                 </p>
               </div>
             )}
-          </div>
-
-          <div className="bg-slate-50 p-6 rounded-lg mt-12 animate-element">
-            <h2 className="text-2xl font-bold mb-4 text-center">
-              Employer Resources
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <h3 className="font-bold mb-2">Post a Job</h3>
-                <p className="mb-4 text-sm">
-                  Reach our talented pool of students and alumni by posting your
-                  job opportunities.
-                </p>
-                <Button variant="outline" size="sm">
-                  Post a Job
-                </Button>
-              </div>
-              <div className="text-center">
-                <h3 className="font-bold mb-2">Recruitment Events</h3>
-                <p className="mb-4 text-sm">
-                  Participate in career fairs, information sessions, and
-                  on-campus interviews.
-                </p>
-                <Button variant="outline" size="sm">
-                  View Calendar
-                </Button>
-              </div>
-              <div className="text-center">
-                <h3 className="font-bold mb-2">Employer Partnerships</h3>
-                <p className="mb-4 text-sm">
-                  Develop a strategic partnership with our university for
-                  ongoing recruitment.
-                </p>
-                <Button variant="outline" size="sm">
-                  Learn More
-                </Button>
-              </div>
-            </div>
           </div>
         </div>
       </AnimatedPage>

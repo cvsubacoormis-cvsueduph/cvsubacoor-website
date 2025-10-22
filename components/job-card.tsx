@@ -136,7 +136,6 @@ export function JobCard({ job }: JobCardProps) {
                 </>
               )}
             </Button>
-            <Button size="sm">Apply Now</Button>
           </CardFooter>
         </div>
       </div>
