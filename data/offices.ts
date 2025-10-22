@@ -122,7 +122,7 @@ export const administrativeoffices = [
     },
   },
   {
-    name: "Research Development and Extension Office",
+    name: "Research Development and Extension Office (RDE)",
     description: "Maintains campus buildings, grounds, and infrastructure.",
     location: "3rd Floor New Building (Room 3)",
     contact: {
@@ -159,6 +159,16 @@ export const administrativeoffices = [
     contact: {
       phone: "(555) 123-4587",
       email: "cvsubacoor.dean@cvsu.edu.ph",
+      hours: "Monday-Thursday: 7:00 AM - 6:00 PM",
+    },
+  },
+  {
+    name: "Management Information Systems Office",
+    description: "",
+    location: "3rd Floor New Building (Room 3)",
+    contact: {
+      phone: "(555) 123-4587",
+      email: "cvsubacoor.mis@cvsu.edu.ph",
       hours: "Monday-Thursday: 7:00 AM - 6:00 PM",
     },
   },

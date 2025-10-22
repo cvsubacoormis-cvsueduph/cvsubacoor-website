@@ -11,7 +11,6 @@ export default function HowToApplyPage() {
     <>
       <AnimatedPage>
         <div className="container mx-auto px-4 py-12">
-          2
           <div className="mb-6 animate-element">
             <Button asChild className="mb-6">
               <Link
