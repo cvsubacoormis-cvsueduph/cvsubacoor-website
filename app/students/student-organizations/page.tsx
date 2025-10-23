@@ -112,7 +112,7 @@ export default function StudentOrganizationsPage() {
                             </div>
                           </DialogTrigger>
 
-                          <DialogContent className="max-w-[800px] p-0 border-none shadow-none">
+                          <DialogContent className="max-w-[1100px] p-0 border-none shadow-none">
                             <div className="relative w-full h-[70vh] bg-black/5 rounded-lg overflow-hidden">
                               <Image
                                 src={
