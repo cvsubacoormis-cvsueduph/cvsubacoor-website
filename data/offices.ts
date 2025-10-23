@@ -182,7 +182,7 @@ export const studentoffices = [
     location: "4th Floor New Building (Look for Ma'am Steff)",
     contact: {
       phone: "(555) 123-4590",
-      email: "cvsubacoor.osas@cvsu.edu.ph",
+      email: "cvsubacoorosas@gmail.com",
       hours: "Monday-Friday: 8:00 AM - 5:00 PM",
     },
   },
