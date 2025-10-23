@@ -55,7 +55,7 @@ export default function CitizensCharterPage() {
           </p>
           <div className="flex justify-center mb-6">
             <Image
-              src="/placeholder.svg?height=150&width=150"
+              src="/logo.png"
               alt="University Seal"
               width={150}
               height={150}
@@ -72,10 +72,9 @@ export default function CitizensCharterPage() {
       </div>
 
       <Tabs defaultValue="vision" className="mb-12">
-        <TabsList className="grid w-full grid-cols-4">
+        <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="vision">Vision & Mission</TabsTrigger>
           <TabsTrigger value="services">Services</TabsTrigger>
-          <TabsTrigger value="procedures">Procedures</TabsTrigger>
           <TabsTrigger value="feedback">Feedback</TabsTrigger>
         </TabsList>
 
@@ -285,349 +284,6 @@ export default function CitizensCharterPage() {
                 </TableBody>
               </Table>
             </div>
-
-            <div>
-              <h3 className="text-xl font-bold mb-4">
-                Student Support Services
-              </h3>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Service</TableHead>
-                    <TableHead>Office Responsible</TableHead>
-                    <TableHead>Service Hours</TableHead>
-                    <TableHead>Processing Time</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      Counseling Services
-                    </TableCell>
-                    <TableCell>Counseling Center</TableCell>
-                    <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                    <TableCell>By appointment</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      Career Counseling
-                    </TableCell>
-                    <TableCell>Career Services</TableCell>
-                    <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                    <TableCell>By appointment</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      Health Services
-                    </TableCell>
-                    <TableCell>University Health Center</TableCell>
-                    <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                    <TableCell>Same day or by appointment</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      Disability Accommodations
-                    </TableCell>
-                    <TableCell>Disability Services</TableCell>
-                    <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                    <TableCell>1-2 weeks</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      International Student Support
-                    </TableCell>
-                    <TableCell>International Office</TableCell>
-                    <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                    <TableCell>Varies by service</TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </div>
-          </div>
-        </TabsContent>
-
-        {/* Procedures Tab */}
-        <TabsContent value="procedures" className="pt-6">
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Admission Procedures</h3>
-              <div className="bg-slate-50 p-6 rounded-lg">
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold shrink-0">
-                      1
-                    </div>
-                    <div>
-                      <h4 className="font-bold">Submit Application</h4>
-                      <p className="mt-1">
-                        Complete the online application form and pay the
-                        application fee.
-                      </p>
-                      <div className="mt-2">
-                        <p className="font-medium">Requirements:</p>
-                        <ul className="list-disc pl-5 space-y-1">
-                          <li>Completed application form</li>
-                          <li>Application fee payment</li>
-                          <li>Valid email address</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold shrink-0">
-                      2
-                    </div>
-                    <div>
-                      <h4 className="font-bold">Submit Required Documents</h4>
-                      <p className="mt-1">
-                        Upload or submit all required academic records and
-                        supporting documents.
-                      </p>
-                      <div className="mt-2">
-                        <p className="font-medium">Requirements:</p>
-                        <ul className="list-disc pl-5 space-y-1">
-                          <li>Official transcripts</li>
-                          <li>Standardized test scores (if applicable)</li>
-                          <li>Letters of recommendation</li>
-                          <li>Personal statement</li>
-                          <li>Resume/CV (for graduate programs)</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold shrink-0">
-                      3
-                    </div>
-                    <div>
-                      <h4 className="font-bold">Application Review</h4>
-                      <p className="mt-1">
-                        The Admissions Committee reviews your application and
-                        documents.
-                      </p>
-                      <div className="mt-2">
-                        <p className="font-medium">Processing Time:</p>
-                        <p>2-4 weeks after receipt of all required documents</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold shrink-0">
-                      4
-                    </div>
-                    <div>
-                      <h4 className="font-bold">Admission Decision</h4>
-                      <p className="mt-1">
-                        Receive notification of admission decision via email and
-                        mail.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold shrink-0">
-                      5
-                    </div>
-                    <div>
-                      <h4 className="font-bold">Confirm Enrollment</h4>
-                      <p className="mt-1">
-                        If admitted, submit enrollment confirmation and deposit.
-                      </p>
-                      <div className="mt-2">
-                        <p className="font-medium">Requirements:</p>
-                        <ul className="list-disc pl-5 space-y-1">
-                          <li>Enrollment confirmation form</li>
-                          <li>Enrollment deposit payment</li>
-                          <li>Housing application (if applicable)</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold mb-4">
-                Transcript Request Procedures
-              </h3>
-              <div className="bg-slate-50 p-6 rounded-lg">
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold shrink-0">
-                      1
-                    </div>
-                    <div>
-                      <h4 className="font-bold">Submit Request</h4>
-                      <p className="mt-1">
-                        Complete the transcript request form online or in person
-                        at the Registrar's Office.
-                      </p>
-                      <div className="mt-2">
-                        <p className="font-medium">Requirements:</p>
-                        <ul className="list-disc pl-5 space-y-1">
-                          <li>Student ID number</li>
-                          <li>Valid photo ID (for in-person requests)</li>
-                          <li>Dates of attendance</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold shrink-0">
-                      2
-                    </div>
-                    <div>
-                      <h4 className="font-bold">Pay Transcript Fee</h4>
-                      <p className="mt-1">
-                        Pay the transcript processing fee online or at the
-                        Cashier's Office.
-                      </p>
-                      <div className="mt-2">
-                        <p className="font-medium">Fee Information:</p>
-                        <ul className="list-disc pl-5 space-y-1">
-                          <li>$10 per official transcript</li>
-                          <li>$5 per unofficial transcript</li>
-                          <li>Additional fee for expedited processing</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold shrink-0">
-                      3
-                    </div>
-                    <div>
-                      <h4 className="font-bold">Processing</h4>
-                      <p className="mt-1">
-                        The Registrar's Office processes your transcript
-                        request.
-                      </p>
-                      <div className="mt-2">
-                        <p className="font-medium">Processing Time:</p>
-                        <ul className="list-disc pl-5 space-y-1">
-                          <li>Standard: 3-5 working days</li>
-                          <li>
-                            Expedited: 1-2 working days (additional fee applies)
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground font-bold shrink-0">
-                      4
-                    </div>
-                    <div>
-                      <h4 className="font-bold">Delivery</h4>
-                      <p className="mt-1">
-                        Transcripts are delivered according to your specified
-                        method.
-                      </p>
-                      <div className="mt-2">
-                        <p className="font-medium">Delivery Options:</p>
-                        <ul className="list-disc pl-5 space-y-1">
-                          <li>Pick up in person (photo ID required)</li>
-                          <li>Mail to specified address</li>
-                          <li>
-                            Electronic delivery (to participating institutions)
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card>
-                <CardHeader className="flex flex-row items-center gap-4">
-                  <div className="bg-primary/10 p-2 rounded-full">
-                    <Clock className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle>Service Standards</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-4">
-                    We are committed to the following service standards:
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                      <span>
-                        Maximum waiting time of 30 minutes for in-person
-                        services
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                      <span>Email response within 24-48 hours</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                      <span>Phone calls answered within 3 rings</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                      <span>Clear communication of processing times</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                      <span>
-                        Courteous and professional service at all times
-                      </span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader className="flex flex-row items-center gap-4">
-                  <div className="bg-primary/10 p-2 rounded-full">
-                    <FileText className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle>Required Documents</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-4">
-                    For most university services, you will need:
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                      <span>Valid university ID card</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                      <span>Proof of enrollment (for current students)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                      <span>Government-issued photo ID</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                      <span>Completed service request forms</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                      <span>Payment receipts (if applicable)</span>
-                    </li>
-                  </ul>
-                  <p className="mt-4 text-sm text-muted-foreground">
-                    Specific services may require additional documentation.
-                    Please check with the relevant office for details.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </TabsContent>
 
@@ -643,20 +299,6 @@ export default function CitizensCharterPage() {
               </p>
 
               <div className="space-y-6">
-                <div className="bg-slate-50 p-4 rounded-lg">
-                  <h4 className="font-bold flex items-center gap-2">
-                    <HelpCircle className="h-5 w-5 text-primary" />
-                    Online Feedback Form
-                  </h4>
-                  <p className="mt-1 mb-2">
-                    Submit feedback, suggestions, or complaints through our
-                    online form available on the university website.
-                  </p>
-                  <Button variant="outline" size="sm">
-                    Access Feedback Form
-                  </Button>
-                </div>
-
                 <div className="bg-slate-50 p-4 rounded-lg">
                   <h4 className="font-bold flex items-center gap-2">
                     <HelpCircle className="h-5 w-5 text-primary" />
@@ -688,35 +330,10 @@ export default function CitizensCharterPage() {
                     Email and Phone
                   </h4>
                   <p className="mt-1">
-                    Send feedback via email to feedback@university.edu or call
-                    our dedicated feedback hotline at (555) 123-4567.
+                    Send feedback via email to cvsubacoor@cvsu.edu.ph or call
+                    our dedicated hotline at (046) 476-5029.
                   </p>
                 </div>
-              </div>
-
-              <div className="mt-8">
-                <h4 className="font-bold mb-2">Feedback Response Process</h4>
-                <ol className="list-decimal pl-5 space-y-2">
-                  <li>
-                    All feedback is logged and assigned a tracking number.
-                  </li>
-                  <li>
-                    You will receive acknowledgment of your feedback within 24
-                    hours.
-                  </li>
-                  <li>
-                    Your feedback is forwarded to the relevant department or
-                    office for review.
-                  </li>
-                  <li>
-                    A response or resolution will be provided within 5 working
-                    days for standard inquiries.
-                  </li>
-                  <li>
-                    Complex issues may require additional time, but you will be
-                    kept informed of progress.
-                  </li>
-                </ol>
               </div>
             </div>
 
@@ -737,11 +354,18 @@ export default function CitizensCharterPage() {
                     <li>At the end of each semester</li>
                     <li>Through annual comprehensive surveys</li>
                   </ul>
-                  <Button className="w-full">Take Current Survey</Button>
+                  <Link
+                    href="https://forms.gle/UW2rcCTQovurMgks8"
+                    target="_blank"
+                  >
+                    <Button className="w-full">
+                      Take Client Satisfaction Survey
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
 
-              <Card className="mt-6">
+              {/* <Card className="mt-6">
                 <CardHeader>
                   <CardTitle>Contact Information</CardTitle>
                 </CardHeader>
@@ -771,7 +395,7 @@ export default function CitizensCharterPage() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
             </div>
           </div>
 
