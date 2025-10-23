@@ -72,9 +72,8 @@ export default function CitizensCharterPage() {
       </div>
 
       <Tabs defaultValue="vision" className="mb-12">
-        <TabsList className="grid w-full grid-cols-3">
+        <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="vision">Vision & Mission</TabsTrigger>
-          <TabsTrigger value="services">Services</TabsTrigger>
           <TabsTrigger value="feedback">Feedback</TabsTrigger>
         </TabsList>
 
@@ -160,117 +159,6 @@ export default function CitizensCharterPage() {
                   </span>
                 </li>
               </ul>
-            </div>
-          </div>
-        </TabsContent>
-
-        {/* Services Tab */}
-        <TabsContent value="services" className="pt-6">
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Academic Services</h3>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Service</TableHead>
-                    <TableHead>Office Responsible</TableHead>
-                    <TableHead>Service Hours</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      Admission Application
-                    </TableCell>
-                    <TableCell>Office of Admissions</TableCell>
-                    <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      Course Registration
-                    </TableCell>
-                    <TableCell>Office of the Registrar</TableCell>
-                    <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      Transcript Request
-                    </TableCell>
-                    <TableCell>Office of the Registrar</TableCell>
-                    <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      Academic Advising
-                    </TableCell>
-                    <TableCell>Academic Departments</TableCell>
-                    <TableCell>By appointment</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      Library Services
-                    </TableCell>
-                    <TableCell>University Library</TableCell>
-                    <TableCell>
-                      Monday-Friday, 7:00 AM - 9:00 PM
-                      <br />
-                      Weekends, 9:00 AM - 5:00 PM
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold mb-4">
-                Administrative Services
-              </h3>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Service</TableHead>
-                    <TableHead>Office Responsible</TableHead>
-                    <TableHead>Service Hours</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      ID Card Issuance
-                    </TableCell>
-                    <TableCell>ID Card Office</TableCell>
-                    <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      Tuition Payment
-                    </TableCell>
-                    <TableCell>Cashier's Office</TableCell>
-                    <TableCell>Monday-Friday, 8:00 AM - 4:00 PM</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      Financial Aid Application
-                    </TableCell>
-                    <TableCell>Office of Financial Aid</TableCell>
-                    <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      Housing Application
-                    </TableCell>
-                    <TableCell>Residential Life Office</TableCell>
-                    <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">
-                      Employment Verification
-                    </TableCell>
-                    <TableCell>Human Resources</TableCell>
-                    <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
             </div>
           </div>
         </TabsContent>
