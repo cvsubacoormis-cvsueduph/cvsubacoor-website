@@ -2,14 +2,18 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronDown, ChevronRight, GraduationCap, Menu } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { useMobileMenu } from "@/hooks/use-mobile-menu";
 
+// Add the import for our new hook at the top of the file
+import { useMobileMenu } from "@/hooks/use-mobile-menu";
+import Image from "next/image";
+
+// Find the Navbar component function declaration:
+// And update it to:
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -35,7 +39,8 @@ export default function Navbar() {
     setActiveNestedDropdown(null);
   };
 
-  // Close dropdowns when switching to mobile
+  // Add a useEffect to close dropdowns when switching to mobile view
+  // Add this after the handleNestedMouseLeave function:
   useEffect(() => {
     if (isMobile) {
       setActiveDropdown(null);
@@ -43,10 +48,8 @@ export default function Navbar() {
     }
   }, [isMobile]);
 
-  // Prevent SSR hydration mismatch
-  if (isMobile === null) return null;
-
   return (
+    //Mobile View
     <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-royal-blue-900/70 to-royal-blue-800/40 backdrop-blur-sm text-white">
       <div className="container flex h-16 items-center justify-between px-4 sm:px-6">
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -56,20 +59,17 @@ export default function Navbar() {
               <span className="sr-only">Toggle Menu</span>
             </Button>
           </SheetTrigger>
-
           <SheetContent
             side="left"
             className="w-[300px] sm:w-[400px] overflow-y-auto"
           >
             <div className="flex items-center mb-6">
-              <GraduationCap className="h-12 w-12 text-royal-blue-800 mr-2" />
+              <Image src="/logo.png" width={27} height={27} alt="Logo" />
               <span className="font-bold text-sm text-royal-blue-800">
                 Cavite State University - Bacoor City Campus
               </span>
             </div>
-
             <nav className="flex flex-col gap-4">
-              {/* About Us */}
               <div className="space-y-3">
                 <div className="font-semibold text-lg text-royal-blue-800">
                   About Us
@@ -110,7 +110,6 @@ export default function Navbar() {
                       </Link>
                     </div>
                   </div>
-
                   <Link
                     href="/about/campus-history"
                     className="block text-muted-foreground hover:text-royal-blue-600 py-1"
@@ -163,7 +162,6 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* Admission */}
               <div className="space-y-3">
                 <div className="font-semibold text-lg text-royal-blue-800">
                   Admission
@@ -193,7 +191,6 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* Academics */}
               <div className="space-y-3">
                 <div className="font-semibold text-lg text-royal-blue-800">
                   Academics
@@ -223,7 +220,6 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* Research and Extension */}
               <div className="space-y-3">
                 <div className="font-semibold text-lg text-royal-blue-800">
                   Research and Extension
@@ -246,7 +242,6 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* Students */}
               <div className="space-y-3">
                 <div className="font-semibold text-lg text-royal-blue-800">
                   Students
@@ -283,7 +278,6 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* Services */}
               <div className="space-y-3">
                 <div className="font-semibold text-lg text-royal-blue-800">
                   Services
@@ -322,7 +316,6 @@ export default function Navbar() {
             </nav>
           </SheetContent>
         </Sheet>
-
         <Link href="/" className="mr-6 flex items-center space-x-2 text-white">
           <Image src="/logo.png" alt="Logo" width={34} height={34} />
           <span className="hidden font-bold sm:inline-block mt-1">
@@ -330,7 +323,6 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex flex-1 items-center justify-center">
           <div className="flex flex-wrap justify-center gap-1 lg:gap-4">
             {/* About Us Dropdown */}
@@ -351,7 +343,6 @@ export default function Navbar() {
                   )}
                 />
               </Button>
-
               {activeDropdown === "about" && (
                 <div className="absolute left-0 top-full z-50 mt-1 w-64 rounded-md bg-accent shadow-md">
                   <div className="p-2">
@@ -361,7 +352,7 @@ export default function Navbar() {
                       onMouseEnter={() => handleNestedMouseEnter("university")}
                       onMouseLeave={handleNestedMouseLeave}
                     >
-                      <div className="flex items-center justify-between text-white hover:text-canary-yellow-500 font-medium">
+                      <div className="flex items-center justify-between text-white hover:text-canary-yellow-500  font-medium">
                         <span>The University</span>
                         <ChevronRight className="h-4 w-4" />
                       </div>
@@ -535,7 +526,7 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Research Dropdown */}
+            {/* Research and Extension Dropdown */}
             <div
               className="relative"
               onMouseEnter={() => handleMouseEnter("research")}
@@ -592,7 +583,7 @@ export default function Navbar() {
                 />
               </Button>
               {activeDropdown === "students" && (
-                <div className="absolute left-0 top-full z-50 mt-1 w-48 rounded-md bg-accent shadow-md">
+                <div className="absolute left-0 top-full z-50 mt-1 w-48 rounded-md  bg-accent shadow-md">
                   <div className="p-2">
                     <Link
                       href="/students/student-organizations"
@@ -608,9 +599,9 @@ export default function Navbar() {
                     </Link>
                     <Link
                       href="https://studentportal.cvsu-bacoor.com/"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Student Portal
                     </Link>
@@ -650,9 +641,9 @@ export default function Navbar() {
                   <div className="p-2">
                     <Link
                       href="https://studentportal.cvsu-bacoor.com/"
+                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block rounded-sm px-2 py-1.5 text-sm text-white font-medium hover:bg-royal-blue-600 hover:text-canary-yellow-500"
                     >
                       Student Portal
                     </Link>
