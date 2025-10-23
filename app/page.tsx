@@ -24,8 +24,8 @@ export default function Home() {
         {/* Hero Section */}
         <AnimatedHero />
 
-        {/* Stats Cards */}
-        <AnimatedStats />
+        {/* Stats Cards
+        <AnimatedStats /> */}
 
         {/* News and Updates */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-royal-blue-900/70 to-royal-blue-800/40">

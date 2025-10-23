@@ -79,15 +79,15 @@ export default function AnimatedStats() {
       <div className="container px-4 md:px-6">
         <div
           ref={cardsRef}
-          className="grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-2"
         >
           <Card className="overflow-hidden transform-gpu transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <div className="relative h-48 w-full">
               <Image
-                src="/placeholder.svg?height=200&width=400"
+                src="/ap-1.png"
                 alt="Academic Programs"
                 fill
-                className="object-cover"
+                className="object-scale-down"
               />
             </div>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -100,50 +100,7 @@ export default function AnimatedStats() {
               <div className="text-3xl sm:text-4xl font-bold stat-number">
                 9
               </div>
-              {/* <p className="text-muted-foreground text-sm sm:text-base">
-                Undergraduate and graduate programs across 8 colleges
-              </p> */}
             </CardContent>
-            {/* <CardFooter>
-              <Link
-                href="#"
-                className="inline-flex items-center text-sm font-medium text-primary"
-              >
-                Explore Programs <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
-            </CardFooter> */}
-          </Card>
-          <Card className="overflow-hidden transform-gpu transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-            <div className="relative h-48 w-full">
-              <Image
-                src="/placeholder.svg?height=200&width=400"
-                alt="Enrolled Students"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-xl sm:text-2xl font-bold">
-                Enrolled Students
-              </CardTitle>
-              <GraduationCap className="h-6 w-6 text-primary" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-3xl sm:text-4xl font-bold stat-number">
-                7000+
-              </div>
-              {/* <p className="text-muted-foreground text-sm sm:text-base">
-                Students from 50+ countries around the world
-              </p> */}
-            </CardContent>
-            {/* <CardFooter>
-              <Link
-                href="#"
-                className="inline-flex items-center text-sm font-medium text-primary"
-              >
-                Student Life <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
-            </CardFooter> */}
           </Card>
           <Card className="overflow-hidden transform-gpu transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <div className="relative h-48 w-full">
