@@ -1249,7 +1249,7 @@ export const staffData = [
     id: 38,
     name: "TUJON, JHOANNA MARIE C.",
     title: "",
-    image: "/placeholder-faculty.png",
+    image: "/staff/JOAN.jpg",
   },
   {
     id: 39,
