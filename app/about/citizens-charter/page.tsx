@@ -175,7 +175,6 @@ export default function CitizensCharterPage() {
                     <TableHead>Service</TableHead>
                     <TableHead>Office Responsible</TableHead>
                     <TableHead>Service Hours</TableHead>
-                    <TableHead>Processing Time</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -185,7 +184,6 @@ export default function CitizensCharterPage() {
                     </TableCell>
                     <TableCell>Office of Admissions</TableCell>
                     <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                    <TableCell>2-4 weeks</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">
@@ -193,7 +191,6 @@ export default function CitizensCharterPage() {
                     </TableCell>
                     <TableCell>Office of the Registrar</TableCell>
                     <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                    <TableCell>Same day</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">
@@ -201,7 +198,6 @@ export default function CitizensCharterPage() {
                     </TableCell>
                     <TableCell>Office of the Registrar</TableCell>
                     <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                    <TableCell>3-5 working days</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">
@@ -209,7 +205,6 @@ export default function CitizensCharterPage() {
                     </TableCell>
                     <TableCell>Academic Departments</TableCell>
                     <TableCell>By appointment</TableCell>
-                    <TableCell>Same day</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">
@@ -221,7 +216,6 @@ export default function CitizensCharterPage() {
                       <br />
                       Weekends, 9:00 AM - 5:00 PM
                     </TableCell>
-                    <TableCell>Same day</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -237,7 +231,6 @@ export default function CitizensCharterPage() {
                     <TableHead>Service</TableHead>
                     <TableHead>Office Responsible</TableHead>
                     <TableHead>Service Hours</TableHead>
-                    <TableHead>Processing Time</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -247,7 +240,6 @@ export default function CitizensCharterPage() {
                     </TableCell>
                     <TableCell>ID Card Office</TableCell>
                     <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                    <TableCell>1 hour</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">
@@ -255,7 +247,6 @@ export default function CitizensCharterPage() {
                     </TableCell>
                     <TableCell>Cashier's Office</TableCell>
                     <TableCell>Monday-Friday, 8:00 AM - 4:00 PM</TableCell>
-                    <TableCell>Same day</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">
@@ -263,7 +254,6 @@ export default function CitizensCharterPage() {
                     </TableCell>
                     <TableCell>Office of Financial Aid</TableCell>
                     <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                    <TableCell>2-3 weeks</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">
@@ -271,7 +261,6 @@ export default function CitizensCharterPage() {
                     </TableCell>
                     <TableCell>Residential Life Office</TableCell>
                     <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                    <TableCell>1-2 weeks</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">
@@ -279,7 +268,6 @@ export default function CitizensCharterPage() {
                     </TableCell>
                     <TableCell>Human Resources</TableCell>
                     <TableCell>Monday-Friday, 8:00 AM - 5:00 PM</TableCell>
-                    <TableCell>3 working days</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
