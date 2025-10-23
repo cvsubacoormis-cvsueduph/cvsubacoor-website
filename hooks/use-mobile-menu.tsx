@@ -1,29 +1,19 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
 export function useMobileMenu() {
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
   useEffect(() => {
-    // Check if we're on the client side
-    if (typeof window === "undefined") return
+    if (typeof window === "undefined") return;
 
-    // Function to update state based on window width
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
+    const checkWidth = () => setIsMobile(window.innerWidth < 768);
+    checkWidth();
 
-    // Initial check
-    checkMobile()
+    window.addEventListener("resize", checkWidth);
+    return () => window.removeEventListener("resize", checkWidth);
+  }, []);
 
-    // Add event listener for window resize
-    window.addEventListener("resize", checkMobile)
-
-    // Clean up
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
-
-  return isMobile
+  return isMobile;
 }
-
