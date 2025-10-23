@@ -4,6 +4,7 @@ import {
   ArrowLeft,
   CheckCircle,
   Clock,
+  EyeIcon,
   FileText,
   HelpCircle,
   Users,
@@ -46,7 +47,7 @@ export default function CitizensCharterPage() {
       <div className="mb-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4">
-            University Name Citizens Charter
+            Cavite State University Bacoor City Campus Citizens Charter
           </h2>
           <p className="text-lg mb-4">
             Our commitment to transparent, efficient, and responsive service to
@@ -62,10 +63,10 @@ export default function CitizensCharterPage() {
             />
           </div>
           <p>
-            This Citizens Charter outlines the services provided by University
-            Name, the requirements for accessing these services, and our
-            commitment to service standards. It serves as a guide to help you
-            navigate university processes efficiently.
+            This Citizens Charter outlines the services provided by Cavite State
+            University Bacoor City Campus, the requirements for accessing these
+            services, and our commitment to service standards. It serves as a
+            guide to help you navigate university processes efficiently.
           </p>
         </div>
       </div>
@@ -84,16 +85,15 @@ export default function CitizensCharterPage() {
             <Card>
               <CardHeader className="flex flex-row items-center gap-4">
                 <div className="bg-primary/10 p-2 rounded-full">
-                  <Users className="h-6 w-6 text-primary" />
+                  <EyeIcon className="w-7 h-7 text-primary" />
                 </div>
                 <CardTitle>Our Vision</CardTitle>
               </CardHeader>
               <CardContent>
                 <p>
-                  To be a leading institution of higher education recognized for
-                  academic excellence, innovative research, and commitment to
-                  the advancement of society at the local, national, and global
-                  levels.
+                  The Premier University in historic Cavite globally recognized
+                  for excellence in character development, academics, research,
+                  innovation and sustainable community engagement.
                 </p>
               </CardContent>
             </Card>
@@ -107,10 +107,12 @@ export default function CitizensCharterPage() {
               </CardHeader>
               <CardContent>
                 <p>
-                  To provide accessible, high-quality education that prepares
-                  students for leadership and service in a diverse and global
-                  society through excellence in teaching, research, and
-                  community engagement.
+                  Cavite State University shall provide excellent, equitable and
+                  relevant educational opportunities in the arts, sciences and
+                  technology through quality instruction and responsive research
+                  and development activities. It shall produce professional,
+                  skilled and morally upright individuals for global
+                  competitiveness.
                 </p>
               </CardContent>
             </Card>
@@ -120,7 +122,8 @@ export default function CitizensCharterPage() {
             <h3 className="text-xl font-bold mb-4">Service Pledge</h3>
             <div className="bg-slate-50 p-6 rounded-lg">
               <p className="mb-4">
-                We, the officials and employees of University Name, commit to:
+                We, the officials and employees of Cavite State University
+                Bacoor City Campus, commit to:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
@@ -823,10 +826,15 @@ export default function CitizensCharterPage() {
           document below.
         </p>
         <div className="flex justify-center">
-          <Button className="flex items-center gap-2">
-            <FileText className="h-4 w-4" />
-            Download Complete Citizens Charter (PDF)
-          </Button>
+          <Link
+            href="/files/citizens-charter-2025-edition_compressed.pdf"
+            target="_blank"
+          >
+            <Button className="flex items-center gap-2">
+              <FileText className="h-4 w-4" />
+              Download Complete Citizens Charter (PDF)
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
