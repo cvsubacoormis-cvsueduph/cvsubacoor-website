@@ -32,7 +32,7 @@ export const organizations = [
       "The LaLiga Psicología is the official student organization of the BS Psychology program, dedicated to fostering mental health awareness, academic growth, and holistic development among psychology students.",
     members: "Officers and Commitees",
     image: "/organization-logos/4.png",
-    studentImage: "/organization-logos/1.png",
+    studentImage: "/news-placeholder.png",
     link: "https://www.facebook.com/llpcvsu13",
   },
   {
@@ -77,7 +77,7 @@ export const organizations = [
       "The Le Manager’s Société – Junior Marketing Association (JMA) is the official student organization of the BSBA major in Marketing Management program. It is dedicated to nurturing future marketing professionals who are innovative, strategic, and driven by excellence.",
     members: "Officers and Commitees",
     image: "/organization-logos/9.png",
-    studentImage: "/organization-logos/1.png",
+    studentImage: "/news-placeholder.png",
     link: "https://www.facebook.com/lms.jma2011",
   },
   {
@@ -104,7 +104,7 @@ export const organizations = [
       "The Commission on Student Elections (COMELEC) is the official electoral body of the campus responsible for administering, supervising, and ensuring fair and transparent student elections. It upholds the principles of democracy, integrity, and impartiality in selecting student leaders who will represent the student body.",
     members: "Officers and Commitees",
     image: "/organization-logos/16.png",
-    studentImage: "/organization-logos/1.png",
+    studentImage: "/news-placeholder.png",
     link: "https://www.facebook.com/profile.php?id=100084232497372",
   },
   {
