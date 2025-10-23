@@ -176,13 +176,13 @@ export const administrativeoffices = [
 
 export const studentoffices = [
   {
-    name: "Office of Student Affairs",
+    name: "Office of Student Affairs and Services",
     description:
       "Coordinates student activities, organizations, and campus life programs.",
-    location: "Student Center, 2nd Floor",
+    location: "4th Floor New Building (Look for Ma'am Steff)",
     contact: {
       phone: "(555) 123-4590",
-      email: "studentaffairs@university.edu",
+      email: "cvsubacoor.osas@cvsu.edu.ph",
       hours: "Monday-Friday: 8:00 AM - 5:00 PM",
     },
   },
@@ -190,10 +190,10 @@ export const studentoffices = [
     name: "Central Student Government Office",
     description:
       "Assists students with scholarships, grants, loans, and work-study opportunities.",
-    location: "Student Services Building, 2nd Floor",
+    location: "1st Floor old building (Room 109)",
     contact: {
       phone: "(555) 123-4591",
-      email: "finaid@university.edu",
+      email: "cvsubacoor.csg@gmail.com",
       hours: "Monday-Friday: 8:00 AM - 5:00 PM",
     },
   },
