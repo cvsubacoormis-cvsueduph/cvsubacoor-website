@@ -1,5 +1,6 @@
+"use client";
+
 import Link from "next/link";
-import Image from "next/image";
 import {
   ArrowLeft,
   BookCopy,
@@ -10,8 +11,22 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useEffect, useState } from "react";
+import { MissionVisionPageSkeleton } from "@/components/skeleton/MissionVisionPageSkeleton";
 
 export default function MissionVisionPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+  }, []);
+
+  if (isLoading) {
+    return <MissionVisionPageSkeleton />;
+  }
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mb-6">

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, Music } from "lucide-react";
@@ -5,8 +7,22 @@ import { ArrowLeft, Music } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Footer from "@/components/footer";
+import { useEffect, useState } from "react";
+import { UniversityHymnPageSkeleton } from "@/components/skeleton/UniversityHymnPageSkeleton";
 
 export default function UniversityHymnPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+  }, []);
+
+  if (isLoading) {
+    return <UniversityHymnPageSkeleton />;
+  }
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mb-6">

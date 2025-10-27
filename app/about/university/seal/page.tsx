@@ -1,10 +1,25 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
+import { UniversitySealPageSkeleton } from "@/components/skeleton/UniversitySealPageSkeleton";
 
 export default function UniversitySealPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <UniversitySealPageSkeleton />;
+  }
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mb-6">

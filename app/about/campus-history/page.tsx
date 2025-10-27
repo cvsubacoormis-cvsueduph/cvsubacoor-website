@@ -1,11 +1,27 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useEffect, useState } from "react";
+import { CampusHistoryPageSkeleton } from "@/components/skeleton/CampusHistoryPageSkeleton";
 
 export default function CampusHistoryPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+  });
+
+  if (isLoading) {
+    return <CampusHistoryPageSkeleton />;
+  }
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mb-6">
