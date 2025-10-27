@@ -209,7 +209,7 @@ export default function Navbar() {
     const desktopClasses =
       "text-white hover:bg-royal-blue-600 hover:text-canary-yellow-500";
     const mobileClasses =
-      "text-muted-foreground hover:text-royal-blue-600 focus:text-royal-blue-600";
+      "text-white hover:text-royal-blue-600 focus:text-canary-yellow-500";
 
     return (
       <Link
@@ -239,7 +239,7 @@ export default function Navbar() {
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <Button
-              variant="outline"
+              variant="secondary"
               size="icon"
               className="mr-2 md:hidden"
               aria-label="Toggle navigation menu"
@@ -251,11 +251,11 @@ export default function Navbar() {
 
           <SheetContent
             side="left"
-            className="w-[280px] sm:w-[340px] overflow-y-auto px-0"
+            className="w-[280px] sm:w-[340px] overflow-y-auto px-0 bg-primary"
           >
             <div className="flex items-center gap-3 px-4 pb-4 pt-2 border-b border-muted">
               <Image src="/logo.png" width={32} height={32} alt="Logo" />
-              <span className="font-semibold text-sm text-royal-blue-800 leading-tight">
+              <span className="font-semibold text-sm text-white leading-tight">
                 Cavite State University - Bacoor City Campus
               </span>
             </div>
@@ -270,8 +270,8 @@ export default function Navbar() {
                       type="button"
                       onClick={() => toggleMobileSection(section.id)}
                       className={cn(
-                        "flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-base font-semibold text-royal-blue-800 transition-colors",
-                        isSectionOpen && "bg-royal-blue-50"
+                        "flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-base font-semibold text-white transition-colors",
+                        isSectionOpen && "bg-primary"
                       )}
                       aria-expanded={isSectionOpen}
                     >
@@ -285,7 +285,7 @@ export default function Navbar() {
                     </button>
 
                     {isSectionOpen && (
-                      <div className="mt-2 space-y-1 rounded-md bg-white/70 px-3 py-2">
+                      <div className="mt-2 space-y-1 rounded-md bg-primary px-3 py-2">
                         {section.links.map((link) => {
                           if (link.children && link.id) {
                             const isNestedOpen = mobileNested === link.id;
@@ -296,8 +296,8 @@ export default function Navbar() {
                                   type="button"
                                   onClick={() => toggleMobileNested(link.id!)}
                                   className={cn(
-                                    "flex w-full items-center justify-between rounded-sm px-2 py-1.5 text-sm font-medium text-royal-blue-700 transition-colors",
-                                    isNestedOpen && "bg-royal-blue-50"
+                                    "flex w-full items-center justify-between rounded-sm px-2 py-1.5 text-sm font-medium text-white transition-colors",
+                                    isNestedOpen && "bg-primary"
                                   )}
                                   aria-expanded={isNestedOpen}
                                 >
