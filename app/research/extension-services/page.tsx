@@ -80,12 +80,6 @@ export default function ExtensionServicesPage() {
 
           {/* Mission, Vision, Objectives Section */}
           <div className="mb-12 animate-element">
-            <AnimatedSectionTitle
-              title="Our Extension Direction"
-              subtitle="Guiding principles that shape our community engagement and service initiatives"
-              className="mb-8"
-            />
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <Card>
                 <CardHeader className="flex flex-row items-center gap-4">

@@ -95,7 +95,7 @@ export const organizations = [
       "The Cornerstone is the official student publication of the campus, dedicated to upholding the freedom of the press, responsible journalism, and the pursuit of truth. It serves as the voice of the student body—informing, inspiring, and empowering readers through credible reporting, creative expression, and meaningful storytelling.",
     members: "Officers and Commitees",
     image: "/organization-logos/15.png",
-    studentImage: "/organization-logos/1.png",
+    studentImage: "/news-placeholder.png",
     link: "https://www.facebook.com/TheCornerstoneCvSU",
   },
   {
