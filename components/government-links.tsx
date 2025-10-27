@@ -76,7 +76,7 @@ export default function GovernmentLinks() {
           {links.map((section, index) => (
             <Card
               key={index}
-              className="rounded-xl shadow-md bg-white/95 hover:shadow-lg transition-shadow duration-200 overflow-hidden"
+              className="rounded-xl shadow-md bg-white/95 hover:shadow-lg transition-shadow duration-200 overflow-hidden animate-element"
             >
               <CardHeader className="pb-2">
                 <CardTitle className="text-base text-center font-semibold">

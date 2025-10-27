@@ -67,7 +67,6 @@ export default function Home() {
                 </>
               }
             />
-
             <QualityPolicy />
             <CoreValues />
           </div>
