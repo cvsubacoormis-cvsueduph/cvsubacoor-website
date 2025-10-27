@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, Calendar, Clock, MapPin, Search } from "lucide-react";
@@ -41,6 +41,7 @@ import {
 } from "@/components/ui/dialog";
 
 import { careersData } from "@/data/careers";
+import { CareersPageSkeleton } from "@/components/skeleton/CareersPageSkeleton";
 
 export default function CareersPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -48,6 +49,7 @@ export default function CareersPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedJob, setSelectedJob] = useState<any | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const itemsPerPage = 5;
 
@@ -115,6 +117,15 @@ export default function CareersPage() {
     setSelectedJob(job);
     setIsDialogOpen(true);
   };
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsLoading(false), 1500);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (isLoading) {
+    return <CareersPageSkeleton />;
+  }
 
   return (
     <div className="container mx-auto px-4 py-12">

@@ -1,11 +1,27 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useEffect, useState } from "react";
+import { CampusOfficialsPageSkeleton } from "@/components/skeleton/CampusOfficialsPageSkeleton";
 
 export default function CampusOfficialsPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+  });
+
+  if (isLoading) {
+    return <CampusOfficialsPageSkeleton />;
+  }
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mb-6">
@@ -50,14 +66,6 @@ export default function CampusOfficialsPage() {
                 <p className="text-lg font-medium text-primary">
                   Head, Administration and Support Services Office
                 </p>
-                {/* <p className="mt-2 text-muted-foreground">
-                  Ph.D. in Educational Leadership
-                </p>
-                <p className="text-muted-foreground">Harvard University</p>
-                <p className="mt-4">
-                  Leading the campus since 2018 with a focus on academic
-                  excellence and community engagement.
-                </p> */}
               </CardContent>
             </Card>
 
@@ -77,14 +85,6 @@ export default function CampusOfficialsPage() {
                 <p className="text-lg font-medium text-primary">
                   Campus Administrator
                 </p>
-                {/* <p className="mt-2 text-muted-foreground">
-                  Ph.D. in Higher Education
-                </p> */}
-                {/* <p className="text-muted-foreground">Stanford University</p> */}
-                {/* <p className="mt-4">
-                  Oversees all academic programs and ensures educational quality
-                  across departments.
-                </p> */}
               </CardContent>
             </Card>
 
@@ -105,14 +105,6 @@ export default function CampusOfficialsPage() {
                   Campus Secretary, Head, Campus Research Services Office,
                   Coordinator, Professional Education
                 </p>
-                {/* <p className="mt-2 text-muted-foreground">
-                  Ph.D. in Public Administration
-                </p> */}
-                {/* <p className="text-muted-foreground">University of Michigan</p>
-                <p className="mt-4">
-                  Manages campus operations, finances, and administrative
-                  services.
-                </p> */}
               </CardContent>
             </Card>
           </div>

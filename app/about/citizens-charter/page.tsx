@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -12,17 +14,23 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useEffect, useState } from "react";
+import { CitizensCharterPageSkeleton } from "@/components/skeleton/CitizensCharterSkeleton";
 
 export default function CitizensCharterPage() {
+  const [isLoading, setIsloading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsloading(false);
+    }, 1500);
+  }, []);
+
+  if (isLoading) {
+    <CitizensCharterPageSkeleton />;
+  }
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mb-6">

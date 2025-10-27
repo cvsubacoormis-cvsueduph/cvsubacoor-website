@@ -13,13 +13,7 @@ export default function FacultyStaffLoadingSkeleton() {
     <div className="container mx-auto px-4 py-12">
       {/* Back Button and Header */}
       <div className="mb-6">
-        <Button variant="outline" asChild className="mb-6">
-          <Link href="/" className="flex items-center gap-2">
-            <ArrowLeft className="h-4 w-4" />
-            Back to Home
-          </Link>
-        </Button>
-
+        <Skeleton className="h-10 w-32 mb-2" />
         <Skeleton className="h-8 w-64 mb-2" />
         <Skeleton className="h-4 w-48 mb-8" />
       </div>
