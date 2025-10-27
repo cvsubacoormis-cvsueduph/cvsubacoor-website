@@ -15,40 +15,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { gsap } from "@/lib/gsap";
+import { newsData } from "@/data/news";
 
 export default function NewsSection() {
   const newsRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
-
-  const newsItems = [
-    {
-      id: "1",
-      title: "University Receives $10M Research Grant",
-      date: "March 10, 2025",
-      excerpt:
-        "The National Science Foundation has awarded our university a $10 million grant to advance research in renewable energy technologies.",
-      link: "/news/1",
-      image: "/news-placeholder.png",
-    },
-    {
-      id: "2",
-      title: "New Student Center Opening Next Month",
-      date: "March 5, 2025",
-      excerpt:
-        "The state-of-the-art student center will open its doors next month, featuring study spaces, dining options, and recreational facilities.",
-      link: "/news/2",
-      image: "/news-placeholder.png",
-    },
-    {
-      id: "3",
-      title: "University Ranks in Top 50 Globally",
-      date: "February 28, 2025",
-      excerpt:
-        "Our university has been ranked among the top 50 institutions globally in the latest World University Rankings.",
-      link: "/news/3",
-      image: "/news-placeholder.png",
-    },
-  ];
 
   useEffect(() => {
     const newsCards = newsRef.current;
@@ -56,13 +27,9 @@ export default function NewsSection() {
 
     if (!newsCards || !button) return;
 
-    // Animate news cards
     gsap.fromTo(
       newsCards.children,
-      {
-        y: 100,
-        opacity: 0,
-      },
+      { y: 100, opacity: 0 },
       {
         y: 0,
         opacity: 1,
@@ -76,13 +43,9 @@ export default function NewsSection() {
       }
     );
 
-    // Animate button
     gsap.fromTo(
       button,
-      {
-        y: 30,
-        opacity: 0,
-      },
+      { y: 30, opacity: 0 },
       {
         y: 0,
         opacity: 1,
@@ -108,7 +71,7 @@ export default function NewsSection() {
         ref={newsRef}
         className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 sm:grid-cols-2 lg:grid-cols-3"
       >
-        {newsItems.map((item) => (
+        {newsData.slice(0, 3).map((item) => (
           <Card
             key={item.id}
             className="flex flex-col overflow-hidden transform-gpu transition-all duration-300 hover:shadow-lg hover:-translate-y-2"
@@ -135,7 +98,7 @@ export default function NewsSection() {
             </CardContent>
             <CardFooter>
               <Link
-                href={item.link}
+                href={`/news/${item.id}`}
                 className="inline-flex items-center text-sm font-medium text-royal-blue-800 hover:text-royal-blue-600 transition-colors"
               >
                 Read More <ArrowRight className="ml-1 h-4 w-4" />

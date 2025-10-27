@@ -20,7 +20,12 @@ export default function GovernmentLinks() {
     {
       category: "Citizens Charter",
       image: "/government-assets/citizen charter.png",
-      items: [{ name: "State Department of Education", url: "#" }],
+      items: [
+        {
+          name: "State Department of Education",
+          url: "/about/citizens-charter",
+        },
+      ],
     },
     // {
     //   category: "LANDBANK Link.BizPortal",

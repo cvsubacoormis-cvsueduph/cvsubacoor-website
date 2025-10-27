@@ -10,6 +10,7 @@ export const newsData = [
       "The National Science Foundation has awarded our university a $10 million grant to advance research in renewable energy technologies.",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non massa lectus. Aliquam sit amet dui et nisi ut iaculis mossis sodales. Praesent urna varius vitae. Sed sit amet nulla metus dictum maecenas sed augue. Morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum id ligula ultricies nisi. Nullam quisque dapibus efficitur.",
+    link: "",
   },
   {
     id: "2",
@@ -21,6 +22,7 @@ export const newsData = [
     excerpt:
       "The state-of-the-art student center will open its doors next month, featuring study spaces, dining options, and recreational facilities.",
     content: "",
+    link: "",
   },
   {
     id: "3",
@@ -32,6 +34,7 @@ export const newsData = [
     excerpt:
       "Our university has been ranked among the top 50 institutions globally in the latest World University Rankings.",
     content: "",
+    link: "",
   },
   {
     id: "4",
@@ -43,6 +46,7 @@ export const newsData = [
     excerpt:
       "The university will host its annual Research Symposium on May 15-16, showcasing innovative projects from students and faculty across all disciplines.",
     content: "",
+    link: "",
   },
   {
     id: "5",
@@ -54,6 +58,7 @@ export const newsData = [
     excerpt:
       "The Office of International Programs has established new exchange partnerships with universities in Singapore, South Korea, and Germany.",
     content: "",
+    link: "",
   },
   {
     id: "6",
@@ -65,6 +70,7 @@ export const newsData = [
     excerpt:
       "After three years of work, the university library has completed the digitization of its rare manuscript collection, making these valuable resources available online.",
     content: "",
+    link: "",
   },
   {
     id: "7",
@@ -76,6 +82,7 @@ export const newsData = [
     excerpt:
       "A team of engineering students has won first place in the National Robotics Design Competition with their innovative autonomous navigation system.",
     content: "",
+    link: "",
   },
   {
     id: "8",
@@ -87,6 +94,7 @@ export const newsData = [
     excerpt:
       "The university has announced a comprehensive sustainability plan aimed at achieving carbon neutrality by 2030 through renewable energy adoption and waste reduction.",
     content: "",
+    link: "",
   },
   {
     id: "9",
@@ -98,5 +106,6 @@ export const newsData = [
     excerpt:
       "Dr. Elizabeth Chen from the Department of Biology has been awarded the National Medal of Science for her groundbreaking research in cellular regeneration.",
     content: "",
+    link: "",
   },
 ];

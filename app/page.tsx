@@ -1,16 +1,12 @@
 import FeedbackForm from "@/components/feedback-form";
 import GovernmentLinks from "@/components/government-links";
-import ImageGallery from "@/components/image-gallery";
 import Navbar from "@/components/navbar";
 import NewsSection from "@/components/news-section";
 import QualityPolicy from "@/components/quality-policy";
-import Footer from "@/components/footer";
 import AnimatedHero from "@/components/animated-hero";
-import AnimatedStats from "@/components/animated-stats";
 import AnimatedSectionTitle from "@/components/animated-section-title";
 import ScrollAnimations from "@/components/scroll-animations";
 import AnimatedBackground from "@/components/animated-background";
-import StickyHeader from "@/components/sticky-header";
 import CoreValues from "@/components/core-values";
 
 export default function Home() {
