@@ -1,11 +1,24 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import AnimatedPage from "@/components/animated-page";
+import { useEffect, useState } from "react";
+import HistoryPageSkeleton from "@/components/skeleton/HistorySkeleton";
 
 export default function HistoryPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 1500);
+    return () => clearTimeout(timer);
+  });
+
+  if (isLoading) {
+    return <HistoryPageSkeleton />;
+  }
   return (
     <>
       <AnimatedPage>
