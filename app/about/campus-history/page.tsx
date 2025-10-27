@@ -85,7 +85,7 @@ export default function CampusHistoryPage() {
                 </div>
                 <div className="relative w-full">
                   <Image
-                    src="/old.png"
+                    src="/hm.png"
                     alt="Early Campus"
                     className="object-cover rounded-md"
                     fill
@@ -226,7 +226,7 @@ export default function CampusHistoryPage() {
                 </div>
                 <div className="relative w-full">
                   <Image
-                    src="/old-3.png"
+                    src="/at-glance-bg.png"
                     alt="Early Campus"
                     className="object-cover rounded-md"
                     fill
@@ -258,13 +258,13 @@ export default function CampusHistoryPage() {
                 will serve as a symbol of innovation, sustainability, and
                 excellence in education and character formation.
               </p>
-              <div className="relative h-60 w-full my-6">
+              <div className="relative h-60 w-full mx-auto my-6">
                 <Image
                   src="/molino3-future.png"
                   alt="Campus Master Plan Rendering"
                   className="object-cover rounded-md"
-                  width={900}
-                  height={400}
+                  width={600}
+                  height={300}
                 />
               </div>
             </TabsContent>
@@ -272,32 +272,6 @@ export default function CampusHistoryPage() {
         </div>
 
         <div className="space-y-6">
-          <div className="bg-slate-50 p-6 rounded-lg">
-            <h3 className="text-xl font-bold mb-4">Historic Buildings</h3>
-            <ul className="space-y-3">
-              <li className="flex gap-2">
-                <span className="font-bold">Old Main (1885):</span>
-                <span>The original university building</span>
-              </li>
-              <li className="flex gap-2">
-                <span className="font-bold">Science Hall (1895):</span>
-                <span>First dedicated science facility</span>
-              </li>
-              <li className="flex gap-2">
-                <span className="font-bold">University Library (1922):</span>
-                <span>Historic library building</span>
-              </li>
-              <li className="flex gap-2">
-                <span className="font-bold">Memorial Gymnasium (1924):</span>
-                <span>Built to honor WWI veterans</span>
-              </li>
-              <li className="flex gap-2">
-                <span className="font-bold">Alumni Hall (1935):</span>
-                <span>Funded by alumni donations</span>
-              </li>
-            </ul>
-          </div>
-
           {/* <div className="bg-slate-50 p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-4">Campus Tours</h3>
             <p className="mb-4">
