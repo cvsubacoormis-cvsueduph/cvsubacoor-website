@@ -43,7 +43,7 @@ export const departments: Department[] = [
     programs: ["Bachelor of Science in Psychology"],
     facultyCount: 18,
     studentCount: 320,
-    chairperson: "Kathy C. Jamero",
+    chairperson: "Kathy J. Gumboc",
     coordinator: [
       "Janette E. Alagar, Psychology Program",
       "Regine U. Caltino, Physical Education",

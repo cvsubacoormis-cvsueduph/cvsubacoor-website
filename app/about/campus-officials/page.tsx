@@ -133,7 +133,7 @@ export default function CampusOfficialsPage() {
                 // education: "Ph.D. in Physics, MIT",
               },
               {
-                name: "Kathy C. Jamero",
+                name: "Kathy J. Gumboc",
                 title: "Chairperson, Department of Arts and Sciences",
                 image: "/campus-officials/gumboc.jpg",
                 // education: "Ph.D. in Business Administration, Wharton",
