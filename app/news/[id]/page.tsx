@@ -77,57 +77,6 @@ export default function NewsDetailPage({ params }: { params: { id: string } }) {
                     ))}
                 </ul>
               </div>
-
-              <div className="bg-slate-50 p-6 rounded-lg animate-element">
-                <h3 className="text-xl font-bold mb-4">Categories</h3>
-                <div className="flex flex-wrap gap-2">
-                  <Link
-                    href="/news?category=research"
-                    className="px-3 py-1 bg-royal-blue-100 text-royal-blue-800 rounded-full text-sm hover:bg-royal-blue-200"
-                  >
-                    Research
-                  </Link>
-                  <Link
-                    href="/news?category=campus"
-                    className="px-3 py-1 bg-royal-blue-100 text-royal-blue-800 rounded-full text-sm hover:bg-royal-blue-200"
-                  >
-                    Campus News
-                  </Link>
-                  <Link
-                    href="/news?category=achievements"
-                    className="px-3 py-1 bg-royal-blue-100 text-royal-blue-800 rounded-full text-sm hover:bg-royal-blue-200"
-                  >
-                    Achievements
-                  </Link>
-                  <Link
-                    href="/news?category=events"
-                    className="px-3 py-1 bg-royal-blue-100 text-royal-blue-800 rounded-full text-sm hover:bg-royal-blue-200"
-                  >
-                    Events
-                  </Link>
-                  <Link
-                    href="/news?category=academics"
-                    className="px-3 py-1 bg-royal-blue-100 text-royal-blue-800 rounded-full text-sm hover:bg-royal-blue-200"
-                  >
-                    Academics
-                  </Link>
-                </div>
-              </div>
-
-              <div className="bg-slate-50 p-6 rounded-lg animate-element">
-                <h3 className="text-xl font-bold mb-4">Share This Article</h3>
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm">
-                    Facebook
-                  </Button>
-                  <Button variant="outline" size="sm">
-                    Twitter
-                  </Button>
-                  <Button variant="outline" size="sm">
-                    LinkedIn
-                  </Button>
-                </div>
-              </div>
             </div>
           </div>
         </div>
