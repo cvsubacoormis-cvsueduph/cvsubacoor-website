@@ -80,30 +80,6 @@ export default function Footer() {
               cvsubacoor@cvsu.edu.ph
             </Link>
           </p>
-          {/* <p className="text-sm mt-2">
-            Web:{" "}
-            <Link
-              href="https://www.cvsu-rosario.edu.ph"
-              target="_blank"
-              className="hover:text-accent transition-colors duration-200"
-            >
-              www.cvsu-rosario.edu.ph
-            </Link>
-          </p> */}
-          {/* <div className="flex gap-3 mt-3">
-            <Image
-              src="/dpo.png" // replace with your actual image path
-              alt="DPO"
-              width={50}
-              height={50}
-            />
-            <Image
-              src="/protected.png" // replace with your actual image path
-              alt="Protected"
-              width={80}
-              height={50}
-            />
-          </div> */}
         </div>
       </div>
 
