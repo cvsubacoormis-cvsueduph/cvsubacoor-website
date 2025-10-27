@@ -92,7 +92,7 @@ export default function RequirementsProceduresPage() {
               <CardHeader>
                 <CardTitle className="flex items-center text-lg font-bold">
                   <span className="mr-2 text-primary">
-                    <HelpCircle />
+                    <MessageCircleWarning />
                   </span>
                   Important Information
                 </CardTitle>
@@ -334,7 +334,7 @@ export default function RequirementsProceduresPage() {
               <Card className="mt-6">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <HelpCircle className="h-5 w-5 text-primary" />
+                    <MessageCircleWarning className="h-5 w-5 text-primary" />
                     Application Category
                   </CardTitle>
                 </CardHeader>

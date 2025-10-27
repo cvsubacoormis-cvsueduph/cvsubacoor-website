@@ -183,7 +183,7 @@ export const studentoffices = [
     contact: {
       phone: "(555) 123-4590",
       email: "cvsubacoorosas@gmail.com",
-      hours: "Monday-Friday: 8:00 AM - 5:00 PM",
+      hours: "Monday-Friday: 7:00 AM - 6:00 PM",
     },
   },
   {
@@ -194,7 +194,7 @@ export const studentoffices = [
     contact: {
       phone: "(555) 123-4591",
       email: "cvsubacoor.csg@gmail.com",
-      hours: "Monday-Friday: 8:00 AM - 5:00 PM",
+      hours: "Monday-Friday: 7:00 AM - 6:00 PM",
     },
   },
 ];
