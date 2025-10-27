@@ -29,6 +29,7 @@ export default function Home() {
             <AnimatedSectionTitle
               title="News & Updates"
               subtitle="Stay informed about the latest happenings at our university"
+              className="mb-6"
             />
             <NewsSection />
           </div>
