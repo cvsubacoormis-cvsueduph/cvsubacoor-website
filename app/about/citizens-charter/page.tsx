@@ -19,12 +19,13 @@ import { useEffect, useState } from "react";
 import { CitizensCharterPageSkeleton } from "@/components/skeleton/CitizensCharterSkeleton";
 
 export default function CitizensCharterPage() {
-  const [isLoading, setIsloading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsloading(false);
+      setIsLoading(false);
     }, 1500);
+    return () => clearTimeout(timer);
   }, []);
 
   if (isLoading) {
