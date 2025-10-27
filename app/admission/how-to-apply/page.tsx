@@ -265,7 +265,7 @@ export default function HowToApplyPage() {
                   <div className="space-y-2 mb-4">
                     <div>
                       <p className="font-medium">Email:</p>
-                      <p>admissions@university.edu</p>
+                      <p>cvsubacoor.admission@cvsu.edu.ph</p>
                     </div>
                     <div>
                       <p className="font-medium">Telephone:</p>

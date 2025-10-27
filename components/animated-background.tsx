@@ -47,17 +47,6 @@ export default function AnimatedBackground() {
       ref={backgroundRef}
       className="fixed inset-0 -z-10 opacity-0"
       aria-hidden="true"
-    >
-      <Particles
-        particleColors={["#ffffff", "#ffffff"]}
-        particleCount={500}
-        particleSpread={10}
-        speed={0.1}
-        particleBaseSize={100}
-        moveParticlesOnHover={true}
-        alphaParticles={false}
-        disableRotation={false}
-      />
-    </div>
+    ></div>
   );
 }
