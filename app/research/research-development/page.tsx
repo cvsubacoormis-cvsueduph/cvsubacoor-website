@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -15,8 +17,23 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AnimatedPage from "@/components/animated-page";
 import AnimatedSectionTitle from "@/components/animated-section-title";
+import { useEffect, useState } from "react";
+import ResearchDevelopmentSkeleton from "@/components/skeleton/ResearchDevelopmentPageSkeleton";
 
 export default function ResearchDevelopmentPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <ResearchDevelopmentSkeleton />;
+  }
+
   return (
     <>
       <AnimatedPage>

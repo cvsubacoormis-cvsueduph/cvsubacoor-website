@@ -1,15 +1,15 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { ArrowLeft, Briefcase } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import AnimatedPage from "@/components/animated-page";
-import AnimatedSectionTitle from "@/components/animated-section-title";
 import { JobCard } from "@/components/job-card";
 import { JobFilter } from "@/components/job-filter";
 import { jobListings } from "@/data/job-listings";
+import JobPlacementSkeleton from "@/components/skeleton/JobPlacementPageSkeleton";
 
 export default function JobPlacementPage() {
   const [filters, setFilters] = useState({
@@ -53,6 +53,19 @@ export default function JobPlacementPage() {
       return matchesSearch && matchesCategory && matchesType && matchesLocation;
     });
   }, [filters]);
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <JobPlacementSkeleton />;
+  }
 
   return (
     <>
@@ -104,8 +117,8 @@ export default function JobPlacementPage() {
               <div className="text-center py-12 bg-slate-50 rounded-lg">
                 <h3 className="text-xl font-bold mb-2">No jobs found</h3>
                 <p className="text-muted-foreground">
-                  No job listings match your current filters. Try adjusting your
-                  search criteria.
+                  No job listings yet or match your current filters. Try
+                  adjusting your search criteria.
                 </p>
               </div>
             )}

@@ -5,8 +5,23 @@ import { ArrowLeft, FileText, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { categories } from "@/data/downloadableforms";
+import { useEffect, useState } from "react";
+import DownloadableFormsSkeleton from "@/components/skeleton/DownloadableFormsPageSkeleton";
 
 export default function DownloadableFormsPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  });
+
+  if (isLoading) {
+    return <DownloadableFormsSkeleton />;
+  }
+
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Header */}

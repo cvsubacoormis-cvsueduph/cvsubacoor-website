@@ -107,15 +107,6 @@ const NAV_SECTIONS: NavSection[] = [
         href: "https://studentportal.cvsu-bacoor.com/",
         external: true,
       },
-      {
-        label: "Open Distance Learning",
-        href: "/students/open-distance-learning",
-      },
-      {
-        label: "Open Distance eLearning",
-        href: "https://elearning.cvsu.edu.ph/",
-        external: true,
-      },
     ],
   },
   {

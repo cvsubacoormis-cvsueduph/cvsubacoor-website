@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -15,8 +17,23 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import AnimatedPage from "@/components/animated-page";
 import AnimatedSectionTitle from "@/components/animated-section-title";
 import DrivePreview from "@/components/drive-preview";
+import { useEffect, useState } from "react";
+import ExtensionServicesSkeleton from "@/components/skeleton/ExtensionServicesPageSkeleton";
 
 export default function ExtensionServicesPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <ExtensionServicesSkeleton />;
+  }
+
   return (
     <>
       <AnimatedPage>

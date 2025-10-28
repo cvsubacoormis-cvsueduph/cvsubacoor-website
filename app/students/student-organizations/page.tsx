@@ -29,6 +29,11 @@ export default function StudentOrganizationsPage() {
     }, 1500);
     return () => clearTimeout(timer);
   }, []);
+
+  if (isLoading) {
+    return <OrganizationCardsSkeleton />;
+  }
+  
   return (
     <>
       <AnimatedPage>
