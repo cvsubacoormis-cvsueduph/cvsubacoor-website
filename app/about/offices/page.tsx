@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -22,8 +24,23 @@ import {
   administrativeoffices,
   studentoffices,
 } from "@/data/offices";
+import { useEffect, useState } from "react";
+import { OfficesPageSkeleton } from "@/components/skeleton/OfficesPageSkeleton";
 
 export default function OfficesPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  });
+
+  if (isLoading) {
+    return <OfficesPageSkeleton />;
+  }
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mb-6">

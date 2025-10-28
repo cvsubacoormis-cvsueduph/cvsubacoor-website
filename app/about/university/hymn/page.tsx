@@ -17,6 +17,7 @@ export default function UniversityHymnPage() {
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1500);
+    return () => clearTimeout(timer);
   }, []);
 
   if (isLoading) {

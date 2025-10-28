@@ -1,4 +1,3 @@
-// app/about/citizens-charter/CitizensCharterPageSkeleton.tsx
 "use client";
 
 import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs";
