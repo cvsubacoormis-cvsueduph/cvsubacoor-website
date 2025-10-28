@@ -63,15 +63,15 @@ export default function OfficesPage() {
       </div>
 
       <div className="mb-8">
-        <p className="text-lg text-center max-w-3xl mx-auto">
+        <p className="text-sm text-center max-w-3xl mx-auto">
           Our university maintains various administrative and academic offices
           to support students, faculty, and staff. Find contact information and
           services provided by each office below.
         </p>
       </div>
 
-      <Tabs defaultValue="academic" className="mb-12">
-        <TabsList className="grid w-full grid-cols-3">
+      <Tabs defaultValue="academic">
+        <TabsList className="grid w-full grid-cols-1 md:grid-cols-3">
           <TabsTrigger value="academic">Academic Offices</TabsTrigger>
           <TabsTrigger value="administrative">
             Administrative Offices
@@ -80,7 +80,7 @@ export default function OfficesPage() {
         </TabsList>
 
         {/* Academic Offices */}
-        <TabsContent value="academic" className="pt-6">
+        <TabsContent value="academic" className="pt-6 mt-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {academicoffices.map((office, index) => (
               <Card key={index}>
@@ -99,8 +99,12 @@ export default function OfficesPage() {
                     </div>
                     <div className="flex items-start gap-2">
                       <Mail className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
-                      <span>{office.contact.email}</span>
-                      <span>{office.contact.email2}</span>
+                      <div className="flex flex-col md:flex-row md:gap-x-2">
+                        <span>{office.contact.email}</span>
+                        {office.contact.email2 && (
+                          <span>{office.contact.email2}</span>
+                        )}
+                      </div>
                     </div>
                     <div>
                       <p className="font-medium">Office Hours:</p>
@@ -116,7 +120,7 @@ export default function OfficesPage() {
         </TabsContent>
 
         {/* Administrative Offices */}
-        <TabsContent value="administrative" className="pt-6">
+        <TabsContent value="administrative" className="pt-6 mt-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {administrativeoffices.map((office, index) => (
               <Card key={index}>
@@ -154,7 +158,7 @@ export default function OfficesPage() {
         </TabsContent>
 
         {/* Student Services Offices */}
-        <TabsContent value="student" className="pt-6">
+        <TabsContent value="student" className="pt-6 mt-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {studentoffices.map((office, index) => (
               <Card key={index}>

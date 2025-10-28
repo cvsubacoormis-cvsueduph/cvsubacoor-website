@@ -201,14 +201,6 @@ export default function UniversitySealPage() {
                   University Hymn
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/about/brand-guidelines"
-                  className="text-primary hover:underline"
-                >
-                  Brand Guidelines
-                </Link>
-              </li>
             </ul>
           </div>
         </div>

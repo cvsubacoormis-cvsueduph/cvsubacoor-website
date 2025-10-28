@@ -12,7 +12,7 @@ export default function DownloadableFormsPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setTimeout(() => { 
       setIsLoading(false);
     }, 1500);
     return () => clearTimeout(timer);

@@ -182,7 +182,7 @@ export default function UniversityHymnPage() {
             <h3 className="text-xl font-bold mb-4">Hymn Performances</h3>
             <ul className="space-y-3">
               <li>Commencement Ceremonies</li>
-              <li>Convocation</li>
+              <li>Invocation</li>
               <li>Alumni Reunions</li>
               <li>Presidential Inaugurations</li>
               {/* <li>Founder's Day Celebrations</li> */}
@@ -214,14 +214,6 @@ export default function UniversityHymnPage() {
                   className="text-primary hover:underline"
                 >
                   University Seal
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about/traditions"
-                  className="text-primary hover:underline"
-                >
-                  University Traditions
                 </Link>
               </li>
             </ul>
