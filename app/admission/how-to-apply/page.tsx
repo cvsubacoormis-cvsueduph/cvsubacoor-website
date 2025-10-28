@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -12,8 +14,22 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import AnimatedPage from "@/components/animated-page";
 import AnimatedSectionTitle from "@/components/animated-section-title";
+import { useEffect, useState } from "react";
+import { HowToApplyPageSkeleton } from "@/components/skeleton/HowToApplyPage";
 
 export default function HowToApplyPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <HowToApplyPageSkeleton />;
+  }
   return (
     <>
       <AnimatedPage>

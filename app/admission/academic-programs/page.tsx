@@ -23,8 +23,23 @@ import {
 
 import AnimatedPage from "@/components/animated-page";
 import { courses } from "@/data/courses";
+import { useEffect, useState } from "react";
+import { AcademicProgramsPageSkeleton } from "@/components/skeleton/AcademicProgramsPageSkeleton";
 
 export default function AcademicProgramsPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  });
+
+  if (isLoading) {
+    return <AcademicProgramsPageSkeleton />;
+  }
+
   return (
     <>
       <AnimatedPage>

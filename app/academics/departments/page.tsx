@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, GraduationCap, ChevronRight } from "lucide-react";
@@ -16,10 +16,24 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { departments, type Department } from "@/data/departments";
 import { cn } from "@/lib/utils";
+import { DepartmentsPageSkeleton } from "@/components/skeleton/DepartmentsPageSkeleton";
 
 export default function DepartmentsPage() {
   const [selectedDepartment, setSelectedDepartment] =
     useState<Department | null>(null);
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  });
+
+  if (isLoading) {
+    return <DepartmentsPageSkeleton />;
+  }
 
   return (
     <div className="container mx-auto px-4 py-12">

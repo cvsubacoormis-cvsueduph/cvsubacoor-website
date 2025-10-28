@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -23,8 +25,23 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { useEffect, useState } from "react";
+import { RequirementsProceduresPageSkeleton } from "@/components/skeleton/RequirementsProceduresPageSkeleton";
 
 export default function RequirementsProceduresPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <RequirementsProceduresPageSkeleton />;
+  }
+
   return (
     <>
       <AnimatedPage>
