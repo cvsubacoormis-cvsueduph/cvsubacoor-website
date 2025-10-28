@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
@@ -11,9 +13,23 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import Footer from "@/components/footer";
+import { useEffect, useState } from "react";
+import { AcademicCalendarPageSkeleton } from "@/components/skeleton/AcademicCalendarPageSkeleton";
 
 export default function AcademicCalendarPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  });
+
+  if (isLoading) {
+    return <AcademicCalendarPageSkeleton />;
+  }
+
   const images = [
     "/calendar/2025-2026-1.jpg",
     "/calendar/2025-2026-2.jpg",

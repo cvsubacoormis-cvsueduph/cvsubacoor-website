@@ -198,15 +198,15 @@ export default function AnimatedHero() {
           </div>
           <div ref={imageRef} className="flex justify-center md:justify-end">
             <div className="relative w-full max-w-md aspect-square">
-              <div className="absolute inset-0 bg-canary-yellow-500 rounded-lg rotate-3 transform-gpu"></div>
-              <Image
+              {/* <div className="absolute inset-0 bg-canary-yellow-500 rounded-lg rotate-3 transform-gpu"></div> */}
+              {/* <Image
                 src="/herobg.png"
                 alt="University Students"
                 width={500}
                 height={500}
                 className="object-cover rounded-lg shadow-lg relative z-10 transform-gpu -rotate-3 hover:rotate-0 transition-transform duration-500"
                 priority
-              />
+              /> */}
             </div>
           </div>
         </div>
