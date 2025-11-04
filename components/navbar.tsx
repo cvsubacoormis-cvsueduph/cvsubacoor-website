@@ -1,9 +1,9 @@
 "use client";
 
-import { Fragment, useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown, ChevronRight, Menu } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -14,59 +14,15 @@ import { NAV_SECTIONS, NavLink } from "@/data/nav-contents";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
-  const [desktopNested, setDesktopNested] = useState<string | null>(null);
   const [mobileSection, setMobileSection] = useState<string | null>(null);
-  const [mobileNested, setMobileNested] = useState<string | null>(null);
-
   const isMobile = useMobileMenu();
-
-  useEffect(() => {
-    if (isMobile) {
-      setDesktopDropdown(null);
-      setDesktopNested(null);
-    } else {
-      setMobileSection(null);
-      setMobileNested(null);
-      setIsOpen(false);
-    }
-  }, [isMobile]);
-
-  useEffect(() => {
-    if (!isOpen) {
-      setMobileSection(null);
-      setMobileNested(null);
-    }
-  }, [isOpen]);
-
-  useEffect(() => {
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setDesktopDropdown(null);
-        setDesktopNested(null);
-      }
-    };
-
-    window.addEventListener("keydown", handleEscape);
-    return () => window.removeEventListener("keydown", handleEscape);
-  }, []);
 
   const toggleMobileSection = (id: string) => {
     setMobileSection((prev) => (prev === id ? null : id));
-    setMobileNested(null);
-  };
-
-  const toggleMobileNested = (id: string) => {
-    setMobileNested((prev) => (prev === id ? null : id));
   };
 
   const toggleDesktopDropdown = (id: string) => {
     setDesktopDropdown((prev) => (prev === id ? null : id));
-    setDesktopNested(null);
-  };
-
-  const closeDesktopDropdowns = () => {
-    setDesktopDropdown(null);
-    setDesktopNested(null);
   };
 
   const renderLink = (link: NavLink, variant: "mobile" | "desktop") => {
@@ -90,6 +46,7 @@ export default function Navbar() {
         onClick={() => {
           if (variant === "mobile") {
             setIsOpen(false);
+            setMobileSection(null);
           }
         }}
       >
@@ -101,15 +58,14 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-royal-blue-900/70 to-royal-blue-800/40 backdrop-blur-sm text-white">
       <div className="container flex h-16 items-center justify-between px-4 sm:px-6">
-        {/* Mobile hamburger */}
+        {/* Mobile & Tablet hamburger */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <Button
               variant="secondary"
               size="icon"
-              className="mr-2 md:hidden"
+              className="mr-2 lg:hidden"
               aria-label="Toggle navigation menu"
-              aria-expanded={isOpen}
             >
               <Menu className="h-5 w-5 text-primary hover:text-white" />
             </Button>
@@ -119,11 +75,11 @@ export default function Navbar() {
             side="left"
             className="w-[280px] sm:w-[340px] overflow-y-auto px-0 bg-primary"
           >
-            <div className="flex items-center gap-3 px-4 pb-4 pt-2 border-b border-muted">
-              <Image src="/logo.png" width={32} height={32} alt="Logo" />
-              <span className="font-semibold text-sm text-white leading-tight">
+            <div className="flex items-end justify-end gap-3 px-4 pb-4 pt-2 border-b border-muted">
+              <span className="font-semibold text-sm text-white leading-tight text-right">
                 Cavite State University - Bacoor City Campus
               </span>
+              <Image src="/logo.png" width={32} height={32} alt="Logo" />
             </div>
 
             <nav className="flex flex-col gap-2 px-2 py-4">
@@ -136,8 +92,8 @@ export default function Navbar() {
                       type="button"
                       onClick={() => toggleMobileSection(section.id)}
                       className={cn(
-                        "flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-base font-semibold text-white transition-colors",
-                        isSectionOpen && "bg-primary"
+                        "flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-base font-semibold text-white transition-colors hover:bg-royal-blue-600",
+                        isSectionOpen && "bg-royal-blue-700"
                       )}
                       aria-expanded={isSectionOpen}
                     >
@@ -151,38 +107,20 @@ export default function Navbar() {
                     </button>
 
                     {isSectionOpen && (
-                      <div className="mt-2 space-y-1 rounded-md bg-primary px-3 py-2">
+                      <div className="mt-2 space-y-1 rounded-md bg-royal-blue-800/50 px-3 py-2">
                         {section.links.map((link) => {
-                          if (link.children && link.id) {
-                            const isNestedOpen = mobileNested === link.id;
-
+                          if (link.children) {
                             return (
-                              <Fragment key={link.id}>
-                                <button
-                                  type="button"
-                                  onClick={() => toggleMobileNested(link.id!)}
-                                  className={cn(
-                                    "flex w-full items-center justify-between rounded-sm px-2 py-1.5 text-sm font-medium text-white transition-colors",
-                                    isNestedOpen && "bg-primary"
-                                  )}
-                                  aria-expanded={isNestedOpen}
-                                >
+                              <div key={link.id}>
+                                <div className="px-2 py-1 text-sm font-semibold text-canary-yellow-400">
                                   {link.label}
-                                  <ChevronDown
-                                    className={cn(
-                                      "h-4 w-4 transition-transform",
-                                      isNestedOpen && "rotate-180"
-                                    )}
-                                  />
-                                </button>
-                                {isNestedOpen && (
-                                  <div className="ml-2 mt-1 space-y-1 border-l border-royal-blue-100 pl-3">
-                                    {link.children?.map((child) =>
-                                      renderLink(child, "mobile")
-                                    )}
-                                  </div>
-                                )}
-                              </Fragment>
+                                </div>
+                                <div className="ml-2 mt-1 space-y-1 border-l-2 border-royal-blue-100/30 pl-3">
+                                  {link.children?.map((child) =>
+                                    renderLink(child, "mobile")
+                                  )}
+                                </div>
+                              </div>
                             );
                           }
 
@@ -198,16 +136,25 @@ export default function Navbar() {
         </Sheet>
 
         {/* Logo */}
-        <Link href="/" className="mr-6 flex items-center space-x-2 text-white">
-          <Image src="/logo.png" alt="Logo" width={36} height={36} />
-          <span className="hidden font-bold sm:inline-block leading-tight">
+        <Link
+          href="/"
+          className="flex items-center space-x-2 text-white mr-auto lg:mr-6"
+        >
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={36}
+            height={36}
+            className="shrink-0"
+          />
+          <span className="hidden sm:inline-block font-bold text-sm lg:text-base leading-tight max-w-[200px] lg:max-w-none">
             Cavite State University - Bacoor City Campus
           </span>
         </Link>
 
-        {/* Desktop navigation */}
-        <nav className="hidden md:flex flex-1 items-center justify-center">
-          <div className="flex flex-wrap items-center justify-center gap-1 lg:gap-4">
+        {/* Desktop navigation - Only show on large screens */}
+        <nav className="hidden lg:flex flex-1 items-center justify-center">
+          <div className="flex items-center justify-center gap-1 xl:gap-3">
             {NAV_SECTIONS.map((section) => {
               const isOpenDesktop = desktopDropdown === section.id;
 
@@ -215,20 +162,12 @@ export default function Navbar() {
                 <div
                   key={section.id}
                   className="relative"
-                  onMouseEnter={() => {
-                    setDesktopDropdown(section.id);
-                    setDesktopNested(null);
-                  }}
-                  onMouseLeave={closeDesktopDropdowns}
+                  onMouseEnter={() => setDesktopDropdown(section.id)}
+                  onMouseLeave={() => setDesktopDropdown(null)}
                 >
                   <Button
                     variant="link"
-                    className={cn(
-                      "group flex items-center gap-1 text-sm lg:text-base font-medium text-white hover:text-canary-yellow-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-canary-yellow-500/70"
-                    )}
-                    aria-haspopup="true"
-                    aria-expanded={isOpenDesktop}
-                    onFocus={() => setDesktopDropdown(section.id)}
+                    className="group flex items-center gap-1 text-sm xl:text-base font-medium text-white hover:text-canary-yellow-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-canary-yellow-500/70 px-2 xl:px-4"
                     onClick={() => toggleDesktopDropdown(section.id)}
                   >
                     {section.label}
@@ -241,40 +180,20 @@ export default function Navbar() {
                   </Button>
 
                   {isOpenDesktop && (
-                    <div className="absolute left-0 top-full z-50 mt-1 w-64 rounded-md bg-accent/95 shadow-lg backdrop-blur">
+                    <div className="absolute left-0 top-full z-50 mt-1 w-64 rounded-md bg-accent/95 shadow-lg backdrop-blur border border-royal-blue-600/20">
                       <div className="p-2">
                         {section.links.map((link) => {
-                          if (link.children && link.id) {
-                            const isNestedOpen = desktopNested === link.id;
-
+                          if (link.children) {
                             return (
-                              <div
-                                key={link.id}
-                                className="relative rounded-sm px-2 py-1.5 text-sm text-white hover:bg-royal-blue-600 hover:text-canary-yellow-500"
-                                onMouseEnter={() => setDesktopNested(link.id!)}
-                                onFocus={() => setDesktopNested(link.id!)}
-                                onMouseLeave={() => setDesktopNested(null)}
-                                onBlur={() => setDesktopNested(null)}
-                              >
-                                <button
-                                  type="button"
-                                  className="flex w-full items-center justify-between text-left font-medium focus:outline-none"
-                                  aria-haspopup="true"
-                                  aria-expanded={isNestedOpen}
-                                >
+                              <div key={link.id}>
+                                <div className="px-2 py-1.5 text-sm font-semibold text-canary-yellow-400">
                                   {link.label}
-                                  <ChevronRight className="h-4 w-4" />
-                                </button>
-
-                                {isNestedOpen && (
-                                  <div className="absolute left-full top-0 z-50 ml-2 w-64 rounded-md bg-accent/95 shadow-lg backdrop-blur">
-                                    <div className="p-2">
-                                      {link.children?.map((child) =>
-                                        renderLink(child, "desktop")
-                                      )}
-                                    </div>
-                                  </div>
-                                )}
+                                </div>
+                                <div className="ml-2 space-y-1 border-l-2 border-royal-blue-100/30 pl-3">
+                                  {link.children?.map((child) =>
+                                    renderLink(child, "desktop")
+                                  )}
+                                </div>
                               </div>
                             );
                           }
