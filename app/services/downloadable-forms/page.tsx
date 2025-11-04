@@ -12,7 +12,7 @@ export default function DownloadableFormsPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => { 
+    const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1500);
     return () => clearTimeout(timer);
@@ -72,10 +72,10 @@ export default function DownloadableFormsPage() {
                   >
                     <span className="text-sm font-medium">{form.name}</span>
                     <Button asChild size="sm" variant="outline">
-                      <Link href={form.file} download>
+                      <a href={form.file} download>
                         <Download className="h-4 w-4 mr-1" />
                         {form.type}
-                      </Link>
+                      </a>
                     </Button>
                   </li>
                 ))}
