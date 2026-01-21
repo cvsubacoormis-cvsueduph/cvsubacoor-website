@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Script async src="https://analytics.cvsu-bacoor.com/script.js" data-website-id="f020d8d3-fdad-4b21-ba68-d54f9b9d5baa"  />
+    <Script async src="https://analytics.cvsu-bacoor.com/script.js" data-website-id="f020d8d3-fdad-4b21-ba68-d54f9b9d5baa">
     <html lang="en">
       <body className={inter.className}>
         <PageTransition>{children}</PageTransition>
@@ -29,5 +29,6 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
+    </Script>
   );
 }
