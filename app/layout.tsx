@@ -6,6 +6,7 @@ import "./globals.css";
 import PageTransition from "@/components/page-transition";
 import { Analytics } from "@vercel/analytics/next";
 import Footer from "@/components/footer";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
