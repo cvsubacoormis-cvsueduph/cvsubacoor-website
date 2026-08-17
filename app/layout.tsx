@@ -7,6 +7,7 @@ import PageTransition from "@/components/page-transition";
 import { Analytics } from "@vercel/analytics/next";
 import Footer from "@/components/footer";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

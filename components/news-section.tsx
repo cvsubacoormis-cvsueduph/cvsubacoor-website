@@ -96,7 +96,7 @@ export default function NewsSection() {
         ref={newsRef}
         className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 sm:grid-cols-2 lg:grid-cols-3"
       >
-        {newsData.slice(0, 3).map((item) => (
+        {newsData?.slice(0, 3).map((item) => (
           <Card
             key={item.id}
             className="flex flex-col overflow-hidden transform-gpu transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
