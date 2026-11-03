@@ -248,19 +248,19 @@ export default function HowToApplyPage() {
                   <div className="space-y-3">
                     <div>
                       <p className="font-bold">Online Application</p>
-                      <p>October 15, 2025</p>
+                      <p>October 12, 2026</p>
                     </div>
                     <div>
                       <p className="font-bold">Deadline</p>
-                      <p>April 16, 2026</p>
+                      <p>May 19, 2027</p>
                     </div>
                     <div>
                       <p className="font-bold">Onsite Validation</p>
-                      <p>October 20, 2025</p>
+                      <p>November 10, 2026</p>
                     </div>
                     <div>
                       <p className="font-bold">Deadline</p>
-                      <p>April 16, 2026</p>
+                      <p>May 19, 2027</p>
                     </div>
                   </div>
                 </CardContent>
