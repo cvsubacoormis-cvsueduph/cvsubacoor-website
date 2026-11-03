@@ -116,9 +116,9 @@ export default function RequirementsProceduresPage() {
               </CardHeader>
               <CardContent>
                 <p className="mb-4">
-                  Beginning October 15, 2025, the Online Admission System will
+                  Beginning October 12, 2026, the Online Admission System will
                   be open for aspiring applicants to process their application
-                  for College Admission for the First Semester, S.Y. 2026-2027.
+                  for College Admission for the First Semester, S.Y. 2027-2028.
                 </p>
 
                 <h3 className="font-bold mb-2">Reminders</h3>
@@ -299,19 +299,19 @@ export default function RequirementsProceduresPage() {
                       <div className="space-y-3">
                         <div>
                           <p className="font-bold">Online Application</p>
-                          <p>October 15, 2025</p>
+                          <p>October 12, 2026</p>
                         </div>
                         <div>
                           <p className="font-bold">Deadline</p>
-                          <p>April 16, 2026</p>
+                          <p>May 19, 2027</p>
                         </div>
                         <div>
                           <p className="font-bold">Onsite Validation</p>
-                          <p>October 20, 2025</p>
+                          <p>November 10, 2026</p>
                         </div>
                         <div>
                           <p className="font-bold">Deadline</p>
-                          <p>April 16, 2026</p>
+                          <p>May 19, 2027</p>
                         </div>
                       </div>
                     </CardContent>
@@ -372,7 +372,7 @@ export default function RequirementsProceduresPage() {
                             Current Grade 12 student
                           </span>{" "}
                           is expecting to finish shs at the end of the school
-                          year (2025-2026). <br />
+                          year (2026-2027). <br />
                           B. <span className="font-semibold">
                             SHS Graduate
                           </span>{" "}
