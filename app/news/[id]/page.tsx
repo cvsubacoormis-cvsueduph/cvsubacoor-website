@@ -1,15 +1,25 @@
 import Link from "next/link";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import { ArrowLeft, Calendar, User, Tag } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import AnimatedPage from "@/components/animated-page";
 import { newsData } from "@/data/news";
 
-export default function NewsDetailPage({ params }: { params: { id: string } }) {
-  // Find the news item with the matching ID
-  const newsItem =
-    newsData.find((item) => item.id === params.id) || newsData[0];
+export default async function NewsDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  // Find the news item with the matching ID, falling back to the newest item
+  const newsItem = newsData.find((item) => item.id === id) ?? newsData[0];
+
+  // Guard against an empty news feed so the route returns a clean 404
+  if (!newsItem) {
+    notFound();
+  }
 
   return (
     <>
@@ -61,7 +71,7 @@ export default function NewsDetailPage({ params }: { params: { id: string } }) {
                 <h3 className="text-xl font-bold mb-4">Recent News</h3>
                 <ul className="space-y-4">
                   {newsData
-                    .filter((item) => item.id !== params.id)
+                    .filter((item) => item.id !== id)
                     .map((item) => (
                       <li key={item.id}>
                         <Link
